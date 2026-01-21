@@ -45,7 +45,7 @@
       <!-- Scroll Indicator -->
       <button
         @click="scrollToHighlights"
-        class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer hover:text-brand-primary transition-colors"
+        class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce cursor-pointer hover:text-brand-primary transition-colors"
         aria-label="Scroll to content"
       >
         <svg class="w-6 h-6 text-brand-light/40 hover:text-brand-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
