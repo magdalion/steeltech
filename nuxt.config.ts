@@ -31,7 +31,11 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'canonical', href: 'https://steeltech.ba' }
+        { rel: 'canonical', href: 'https://steeltech.ba' },
+        { rel: 'preload', as: 'style', href: '/css/nuxt-google-fonts.css' },
+        { rel: 'stylesheet', href: '/css/nuxt-google-fonts.css' },
+        { rel: 'preload', as: 'font', type: 'font/woff2', href: '/fonts/Audiowide-normal-400-latin.woff2', crossorigin: 'anonymous' },
+        { rel: 'preload', as: 'font', type: 'font/woff2', href: '/fonts/Rajdhani-normal-400-latin.woff2', crossorigin: 'anonymous' }
       ]
     }
   },
@@ -50,11 +54,6 @@ export default defineNuxtConfig({
     display: 'swap',
     subsets: ['latin', 'latin-ext'],
     download: true,
-    preload: true,
-    prefetch: true,
-    preconnect: true,
-    overwriting: true,
-    inject: true,
-    base64: true
+    inject: true
   }
 })
