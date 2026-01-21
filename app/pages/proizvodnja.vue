@@ -23,10 +23,11 @@
           <!-- Service Card 1: Čelične konstrukcije -->
           <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300">
             <div class="relative h-56 overflow-hidden">
-              <img
+              <NuxtImg
                 src="/images/Steeltech_Section_1_3.JPG"
                 alt="Čelične konstrukcije"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-[#2d2d2d] to-transparent"></div>
             </div>
@@ -52,10 +53,11 @@
           <!-- Service Card 2: Tehnologija zavarivanja -->
           <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300">
             <div class="relative h-56 overflow-hidden">
-              <img
+              <NuxtImg
                 src="/images/Steeltech_Section_2_1.JPG"
                 alt="Tehnologija zavarivanja"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-[#2d2d2d] to-transparent"></div>
             </div>
@@ -81,10 +83,11 @@
           <!-- Service Card 3: Lasersko rezanje -->
           <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300">
             <div class="relative h-56 overflow-hidden">
-              <img
+              <NuxtImg
                 src="/images/Steeltech_Section_3_1.JPG"
                 alt="Lasersko rezanje"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-[#2d2d2d] to-transparent"></div>
             </div>
@@ -110,10 +113,11 @@
           <!-- Service Card 4: Antikorozivna zaštita -->
           <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300">
             <div class="relative h-56 overflow-hidden">
-              <img
+              <NuxtImg
                 src="/images/Steeltech_section_4_1.JPG"
                 alt="Antikorozivna zaštita"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-[#2d2d2d] to-transparent"></div>
             </div>
@@ -214,9 +218,18 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'Proizvodnja - SteelTech',
+  title: 'Proizvodnja - SteelTech | Čelične Konstrukcije, Zavarivanje, Lasersko Rezanje',
   meta: [
-    { name: 'description', content: 'SteelTech proizvodnja - čelične konstrukcije, tehnologija zavarivanja, lasersko rezanje, antikorozivna zaštita i usluge transporta.' }
+    { name: 'description', content: 'SteelTech proizvodnja - čelične konstrukcije, MIG/MAG/TIG/REL zavarivanje, 6kW fiber lasersko rezanje, antikorozivna zaštita i usluge transporta.' },
+    { name: 'keywords', content: 'proizvodnja, čelične konstrukcije, zavarivanje, MIG, MAG, TIG, REL, lasersko rezanje, fiber laser, antikorozivna zaštita, cinčanje' },
+    { property: 'og:title', content: 'Proizvodnja - SteelTech' },
+    { property: 'og:description', content: 'Čelične konstrukcije, tehnologija zavarivanja, lasersko rezanje, antikorozivna zaštita i usluge transporta.' },
+    { property: 'og:url', content: 'https://steeltech.ba/proizvodnja' },
+    { name: 'twitter:title', content: 'Proizvodnja - SteelTech' },
+    { name: 'twitter:description', content: 'Čelične konstrukcije, zavarivanje, lasersko rezanje, antikorozivna zaštita.' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://steeltech.ba/proizvodnja' }
   ]
 })
 </script>

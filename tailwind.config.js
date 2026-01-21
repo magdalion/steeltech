@@ -5,8 +5,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        title: ['Audiowide', 'sans-serif'],
-        subtitle: ['Rajdhani', 'sans-serif']
+        title: ['Audiowide', 'Audiowide Fallback', 'Arial Black', 'sans-serif'],
+        subtitle: ['Rajdhani', 'Rajdhani Fallback', 'Arial', 'sans-serif']
       },
       colors: {
         brand: {

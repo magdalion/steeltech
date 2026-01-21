@@ -12,17 +12,17 @@
 
       <div class="container mx-auto px-4 relative z-10 py-20">
         <div class="max-w-4xl">
-          <span class="inline-block font-subtitle text-brand-primary text-lg md:text-xl mb-4 tracking-wide">
+          <span class="text-appear inline-block font-subtitle text-brand-primary text-lg md:text-xl mb-4 tracking-wide">
             STEELTECH ŽEPČE
           </span>
-          <h1 class="font-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold uppercase tracking-wider mb-6 leading-tight">
+          <h1 class="text-appear text-appear-delay-1 font-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold uppercase tracking-wider mb-6 leading-tight">
             Pouzdana<br />
             <span class="text-brand-primary">Snaga Čelika</span>
           </h1>
-          <p class="text-lg md:text-xl text-brand-light/70 mb-8 max-w-2xl leading-relaxed">
+          <p class="text-appear text-appear-delay-2 text-lg md:text-xl text-brand-light/70 mb-8 max-w-2xl leading-relaxed">
             Specijalizirani za izradu čeličnih konstrukcija i vrhunske tehnologije zavarivanja. Rješenja koja zadovoljavaju najviše industrijske standarde.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4">
+          <div class="text-appear text-appear-delay-3 flex flex-col sm:flex-row gap-4">
             <NuxtLink
               to="/proizvodnja"
               class="inline-flex items-center justify-center px-8 py-4 bg-brand-primary text-white font-title uppercase tracking-wide text-sm rounded hover:bg-brand-secondary transition-colors duration-300"
@@ -105,27 +105,31 @@
           </div>
           <div class="grid grid-cols-2 gap-4">
             <div class="space-y-4">
-              <img
+              <NuxtImg
                 src="/images/Steeltech_Section_1_3.JPG"
                 alt="SteelTech rad"
                 class="w-full h-48 object-cover rounded-lg"
+                loading="lazy"
               />
-              <img
+              <NuxtImg
                 src="/images/Steeltech_Section_2_1.JPG"
                 alt="SteelTech zavarivanje"
                 class="w-full h-32 object-cover rounded-lg"
+                loading="lazy"
               />
             </div>
             <div class="space-y-4 pt-8">
-              <img
+              <NuxtImg
                 src="/images/Steeltech_Section_1_12.JPG"
                 alt="SteelTech konstrukcija"
                 class="w-full h-32 object-cover rounded-lg"
+                loading="lazy"
               />
-              <img
+              <NuxtImg
                 src="/images/Steeltech_Section_2_4.JPG"
                 alt="SteelTech oprema"
                 class="w-full h-48 object-cover rounded-lg"
+                loading="lazy"
               />
             </div>
           </div>
@@ -147,10 +151,11 @@
           <!-- Service 1 -->
           <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300">
             <div class="relative h-40 overflow-hidden">
-              <img
+              <NuxtImg
                 src="/images/Steeltech_Section_1_3.JPG"
                 alt="Čelične konstrukcije"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-[#2d2d2d] to-transparent"></div>
             </div>
@@ -167,10 +172,11 @@
           <!-- Service 2 -->
           <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300">
             <div class="relative h-40 overflow-hidden">
-              <img
+              <NuxtImg
                 src="/images/Steeltech_Section_2_1.JPG"
                 alt="Zavarivanje"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-[#2d2d2d] to-transparent"></div>
             </div>
@@ -187,10 +193,11 @@
           <!-- Service 3 -->
           <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300">
             <div class="relative h-40 overflow-hidden">
-              <img
+              <NuxtImg
                 src="/images/Steeltech_Section_3_1.JPG"
                 alt="Lasersko rezanje"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-[#2d2d2d] to-transparent"></div>
             </div>
@@ -207,10 +214,11 @@
           <!-- Service 4 -->
           <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300">
             <div class="relative h-40 overflow-hidden">
-              <img
+              <NuxtImg
                 src="/images/Steeltech_section_4_1.JPG"
                 alt="Antikorozivna zaštita"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-[#2d2d2d] to-transparent"></div>
             </div>
@@ -256,10 +264,11 @@
             class="group relative aspect-square overflow-hidden rounded-lg cursor-pointer"
           >
             <NuxtLink :to="'/galerija'">
-              <img
+              <NuxtImg
                 :src="image.src"
                 :alt="image.alt"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
               />
               <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
                 <svg
@@ -340,9 +349,18 @@ const galleryPreview = [
 ]
 
 useHead({
-  title: 'SteelTech - Pouzdana Snaga Čelika',
+  title: 'SteelTech - Pouzdana Snaga Čelika | Čelične Konstrukcije Žepče',
   meta: [
-    { name: 'description', content: 'SteelTech Žepče - specijalizirani za izradu čeličnih konstrukcija i vrhunske tehnologije zavarivanja. ISO certificirani standardi, moderna oprema.' }
+    { name: 'description', content: 'SteelTech Žepče - specijalizirani za izradu čeličnih konstrukcija i vrhunske tehnologije zavarivanja. ISO certificirani standardi, moderna oprema, 6kW fiber laser.' },
+    { name: 'keywords', content: 'čelične konstrukcije, zavarivanje, lasersko rezanje, Žepče, BiH, ISO certifikat, MIG, MAG, TIG, antikorozivna zaštita' },
+    { property: 'og:title', content: 'SteelTech - Pouzdana Snaga Čelika' },
+    { property: 'og:description', content: 'Specijalizirani za izradu čeličnih konstrukcija i vrhunske tehnologije zavarivanja. ISO certificirani standardi.' },
+    { property: 'og:url', content: 'https://steeltech.ba/' },
+    { name: 'twitter:title', content: 'SteelTech - Pouzdana Snaga Čelika' },
+    { name: 'twitter:description', content: 'Specijalizirani za izradu čeličnih konstrukcija i vrhunske tehnologije zavarivanja.' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://steeltech.ba/' }
   ]
 })
 </script>

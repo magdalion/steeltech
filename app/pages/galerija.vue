@@ -45,7 +45,7 @@
             @click="openLightbox(index)"
             class="group relative aspect-square overflow-hidden rounded-lg cursor-pointer bg-[#2d2d2d]"
           >
-            <img
+            <NuxtImg
               :src="image.src"
               :alt="image.alt"
               loading="lazy"
@@ -128,7 +128,7 @@
 
           <!-- Image -->
           <div class="max-w-[90vw] max-h-[85vh] flex items-center justify-center">
-            <img
+            <NuxtImg
               :src="filteredImages[currentImageIndex]?.src"
               :alt="filteredImages[currentImageIndex]?.alt"
               class="max-w-full max-h-[85vh] object-contain"
@@ -263,9 +263,18 @@ onUnmounted(() => {
 })
 
 useHead({
-  title: 'Galerija - SteelTech',
+  title: 'Galerija - SteelTech | Projekti Čeličnih Konstrukcija',
   meta: [
-    { name: 'description', content: 'SteelTech galerija projekata - čelične konstrukcije, zavarivanje, lasersko rezanje i antikorozivna zaštita.' }
+    { name: 'description', content: 'SteelTech galerija projekata - pogledajte naše radove: čelične konstrukcije, zavarivanje, lasersko rezanje i antikorozivna zaštita.' },
+    { name: 'keywords', content: 'galerija, projekti, čelične konstrukcije, zavarivanje, lasersko rezanje, antikorozivna zaštita, portfolio' },
+    { property: 'og:title', content: 'Galerija - SteelTech' },
+    { property: 'og:description', content: 'Pogledajte naše projekte: čelične konstrukcije, zavarivanje, lasersko rezanje i antikorozivna zaštita.' },
+    { property: 'og:url', content: 'https://steeltech.ba/galerija' },
+    { name: 'twitter:title', content: 'Galerija - SteelTech' },
+    { name: 'twitter:description', content: 'Pogledajte naše projekte čeličnih konstrukcija i zavarivanja.' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://steeltech.ba/galerija' }
   ]
 })
 </script>

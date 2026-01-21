@@ -289,9 +289,18 @@ async function handleSubmit() {
 }
 
 useHead({
-  title: 'Kontakt - SteelTech',
+  title: 'Kontakt - SteelTech | Pošaljite Upit',
   meta: [
-    { name: 'description', content: 'Kontaktirajte SteelTech - email: dominik.jukic@steeltech.ba, telefon: +387 64 404 1908, adresa: Brankovići bb, Žepče 72230.' }
+    { name: 'description', content: 'Kontaktirajte SteelTech za besplatnu ponudu. Email: dominik.jukic@steeltech.ba, telefon: +387 64 404 1908, adresa: Brankovići bb, Žepče 72230.' },
+    { name: 'keywords', content: 'kontakt, email, telefon, upit, ponuda, SteelTech, Žepče' },
+    { property: 'og:title', content: 'Kontakt - SteelTech' },
+    { property: 'og:description', content: 'Kontaktirajte nas za besplatnu ponudu. Email: dominik.jukic@steeltech.ba, telefon: +387 64 404 1908.' },
+    { property: 'og:url', content: 'https://steeltech.ba/kontakt' },
+    { name: 'twitter:title', content: 'Kontakt - SteelTech' },
+    { name: 'twitter:description', content: 'Kontaktirajte SteelTech za besplatnu ponudu.' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://steeltech.ba/kontakt' }
   ]
 })
 </script>

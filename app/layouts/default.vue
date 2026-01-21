@@ -12,7 +12,7 @@
           </NuxtLink>
 
           <!-- Desktop Navigation -->
-          <div class="hidden md:flex space-x-6 font-title text-sm tracking-wide uppercase">
+          <div class="text-appear hidden md:flex space-x-6 font-title text-sm tracking-wide uppercase">
             <NuxtLink
               v-for="link in navLinks"
               :key="link.to"
@@ -84,7 +84,7 @@
 
     <footer class="bg-[#1a1a1a] border-t border-white/10">
       <div class="container mx-auto px-4 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <!-- Logo & Description -->
           <div>
             <img
@@ -141,6 +141,21 @@
               </li>
             </ul>
           </div>
+
+          <!-- Social Media -->
+          <div>
+            <h3 class="font-title text-lg uppercase tracking-wide mb-4 text-brand-primary">Zapratite nas!</h3>
+            <div class="flex gap-6">
+              <a href="https://www.facebook.com/share/1L1i7FQtuL/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 text-brand-primary hover:text-brand-primary/70 transition-colors" aria-label="Facebook">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 64 64"><path d="M62,32.18A30,30,0,1,0,27.312,61.816V40.851H19.7V32.18h7.616V25.57c0-7.519,4.48-11.672,11.331-11.672a46.208,46.208,0,0,1,6.716.585v7.384H41.576a4.339,4.339,0,0,0-4.889,4.688V32.18h8.322l-1.331,8.671H36.687V61.816A30,30,0,0,0,62,32.18Z"/></svg>
+                <span class="text-sm text-brand-light/60">na Facebook-u</span>
+              </a>
+              <a href="#" class="flex flex-col items-center gap-2 text-brand-primary hover:text-brand-primary/70 transition-colors" aria-label="Instagram">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 64 64"><path d="M32,9.045c7.476,0,8.362.029,11.314.163a15.525,15.525,0,0,1,5.2.964,9.28,9.28,0,0,1,5.314,5.314,15.525,15.525,0,0,1,.964,5.2c.134,2.952.163,3.838.163,11.314s-.029,8.362-.163,11.314a15.525,15.525,0,0,1-.964,5.2,9.28,9.28,0,0,1-5.314,5.314,15.525,15.525,0,0,1-5.2.964c-2.952.134-3.837.163-11.314.163s-8.362-.029-11.314-.163a15.525,15.525,0,0,1-5.2-.964,9.28,9.28,0,0,1-5.314-5.314,15.525,15.525,0,0,1-.964-5.2C9.074,40.362,9.045,39.476,9.045,32s.029-8.362.163-11.314a15.525,15.525,0,0,1,.964-5.2,9.28,9.28,0,0,1,5.314-5.314,15.525,15.525,0,0,1,5.2-.964c2.952-.134,3.838-.163,11.314-.163M32,4c-7.6,0-8.558.032-11.544.168a20.553,20.553,0,0,0-6.8,1.3A14.324,14.324,0,0,0,5.47,13.659a20.553,20.553,0,0,0-1.3,6.8C4.032,23.442,4,24.4,4,32s.032,8.558.168,11.544a20.553,20.553,0,0,0,1.3,6.8,14.324,14.324,0,0,0,8.189,8.189,20.553,20.553,0,0,0,6.8,1.3C23.442,59.968,24.4,60,32,60s8.558-.032,11.544-.168a20.553,20.553,0,0,0,6.8-1.3,14.324,14.324,0,0,0,8.189-8.189,20.553,20.553,0,0,0,1.3-6.8C59.968,40.558,60,39.6,60,32s-.032-8.558-.168-11.544a20.553,20.553,0,0,0-1.3-6.8A14.324,14.324,0,0,0,50.341,5.47a20.553,20.553,0,0,0-6.8-1.3C40.558,4.032,39.6,4,32,4Z"/><path d="M32,17.622A14.378,14.378,0,1,0,46.378,32,14.378,14.378,0,0,0,32,17.622Zm0,23.711A9.333,9.333,0,1,1,41.333,32,9.332,9.332,0,0,1,32,41.333Z"/><circle cx="46.946" cy="17.054" r="3.36"/></svg>
+                <span class="text-sm text-brand-light/60">na Instagram-u</span>
+              </a>
+            </div>
+          </div>
         </div>
 
         <!-- Copyright -->
@@ -151,11 +166,49 @@
         </div>
       </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <Transition
+      enter-active-class="transition duration-300 ease-out"
+      enter-from-class="opacity-0 translate-y-4"
+      enter-to-class="opacity-100 translate-y-0"
+      leave-active-class="transition duration-200 ease-in"
+      leave-from-class="opacity-100 translate-y-0"
+      leave-to-class="opacity-0 translate-y-4"
+    >
+      <button
+        v-if="showBackToTop"
+        @click="scrollToTop"
+        class="fixed bottom-6 right-6 z-50 p-3 bg-brand-primary text-white rounded-full shadow-lg hover:bg-brand-secondary transition-colors duration-300"
+        aria-label="Na vrh stranice"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+      </button>
+    </Transition>
   </div>
 </template>
 
 <script setup lang="ts">
 const mobileMenuOpen = ref(false)
+const showBackToTop = ref(false)
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+function handleScroll() {
+  showBackToTop.value = window.scrollY > 300
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 
 const navLinks = [
   { to: '/', label: 'Naslovna' },

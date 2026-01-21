@@ -1,2 +1,13 @@
+# SteelTech.ba Robots.txt
+
 User-Agent: *
-Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: https://steeltech.ba/sitemap.xml
+
+# Block internal paths
+Disallow: /_nuxt/
+Disallow: /_ipx/
+Disallow: /__sitemap__/
+Disallow: /_payload.json

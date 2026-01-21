@@ -114,9 +114,18 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'O Nama - SteelTech',
+  title: 'O Nama - SteelTech | Porodična Firma za Čelične Konstrukcije',
   meta: [
-    { name: 'description', content: 'Steeltech Žepče - mlada, porodična firma specijalizirana za izradu čeličnih konstrukcija i vrhunske tehnologije zavarivanja.' }
+    { name: 'description', content: 'Steeltech Žepče - mlada, porodična firma specijalizirana za izradu čeličnih konstrukcija i vrhunske tehnologije zavarivanja. ISO certificirani, moderno opremljeni.' },
+    { name: 'keywords', content: 'o nama, SteelTech, Žepče, porodična firma, čelične konstrukcije, ISO certifikat, kvaliteta' },
+    { property: 'og:title', content: 'O Nama - SteelTech' },
+    { property: 'og:description', content: 'Mlada, porodična firma specijalizirana za izradu čeličnih konstrukcija i vrhunske tehnologije zavarivanja.' },
+    { property: 'og:url', content: 'https://steeltech.ba/o-nama' },
+    { name: 'twitter:title', content: 'O Nama - SteelTech' },
+    { name: 'twitter:description', content: 'Mlada, porodična firma specijalizirana za izradu čeličnih konstrukcija.' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://steeltech.ba/o-nama' }
   ]
 })
 </script>

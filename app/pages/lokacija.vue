@@ -144,9 +144,18 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'Lokacija - SteelTech',
+  title: 'Lokacija - SteelTech | Žepče, Bosna i Hercegovina',
   meta: [
-    { name: 'description', content: 'SteelTech lokacija - Brankovići bb, Žepče 72230, Bosna i Hercegovina. Pronađite nas na mapi.' }
+    { name: 'description', content: 'SteelTech lokacija - Brankovići bb, Žepče 72230, Bosna i Hercegovina. Pronađite nas na Google mapi i posjetite nas.' },
+    { name: 'keywords', content: 'lokacija, adresa, Žepče, Brankovići, Bosna i Hercegovina, mapa, kako doći' },
+    { property: 'og:title', content: 'Lokacija - SteelTech' },
+    { property: 'og:description', content: 'Brankovići bb, Žepče 72230, Bosna i Hercegovina. Pronađite nas na mapi.' },
+    { property: 'og:url', content: 'https://steeltech.ba/lokacija' },
+    { name: 'twitter:title', content: 'Lokacija - SteelTech' },
+    { name: 'twitter:description', content: 'Brankovići bb, Žepče 72230, Bosna i Hercegovina.' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://steeltech.ba/lokacija' }
   ]
 })
 </script>
