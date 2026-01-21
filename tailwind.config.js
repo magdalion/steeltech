@@ -5,16 +5,17 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        title: ['Orbitron', 'sans-serif'],
+        title: ['Audiowide', 'sans-serif'],
         subtitle: ['Rajdhani', 'sans-serif']
       },
       colors: {
-        // Brand colors will be defined after logo is provided
-        // brand: {
-        //   primary: '#000000',
-        //   secondary: '#000000',
-        //   accent: '#000000'
-        // }
+        brand: {
+          primary: '#0087C2',    // Bright blue - CTAs, links, accents
+          secondary: '#165A8F',  // Dark blue - secondary elements
+          dark: '#231F20',       // Near-black - backgrounds
+          gray: '#606164',       // Gray - secondary text
+          light: '#F5F5F5'       // Light gray - text on dark
+        }
       }
     }
   },

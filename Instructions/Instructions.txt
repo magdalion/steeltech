@@ -1,0 +1,11 @@
+Instructions:
+
+1. Home page finish last. You will combine it from other pages.
+2. In gallery place all images.
+3. Instead of Usluge we should name page Proizvodnja.
+4. Images in images folder correspond to items/text in Proizvodnja description.
+5. Place in location Google Map.
+6. In Kontakt include contact details and contact form. We will later install php mailer on server.
+7. Ask me for icons, I have svg icon.
+8. This page needs to be ultra professional, Metal Works presentation page. Whole this business now depends on this page. Make sure this is ultra professional.
+9. There is no that much content, but still I think this should be website with pages instead of landing page. Your opinion?

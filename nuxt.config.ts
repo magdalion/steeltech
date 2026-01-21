@@ -6,9 +6,10 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   googleFonts: {
     families: {
-      Orbitron: [400, 500, 600, 700],
+      Audiowide: [400],
       Rajdhani: [400, 500, 600, 700]
     },
-    display: 'swap'
+    display: 'swap',
+    subsets: ['latin', 'latin-ext']
   }
 })
