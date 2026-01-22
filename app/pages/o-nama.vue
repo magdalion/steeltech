@@ -75,9 +75,9 @@
             </div>
           </div>
 
-          <!-- Partners Section -->
+          <!-- References Section -->
           <div class="bg-[#2d2d2d] border border-white/10 rounded-lg p-8">
-            <h2 class="font-title text-2xl uppercase tracking-wide mb-6 text-brand-primary text-center">Naši Partneri</h2>
+            <h2 class="font-title text-2xl uppercase tracking-wide mb-6 text-brand-primary text-center">Reference</h2>
             <p class="text-brand-light/70 text-center mb-6">
               Znanje i kvalitet smo postigli i dokazali radeći poslove zavarivanja i montaže za vodeće kompanije:
             </p>
@@ -86,6 +86,7 @@
               <span class="px-4 py-2 bg-brand-dark border border-white/10 rounded text-brand-light/60 text-sm">Preis Usora d.o.o. BiH</span>
               <span class="px-4 py-2 bg-brand-dark border border-white/10 rounded text-brand-light/60 text-sm">GS Travnik d.o.o. BiH</span>
               <span class="px-4 py-2 bg-brand-dark border border-white/10 rounded text-brand-light/60 text-sm">Robor Italy</span>
+              <span class="px-4 py-2 bg-brand-dark border border-white/10 rounded text-brand-light/60 text-sm">Cemex Hrvatska</span>
             </div>
           </div>
         </div>

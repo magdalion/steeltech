@@ -12,7 +12,7 @@
 
       <div class="container mx-auto px-4 relative z-10 py-20">
         <div class="max-w-4xl">
-          <span class="text-appear inline-block font-subtitle text-brand-primary text-lg md:text-xl mb-4 tracking-wide">
+          <span class="text-appear inline-block font-subtitle text-brand-primary text-2xl md:text-3xl mb-4 tracking-wide">
             STEELTECH ŽEPČE
           </span>
           <h1 class="text-appear text-appear-delay-1 font-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold uppercase tracking-wider mb-6 leading-tight">
@@ -60,19 +60,19 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div class="text-center">
             <div class="text-3xl md:text-4xl font-bold text-brand-primary mb-2">5</div>
-            <div class="text-brand-light/60 text-sm font-subtitle uppercase tracking-wide">Tehnologija Zavarivanja</div>
+            <div class="text-brand-light/60 text-lg font-subtitle uppercase tracking-wide">Tehnologija Zavarivanja</div>
           </div>
           <div class="text-center">
             <div class="text-3xl md:text-4xl font-bold text-brand-primary mb-2">ISO</div>
-            <div class="text-brand-light/60 text-sm font-subtitle uppercase tracking-wide">Certificirani Standardi</div>
+            <div class="text-brand-light/60 text-lg font-subtitle uppercase tracking-wide">Certificirani Standardi</div>
           </div>
           <div class="text-center">
             <div class="text-3xl md:text-4xl font-bold text-brand-primary mb-2">6kW</div>
-            <div class="text-brand-light/60 text-sm font-subtitle uppercase tracking-wide">Fiber Laser</div>
+            <div class="text-brand-light/60 text-lg font-subtitle uppercase tracking-wide">Fiber Laser</div>
           </div>
           <div class="text-center">
             <div class="text-3xl md:text-4xl font-bold text-brand-primary mb-2">100%</div>
-            <div class="text-brand-light/60 text-sm font-subtitle uppercase tracking-wide">Predanost Kvaliteti</div>
+            <div class="text-brand-light/60 text-lg font-subtitle uppercase tracking-wide">Predanost Kvaliteti</div>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span class="inline-block font-subtitle text-brand-primary text-sm uppercase tracking-wider mb-4">O Nama</span>
+            <span class="inline-block font-subtitle text-brand-primary text-base uppercase tracking-wider mb-4">O Nama</span>
             <h2 class="font-title text-3xl md:text-4xl uppercase tracking-wide mb-6">
               Mlada Porodična <span class="text-brand-primary">Firma</span>
             </h2>
@@ -141,7 +141,7 @@
     <section class="pt-8 pb-20 md:pt-12 md:pb-28">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-          <span class="inline-block font-subtitle text-brand-primary text-sm uppercase tracking-wider mb-4">Naši Certifikati</span>
+          <span class="inline-block font-subtitle text-brand-primary text-base uppercase tracking-wider mb-4">Naši Certifikati</span>
           <h2 class="font-title text-3xl md:text-4xl uppercase tracking-wide">
             Potvrđena <span class="text-brand-primary">Kvaliteta</span>
           </h2>
@@ -230,7 +230,7 @@
     <section class="py-20 md:py-28 bg-[#1a1a1a]">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-          <span class="inline-block font-subtitle text-brand-primary text-sm uppercase tracking-wider mb-4">Naše Usluge</span>
+          <span class="inline-block font-subtitle text-brand-primary text-base uppercase tracking-wider mb-4">Naše Usluge</span>
           <h2 class="font-title text-3xl md:text-4xl uppercase tracking-wide">
             Što <span class="text-brand-primary">Radimo</span>
           </h2>
@@ -340,7 +340,7 @@
     <section class="py-20 md:py-28">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-          <span class="inline-block font-subtitle text-brand-primary text-sm uppercase tracking-wider mb-4">Galerija</span>
+          <span class="inline-block font-subtitle text-brand-primary text-base uppercase tracking-wider mb-4">Galerija</span>
           <h2 class="font-title text-3xl md:text-4xl uppercase tracking-wide">
             Naši <span class="text-brand-primary">Projekti</span>
           </h2>

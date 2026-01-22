@@ -46,41 +46,6 @@
               </div>
             </div>
 
-            <!-- Contact Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-              <div class="bg-[#2d2d2d] border border-white/10 rounded-lg p-6">
-                <div class="flex items-center gap-4">
-                  <div class="w-10 h-10 bg-brand-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                    <svg class="w-5 h-5 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 class="text-brand-light/60 text-sm mb-1">Telefon</h4>
-                    <a href="tel:+38764404198" class="text-brand-light hover:text-brand-primary transition-colors">
-                      +387 64 404 1908
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="bg-[#2d2d2d] border border-white/10 rounded-lg p-6">
-                <div class="flex items-center gap-4">
-                  <div class="w-10 h-10 bg-brand-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                    <svg class="w-5 h-5 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 class="text-brand-light/60 text-sm mb-1">Email</h4>
-                    <a href="mailto:dominik.jukic@steeltech.ba" class="text-brand-light hover:text-brand-primary transition-colors text-sm">
-                      dominik.jukic@steeltech.ba
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <!-- Directions -->
             <div class="bg-[#2d2d2d] border border-white/10 rounded-lg p-6">
               <h3 class="font-title text-lg uppercase tracking-wide mb-4 text-brand-light">Upute za Dolazak</h3>

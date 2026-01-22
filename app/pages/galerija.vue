@@ -166,7 +166,7 @@ interface GalleryImage {
 }
 
 const allImages: GalleryImage[] = [
-  // Section 1 - Čelične konstrukcije (17 images)
+  // Section 1 - Čelične konstrukcije (24 images)
   { src: '/images/Steeltech_Section_1_1.JPG', alt: 'Čelična konstrukcija 1', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
   { src: '/images/Steeltech_Section_1_2.JPG', alt: 'Čelična konstrukcija 2', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
   { src: '/images/Steeltech_Section_1_3.JPG', alt: 'Čelična konstrukcija 3', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
@@ -183,6 +183,14 @@ const allImages: GalleryImage[] = [
   { src: '/images/Steeltech_Section_1_15.JPG', alt: 'Čelična konstrukcija 15', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
   { src: '/images/Steeltech_Section_1_16.JPG', alt: 'Čelična konstrukcija 16', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
   { src: '/images/Steeltech_Section_1_17.JPG', alt: 'Čelična konstrukcija 17', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
+  { src: '/images/Steeltech_Section_1_18.JPG', alt: 'Čelična konstrukcija 18', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
+  { src: '/images/Steeltech_Section_1_19.JPG', alt: 'Čelična konstrukcija 19', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
+  { src: '/images/Steeltech_Section_1_20.JPG', alt: 'Čelična konstrukcija 20', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
+  { src: '/images/Steeltech_Section_1_21.JPG', alt: 'Čelična konstrukcija 21', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
+  { src: '/images/Steeltech_Section_1_22.JPG', alt: 'Čelična konstrukcija 22', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
+  { src: '/images/Steeltech_Section_1_23.JPG', alt: 'Čelična konstrukcija 23', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
+  { src: '/images/Steeltech_Section_1_24.JPG', alt: 'Čelična konstrukcija 24', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
+  { src: '/images/Steeltech_Section_1_25.JPG', alt: 'Čelična konstrukcija 25', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
   // Section 2 - Zavarivanje (9 images)
   { src: '/images/Steeltech_Section_2_1.JPG', alt: 'Zavarivanje 1', categoryId: 'zavarivanje', category: 'Zavarivanje' },
   { src: '/images/Steeltech_Section_2_2.JPG', alt: 'Zavarivanje 2', categoryId: 'zavarivanje', category: 'Zavarivanje' },

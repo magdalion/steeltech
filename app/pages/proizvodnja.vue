@@ -96,7 +96,7 @@
                 Lasersko Rezanje
               </h3>
               <p class="text-brand-light/60 text-sm leading-relaxed mb-4">
-                Usluge laserskog rezanja i obrade metala bušenjem i savijanjem. Posjedujemo 6kW fiber laser, apkant prešu do 3m, i mogućnost izrade provrta do 100mm.
+                Usluge laserskog rezanja i obrade metala bušenjem i savijanjem. Posjedujemo 6kW fiber laser, apkant prešu do 3m, i mogućnost bušenja do fi 100mm.
               </p>
               <NuxtLink
                 to="/galerija?kategorija=lasersko-rezanje"

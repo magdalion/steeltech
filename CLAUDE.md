@@ -1,5 +1,7 @@
 # CLAUDE.md
 
+> **Note:** Do not commit or push this file to the repository.
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
@@ -87,10 +89,26 @@ Both fonts include `latin-ext` subset for Croatian special characters (č, ć, �
 
 Fonts are **self-hosted** (downloaded locally) with preload for performance.
 
-### Font Loading Optimization
-To prevent FOUT (Flash of Unstyled Text), the site uses:
-- `font-display: swap` with local font hosting
-- Size-adjusted fallback fonts in `main.css`
+### Font Loading & Configuration
+
+**Important:** The `@nuxtjs/google-fonts` module downloads fonts but does NOT automatically inject the CSS `<link>` tag during static site generation (`npm run generate`). The stylesheet and font preloads are manually configured in `nuxt.config.ts`:
+
+```js
+// In app.head.link array:
+{ rel: 'preload', as: 'style', href: '/css/nuxt-google-fonts.css' },
+{ rel: 'stylesheet', href: '/css/nuxt-google-fonts.css' },
+{ rel: 'preload', as: 'font', type: 'font/woff2', href: '/fonts/Audiowide-normal-400-latin.woff2', crossorigin: 'anonymous' },
+{ rel: 'preload', as: 'font', type: 'font/woff2', href: '/fonts/Rajdhani-normal-400-latin.woff2', crossorigin: 'anonymous' }
+```
+
+**Generated font files (in `.output/public/`):**
+- `/css/nuxt-google-fonts.css` - Font-face declarations
+- `/fonts/*.woff2` - Self-hosted font files (Audiowide + Rajdhani weights)
+
+**To prevent FOUT (Flash of Unstyled Text):**
+- Font files are preloaded with high priority
+- `font-display: swap` allows text to render with fallback fonts while loading
+- Size-adjusted fallback fonts in `main.css` minimize layout shift
 - **Text appear animation** - hero text fades in with staggered delays (masks font swap)
 
 Animation classes in `main.css`:
@@ -98,6 +116,11 @@ Animation classes in `main.css`:
 - `.text-appear-delay-1` - 0.45s delay
 - `.text-appear-delay-2` - 0.7s delay
 - `.text-appear-delay-3` - 0.95s delay
+
+**Troubleshooting fonts not loading:**
+1. Clear cache: `rm -rf .nuxt .output node_modules/.cache`
+2. Rebuild: `npm run generate`
+3. Ensure `/css/` and `/fonts/` directories are uploaded to server
 
 ### Font Usage Guidelines
 - Use `font-title` for: main navigation, h1 headings, hero text, section titles
@@ -242,8 +265,11 @@ Logo SVGs remain as standard `<img>` (SVGs don't need optimization).
 ## Deployment
 
 1. Run `npm run generate`
-2. Upload contents of `.output/public/` to hosting root
-3. Ensure `.htaccess` is uploaded (may be hidden)
+2. Upload **all** contents of `.output/public/` to hosting root, including:
+   - `/css/nuxt-google-fonts.css` - Required for fonts
+   - `/fonts/` directory - Self-hosted font files
+   - `.htaccess` - May be hidden, required for HTTPS/caching
+3. Verify fonts load correctly in browser DevTools → Network → Font
 
 ---
 
