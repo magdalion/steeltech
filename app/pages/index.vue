@@ -137,6 +137,95 @@
       </div>
     </section>
 
+    <!-- Certificates Section -->
+    <section class="pt-8 pb-20 md:pt-12 md:pb-28">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <span class="inline-block font-subtitle text-brand-primary text-sm uppercase tracking-wider mb-4">Naši Certifikati</span>
+          <h2 class="font-title text-3xl md:text-4xl uppercase tracking-wide">
+            Potvrđena <span class="text-brand-primary">Kvaliteta</span>
+          </h2>
+          <p class="text-brand-light/60 mt-4 max-w-2xl mx-auto">
+            Naši certifikati garantuju usklađenost s najvišim europskim standardima za proizvodnju čeličnih konstrukcija i zavarivanje.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <!-- Certificate 1: ISO 9001 -->
+          <div class="flex flex-col bg-[#2d2d2d] border border-white/10 rounded-lg p-6 md:p-8 text-center hover:border-brand-primary/50 transition-all duration-300">
+            <img
+              src="/images/q-cert-logo.png"
+              alt="Q-CERT logo"
+              class="h-16 mx-auto mb-6"
+            />
+            <span class="inline-block font-subtitle text-brand-primary text-sm uppercase tracking-wider mb-2">
+              EN ISO 9001:2015
+            </span>
+            <h3 class="font-title text-lg uppercase tracking-wide text-brand-light mb-6">
+              Sistem Upravljanja Kvalitetom
+            </h3>
+            <a
+              href="/certificates/steeltech-iso-9001.pdf"
+              target="_blank"
+              rel="noopener"
+              class="mt-auto inline-flex items-center justify-center gap-3 text-brand-primary hover:text-brand-light transition-colors duration-300 font-subtitle text-lg"
+            >
+              <svg class="w-7 h-7" viewBox="0 0 48 48" fill="currentColor"><path d="M20.071,30.645c0,0.878-0.259,1.556-0.776,2.033c-0.518,0.479-1.252,0.717-2.205,0.717h-0.596V36h-2.122v-7.853h2.718c0.992,0,1.737,0.217,2.234,0.649C19.822,29.23,20.071,29.847,20.071,30.645z M16.494,31.666h0.387c0.319,0,0.572-0.09,0.76-0.27c0.188-0.179,0.282-0.426,0.282-0.74c0-0.53-0.293-0.795-0.881-0.795h-0.548V31.666z"/><path d="M27.988,31.907c0,1.311-0.361,2.32-1.083,3.029C26.184,35.646,25.17,36,23.863,36h-2.541v-7.853h2.718c1.26,0,2.233,0.322,2.919,0.967C27.645,29.759,27.988,30.689,27.988,31.907z M25.786,31.982c0-0.72-0.142-1.253-0.427-1.601c-0.284-0.348-0.717-0.521-1.297-0.521h-0.618v4.398h0.473c0.645,0,1.117-0.188,1.418-0.562S25.786,32.752,25.786,31.982z"/><path d="M31.484,36h-2.089v-7.853h4.641v1.702h-2.551v1.499h2.353v1.702h-2.353V36z"/><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" points="29,2 29,14 41,14"/><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" points="41,23 41,14 29,2 7,2 7,23"/><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" points="7,41 7,46 41,46 41,41"/><rect x="2" y="23" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="44" height="18"/></svg>
+              Preuzmi PDF
+            </a>
+          </div>
+
+          <!-- Certificate 2: EN 1090 -->
+          <div class="flex flex-col bg-[#2d2d2d] border border-white/10 rounded-lg p-6 md:p-8 text-center hover:border-brand-primary/50 transition-all duration-300">
+            <img
+              src="/images/q-cert-logo.png"
+              alt="Q-CERT logo"
+              class="h-16 mx-auto mb-6"
+            />
+            <span class="inline-block font-subtitle text-brand-primary text-sm uppercase tracking-wider mb-2">
+              EN 1090 - FPC Sistema 2+
+            </span>
+            <h3 class="font-title text-lg uppercase tracking-wide text-brand-light mb-6">
+              Kontrola Proizvodnje Čeličnih Konstrukcija
+            </h3>
+            <a
+              href="/certificates/steeltech-en-1090-fpc.pdf"
+              target="_blank"
+              rel="noopener"
+              class="mt-auto inline-flex items-center justify-center gap-3 text-brand-primary hover:text-brand-light transition-colors duration-300 font-subtitle text-lg"
+            >
+              <svg class="w-7 h-7" viewBox="0 0 48 48" fill="currentColor"><path d="M20.071,30.645c0,0.878-0.259,1.556-0.776,2.033c-0.518,0.479-1.252,0.717-2.205,0.717h-0.596V36h-2.122v-7.853h2.718c0.992,0,1.737,0.217,2.234,0.649C19.822,29.23,20.071,29.847,20.071,30.645z M16.494,31.666h0.387c0.319,0,0.572-0.09,0.76-0.27c0.188-0.179,0.282-0.426,0.282-0.74c0-0.53-0.293-0.795-0.881-0.795h-0.548V31.666z"/><path d="M27.988,31.907c0,1.311-0.361,2.32-1.083,3.029C26.184,35.646,25.17,36,23.863,36h-2.541v-7.853h2.718c1.26,0,2.233,0.322,2.919,0.967C27.645,29.759,27.988,30.689,27.988,31.907z M25.786,31.982c0-0.72-0.142-1.253-0.427-1.601c-0.284-0.348-0.717-0.521-1.297-0.521h-0.618v4.398h0.473c0.645,0,1.117-0.188,1.418-0.562S25.786,32.752,25.786,31.982z"/><path d="M31.484,36h-2.089v-7.853h4.641v1.702h-2.551v1.499h2.353v1.702h-2.353V36z"/><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" points="29,2 29,14 41,14"/><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" points="41,23 41,14 29,2 7,2 7,23"/><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" points="7,41 7,46 41,46 41,41"/><rect x="2" y="23" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="44" height="18"/></svg>
+              Preuzmi PDF
+            </a>
+          </div>
+
+          <!-- Certificate 3: EN ISO 3834 -->
+          <div class="flex flex-col bg-[#2d2d2d] border border-white/10 rounded-lg p-6 md:p-8 text-center hover:border-brand-primary/50 transition-all duration-300">
+            <img
+              src="/images/q-cert-logo.png"
+              alt="Q-CERT logo"
+              class="h-16 mx-auto mb-6"
+            />
+            <span class="inline-block font-subtitle text-brand-primary text-sm uppercase tracking-wider mb-2">
+              EN ISO 3834-2
+            </span>
+            <h3 class="font-title text-lg uppercase tracking-wide text-brand-light mb-6">
+              Zavarivanje Čeličnih Konstrukcija
+            </h3>
+            <a
+              href="/certificates/steeltech-en-3834-welding.pdf"
+              target="_blank"
+              rel="noopener"
+              class="mt-auto inline-flex items-center justify-center gap-3 text-brand-primary hover:text-brand-light transition-colors duration-300 font-subtitle text-lg"
+            >
+              <svg class="w-7 h-7" viewBox="0 0 48 48" fill="currentColor"><path d="M20.071,30.645c0,0.878-0.259,1.556-0.776,2.033c-0.518,0.479-1.252,0.717-2.205,0.717h-0.596V36h-2.122v-7.853h2.718c0.992,0,1.737,0.217,2.234,0.649C19.822,29.23,20.071,29.847,20.071,30.645z M16.494,31.666h0.387c0.319,0,0.572-0.09,0.76-0.27c0.188-0.179,0.282-0.426,0.282-0.74c0-0.53-0.293-0.795-0.881-0.795h-0.548V31.666z"/><path d="M27.988,31.907c0,1.311-0.361,2.32-1.083,3.029C26.184,35.646,25.17,36,23.863,36h-2.541v-7.853h2.718c1.26,0,2.233,0.322,2.919,0.967C27.645,29.759,27.988,30.689,27.988,31.907z M25.786,31.982c0-0.72-0.142-1.253-0.427-1.601c-0.284-0.348-0.717-0.521-1.297-0.521h-0.618v4.398h0.473c0.645,0,1.117-0.188,1.418-0.562S25.786,32.752,25.786,31.982z"/><path d="M31.484,36h-2.089v-7.853h4.641v1.702h-2.551v1.499h2.353v1.702h-2.353V36z"/><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" points="29,2 29,14 41,14"/><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" points="41,23 41,14 29,2 7,2 7,23"/><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" points="7,41 7,46 41,46 41,41"/><rect x="2" y="23" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="44" height="18"/></svg>
+              Preuzmi PDF
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Services Preview Section -->
     <section class="py-20 md:py-28 bg-[#1a1a1a]">
       <div class="container mx-auto px-4">
