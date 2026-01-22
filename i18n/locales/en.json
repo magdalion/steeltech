@@ -244,6 +244,14 @@
         "antiCorrosion": "Anti-corrosion protection",
         "transport": "Transport services",
         "other": "Other"
+      },
+      "errors": {
+        "nameRequired": "Please enter your full name.",
+        "emailRequired": "Please enter a valid email address.",
+        "messageRequired": "Message must contain at least 10 characters.",
+        "networkError": "A communication error occurred. Please try again.",
+        "generic": "An error occurred. Please try again.",
+        "tooManyRequests": "Too many requests. Please wait before sending again."
       }
     },
     "info": {

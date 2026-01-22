@@ -244,6 +244,14 @@
         "antiCorrosion": "Antikorozivna zaštita",
         "transport": "Usluge transporta",
         "other": "Ostalo"
+      },
+      "errors": {
+        "nameRequired": "Molimo unesite vaše ime i prezime.",
+        "emailRequired": "Molimo unesite ispravnu email adresu.",
+        "messageRequired": "Poruka mora sadržavati najmanje 10 znakova.",
+        "networkError": "Došlo je do greške u komunikaciji. Molimo pokušajte ponovno.",
+        "generic": "Došlo je do greške. Molimo pokušajte ponovno.",
+        "tooManyRequests": "Previše zahtjeva. Molimo pričekajte prije ponovnog slanja."
       }
     },
     "info": {

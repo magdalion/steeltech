@@ -35,7 +35,7 @@ RewriteRule ^(.*)$ https://steeltech.ba/$1 [L,R=301]
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
 
     # Content Security Policy (adjust as needed)
-    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://maps.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; frame-src 'self' https://www.google.com https://maps.google.com; connect-src 'self' https://maps.googleapis.com;"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://maps.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; frame-src 'self' https://www.google.com https://maps.google.com; connect-src 'self' https://steeltech.ba https://maps.googleapis.com;"
 
     # Strict Transport Security (HSTS) - 1 year
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
@@ -124,10 +124,21 @@ RewriteRule ^(.*)$ https://steeltech.ba/$1 [L,R=301]
 </IfModule>
 
 # ======================================
+# API Routing (PHP)
+# ======================================
+
+# Allow PHP execution for /api/ directory
+RewriteCond %{REQUEST_URI} ^/api/
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^api/(.*)\.php$ /api/$1.php [L]
+
+# ======================================
 # SPA Routing (Nuxt Static)
 # ======================================
 
 # Handle client-side routing - serve index.html for non-file requests
+# Exclude /api/ directory from SPA fallback
+RewriteCond %{REQUEST_URI} !^/api/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /index.html [L]

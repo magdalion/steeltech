@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novi upit - SteelTech</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; background-color: #f5f5f5;">
+    <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f5f5f5;">
+        <tr>
+            <td style="padding: 40px 20px;">
+                <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <!-- Header -->
+                    <tr>
+                        <td style="background: linear-gradient(135deg, #165A8F 0%, #0087C2 100%); padding: 30px 40px; text-align: center;">
+                            <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: bold; letter-spacing: 2px;">STEELTECH</h1>
+                            <p style="margin: 10px 0 0 0; color: rgba(255, 255, 255, 0.9); font-size: 14px;">Novi upit sa web stranice</p>
+                        </td>
+                    </tr>
+
+                    <!-- Content -->
+                    <tr>
+                        <td style="padding: 40px;">
+                            <!-- Subject Badge -->
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 30px;">
+                                <tr>
+                                    <td>
+                                        <span style="display: inline-block; background-color: #0087C2; color: #ffffff; padding: 8px 16px; border-radius: 4px; font-size: 14px; font-weight: bold;">{{SUBJECT}}</span>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Contact Info -->
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f8f9fa; border-radius: 8px; margin-bottom: 30px;">
+                                <tr>
+                                    <td style="padding: 24px;">
+                                        <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td style="padding-bottom: 16px; border-bottom: 1px solid #e9ecef;">
+                                                    <p style="margin: 0 0 4px 0; color: #6c757d; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Ime i prezime</p>
+                                                    <p style="margin: 0; color: #231F20; font-size: 16px; font-weight: bold;">{{NAME}}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 16px 0; border-bottom: 1px solid #e9ecef;">
+                                                    <p style="margin: 0 0 4px 0; color: #6c757d; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Email adresa</p>
+                                                    <p style="margin: 0; color: #0087C2; font-size: 16px;">
+                                                        <a href="mailto:{{EMAIL}}" style="color: #0087C2; text-decoration: none;">{{EMAIL}}</a>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-top: 16px;">
+                                                    <p style="margin: 0 0 4px 0; color: #6c757d; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Telefon</p>
+                                                    <p style="margin: 0; color: #231F20; font-size: 16px;">{{PHONE}}</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Message -->
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td>
+                                        <p style="margin: 0 0 12px 0; color: #6c757d; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Poruka</p>
+                                        <div style="background-color: #ffffff; border: 1px solid #e9ecef; border-left: 4px solid #0087C2; border-radius: 0 8px 8px 0; padding: 20px;">
+                                            <p style="margin: 0; color: #231F20; font-size: 15px; line-height: 1.6;">{{MESSAGE}}</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background-color: #231F20; padding: 24px 40px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td>
+                                        <p style="margin: 0 0 8px 0; color: rgba(255, 255, 255, 0.6); font-size: 12px;">
+                                            Primljeno: {{DATE}}
+                                        </p>
+                                        <p style="margin: 0; color: rgba(255, 255, 255, 0.4); font-size: 11px;">
+                                            IP adresa: {{IP}}
+                                        </p>
+                                    </td>
+                                    <td style="text-align: right;">
+                                        <p style="margin: 0; color: rgba(255, 255, 255, 0.6); font-size: 12px;">
+                                            steeltech.ba
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,45 @@
+# ======================================
+# SteelTech API Directory - Apache Config
+# ======================================
+
+# Deny access to PHP includes and config
+<FilesMatch "^(RateLimiter|CsrfToken|InputValidator|mail\.config)\.php$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Block direct access to subdirectories
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Block access to includes directory
+    RewriteRule ^includes/ - [F,L]
+
+    # Block access to config directory
+    RewriteRule ^config/ - [F,L]
+
+    # Block access to templates directory
+    RewriteRule ^templates/ - [F,L]
+
+    # Block access to storage directory
+    RewriteRule ^storage/ - [F,L]
+
+    # Block access to vendor directory (except autoload)
+    RewriteRule ^vendor/(?!autoload\.php) - [F,L]
+</IfModule>
+
+# NOTE: Do NOT use SetHandler directive - cPanel PHP-FPM handles .php files automatically
+# Using SetHandler causes 404 errors on PHP-FPM setups
+
+# Prevent directory listing
+Options -Indexes
+
+# Set CORS headers for API endpoints
+<IfModule mod_headers.c>
+    <FilesMatch "\.(php)$">
+        Header set Access-Control-Allow-Origin "https://steeltech.ba"
+        Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+        Header set Access-Control-Allow-Headers "Content-Type, X-CSRF-Token"
+        Header set Access-Control-Allow-Credentials "true"
+    </FilesMatch>
+</IfModule>

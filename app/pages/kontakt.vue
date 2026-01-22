@@ -27,6 +27,19 @@
             </h2>
 
             <form @submit.prevent="handleSubmit" class="space-y-6">
+              <!-- Honeypot field - hidden from users, bots will fill it -->
+              <div class="hidden" aria-hidden="true">
+                <label for="website">Website</label>
+                <input
+                  id="website"
+                  v-model="honeypot"
+                  type="text"
+                  name="website"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+              </div>
+
               <!-- Name -->
               <div>
                 <label for="name" class="block text-brand-light/80 text-sm mb-2">
@@ -123,6 +136,22 @@
                 </svg>
                 {{ isSubmitting ? $t('contact.form.submitting') : $t('contact.form.submit') }}
               </button>
+
+              <!-- Error Message -->
+              <Transition
+                enter-active-class="transition duration-200 ease-out"
+                enter-from-class="opacity-0 -translate-y-2"
+                enter-to-class="opacity-100 translate-y-0"
+                leave-active-class="transition duration-150 ease-in"
+                leave-from-class="opacity-100 translate-y-0"
+                leave-to-class="opacity-0 -translate-y-2"
+              >
+                <div v-if="submitError" class="p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
+                  <p class="text-red-400 text-sm">
+                    {{ submitError }}
+                  </p>
+                </div>
+              </Transition>
 
               <!-- Success Message -->
               <Transition
@@ -242,7 +271,7 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
 interface ContactForm {
@@ -263,32 +292,117 @@ const form = reactive<ContactForm>({
 
 const isSubmitting = ref(false)
 const submitSuccess = ref(false)
+const submitError = ref('')
+const csrfToken = ref('')
+const honeypot = ref('')
+
+// Fetch CSRF token on mount
+onMounted(async () => {
+  await fetchCsrfToken()
+})
+
+async function fetchCsrfToken() {
+  try {
+    const response = await fetch('/api/csrf-token.php')
+    if (response.ok) {
+      const data = await response.json()
+      csrfToken.value = data.csrf_token
+    }
+  } catch (error) {
+    console.error('Failed to fetch CSRF token:', error)
+  }
+}
 
 async function handleSubmit() {
   isSubmitting.value = true
   submitSuccess.value = false
+  submitError.value = ''
 
-  // Simulate form submission (replace with actual API call)
-  await new Promise(resolve => setTimeout(resolve, 1500))
+  // Client-side validation
+  if (!form.name.trim()) {
+    submitError.value = t('contact.form.errors.nameRequired')
+    isSubmitting.value = false
+    return
+  }
 
-  // In production, replace this with actual form submission logic
-  // For example, sending to a PHP mailer or API endpoint
-  console.log('Form submitted:', form)
+  if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+    submitError.value = t('contact.form.errors.emailRequired')
+    isSubmitting.value = false
+    return
+  }
 
-  // Reset form and show success
-  form.name = ''
-  form.email = ''
-  form.phone = ''
-  form.subject = ''
-  form.message = ''
+  if (!form.message.trim() || form.message.trim().length < 10) {
+    submitError.value = t('contact.form.errors.messageRequired')
+    isSubmitting.value = false
+    return
+  }
 
-  isSubmitting.value = false
-  submitSuccess.value = true
+  try {
+    const response = await fetch('/api/contact.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        subject: form.subject,
+        message: form.message,
+        lang: locale.value,
+        csrf_token: csrfToken.value,
+        website: honeypot.value // Honeypot field
+      })
+    })
 
-  // Hide success message after 5 seconds
-  setTimeout(() => {
-    submitSuccess.value = false
-  }, 5000)
+    const data = await response.json()
+
+    if (data.success) {
+      // Reset form and show success
+      form.name = ''
+      form.email = ''
+      form.phone = ''
+      form.subject = ''
+      form.message = ''
+      submitSuccess.value = true
+
+      // Refresh CSRF token for potential next submission
+      await fetchCsrfToken()
+
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        submitSuccess.value = false
+      }, 5000)
+    } else {
+      // Handle specific error codes
+      switch (data.error) {
+        case 'rate_limited':
+          submitError.value = t('contact.form.errors.tooManyRequests')
+          break
+        case 'invalid_csrf':
+          // Refresh token and ask user to try again
+          await fetchCsrfToken()
+          submitError.value = t('contact.form.errors.generic')
+          break
+        case 'name_invalid':
+          submitError.value = t('contact.form.errors.nameRequired')
+          break
+        case 'email_invalid':
+          submitError.value = t('contact.form.errors.emailRequired')
+          break
+        case 'message_invalid':
+          submitError.value = t('contact.form.errors.messageRequired')
+          break
+        default:
+          submitError.value = t('contact.form.errors.generic')
+      }
+    }
+  } catch (error) {
+    console.error('Form submission error:', error)
+    submitError.value = t('contact.form.errors.networkError')
+  } finally {
+    isSubmitting.value = false
+  }
 }
 
 useHead({

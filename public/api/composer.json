@@ -1,0 +1,15 @@
+{
+    "name": "steeltech/contact-api",
+    "description": "SteelTech contact form backend",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "classmap": ["includes/"]
+    },
+    "config": {
+        "vendor-dir": "vendor"
+    }
+}
