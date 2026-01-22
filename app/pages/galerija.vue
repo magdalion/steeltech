@@ -8,10 +8,10 @@
       </div>
       <div class="container mx-auto px-4 relative z-10">
         <h1 class="font-title text-4xl md:text-5xl lg:text-6xl font-bold text-center uppercase tracking-wider mb-6">
-          <span class="text-brand-primary">Galerija</span>
+          <span class="text-brand-primary">{{ $t('gallery.hero.title') }}</span>
         </h1>
         <p class="font-subtitle text-xl md:text-2xl text-center text-brand-light/80 max-w-2xl mx-auto">
-          Pogledajte naše projekte i radove
+          {{ $t('gallery.hero.subtitle') }}
         </p>
       </div>
     </section>
@@ -29,7 +29,7 @@
               ? 'bg-brand-primary text-white'
               : 'bg-white/5 text-brand-light/70 hover:bg-white/10 hover:text-brand-light'"
           >
-            {{ category.label }}
+            {{ $t(category.labelKey) }}
           </button>
         </div>
       </div>
@@ -47,7 +47,7 @@
           >
             <NuxtImg
               :src="image.src"
-              :alt="image.alt"
+              :alt="$t(image.altKey)"
               loading="lazy"
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
@@ -62,13 +62,13 @@
               </svg>
             </div>
             <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
-              <span class="text-white/80 text-xs font-medium">{{ image.category }}</span>
+              <span class="text-white/80 text-xs font-medium">{{ $t(image.categoryKey) }}</span>
             </div>
           </div>
         </div>
 
         <div v-else class="text-center py-16">
-          <p class="text-brand-light/60">Nema slika u ovoj kategoriji.</p>
+          <p class="text-brand-light/60">{{ $t('gallery.noImages') }}</p>
         </div>
       </div>
     </section>
@@ -97,7 +97,7 @@
           <button
             @click="closeLightbox"
             class="absolute top-4 right-4 p-3 text-white/70 hover:text-white transition-colors z-10"
-            aria-label="Close lightbox"
+            :aria-label="$t('aria.closeLightbox')"
           >
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -108,7 +108,7 @@
           <button
             @click="prevImage"
             class="absolute left-4 top-1/2 -translate-y-1/2 p-3 text-white/70 hover:text-white transition-colors"
-            aria-label="Previous image"
+            :aria-label="$t('aria.previousImage')"
           >
             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -119,7 +119,7 @@
           <button
             @click="nextImage"
             class="absolute right-4 top-1/2 -translate-y-1/2 p-3 text-white/70 hover:text-white transition-colors"
-            aria-label="Next image"
+            :aria-label="$t('aria.nextImage')"
           >
             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -130,7 +130,7 @@
           <div class="max-w-[90vw] max-h-[85vh] flex items-center justify-center">
             <NuxtImg
               :src="filteredImages[currentImageIndex]?.src"
-              :alt="filteredImages[currentImageIndex]?.alt"
+              :alt="$t(filteredImages[currentImageIndex]?.altKey || '')"
               class="max-w-full max-h-[85vh] object-contain"
             />
           </div>
@@ -146,86 +146,89 @@
 </template>
 
 <script setup lang="ts">
+const { t, locale } = useI18n()
+const localePath = useLocalePath()
 const route = useRoute()
 const router = useRouter()
 const lightboxRef = ref<HTMLElement | null>(null)
 
 const categories = [
-  { id: 'sve', label: 'Sve' },
-  { id: 'celicne-konstrukcije', label: 'Čelične Konstrukcije' },
-  { id: 'zavarivanje', label: 'Zavarivanje' },
-  { id: 'lasersko-rezanje', label: 'Lasersko Rezanje' },
-  { id: 'antikorozivna-zastita', label: 'Antikorozivna Zaštita' }
+  { id: 'sve', labelKey: 'gallery.categories.all' },
+  { id: 'celicne-konstrukcije', labelKey: 'gallery.categories.steelConstructions' },
+  { id: 'zavarivanje', labelKey: 'gallery.categories.welding' },
+  { id: 'lasersko-rezanje', labelKey: 'gallery.categories.laserCutting' },
+  { id: 'antikorozivna-zastita', labelKey: 'gallery.categories.antiCorrosion' }
 ]
 
 interface GalleryImage {
   src: string
-  alt: string
+  altKey: string
   categoryId: string
-  category: string
+  categoryKey: string
 }
 
 const allImages: GalleryImage[] = [
-  // Section 1 - Čelične konstrukcije (24 images)
-  { src: '/images/Steeltech_Section_1_1.JPG', alt: 'Čelična konstrukcija 1', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_2.JPG', alt: 'Čelična konstrukcija 2', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_3.JPG', alt: 'Čelična konstrukcija 3', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_4.JPG', alt: 'Čelična konstrukcija 4', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_5.JPG', alt: 'Čelična konstrukcija 5', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_6.JPG', alt: 'Čelična konstrukcija 6', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_7.JPG', alt: 'Čelična konstrukcija 7', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_8.JPG', alt: 'Čelična konstrukcija 8', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_9.JPG', alt: 'Čelična konstrukcija 9', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_11.JPG', alt: 'Čelična konstrukcija 11', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_12.JPG', alt: 'Čelična konstrukcija 12', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_13.JPG', alt: 'Čelična konstrukcija 13', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_14.JPG', alt: 'Čelična konstrukcija 14', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_15.JPG', alt: 'Čelična konstrukcija 15', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_16.JPG', alt: 'Čelična konstrukcija 16', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_17.JPG', alt: 'Čelična konstrukcija 17', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_18.JPG', alt: 'Čelična konstrukcija 18', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_19.JPG', alt: 'Čelična konstrukcija 19', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_20.JPG', alt: 'Čelična konstrukcija 20', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_21.JPG', alt: 'Čelična konstrukcija 21', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_22.JPG', alt: 'Čelična konstrukcija 22', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_23.JPG', alt: 'Čelična konstrukcija 23', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_24.JPG', alt: 'Čelična konstrukcija 24', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  { src: '/images/Steeltech_Section_1_25.JPG', alt: 'Čelična konstrukcija 25', categoryId: 'celicne-konstrukcije', category: 'Čelične Konstrukcije' },
-  // Section 2 - Zavarivanje (9 images)
-  { src: '/images/Steeltech_Section_2_1.JPG', alt: 'Zavarivanje 1', categoryId: 'zavarivanje', category: 'Zavarivanje' },
-  { src: '/images/Steeltech_Section_2_2.JPG', alt: 'Zavarivanje 2', categoryId: 'zavarivanje', category: 'Zavarivanje' },
-  { src: '/images/Steeltech_Section_2_3.JPG', alt: 'Zavarivanje 3', categoryId: 'zavarivanje', category: 'Zavarivanje' },
-  { src: '/images/Steeltech_Section_2_4.JPG', alt: 'Zavarivanje 4', categoryId: 'zavarivanje', category: 'Zavarivanje' },
-  { src: '/images/Steeltech_Section_2_5.JPG', alt: 'Zavarivanje 5', categoryId: 'zavarivanje', category: 'Zavarivanje' },
-  { src: '/images/Steeltech_Section_2_6.JPG', alt: 'Zavarivanje 6', categoryId: 'zavarivanje', category: 'Zavarivanje' },
-  { src: '/images/Steeltech_Section_2_7.JPG', alt: 'Zavarivanje 7', categoryId: 'zavarivanje', category: 'Zavarivanje' },
-  { src: '/images/Steeltech_Section_2_8.JPG', alt: 'Zavarivanje 8', categoryId: 'zavarivanje', category: 'Zavarivanje' },
-  { src: '/images/Steeltech_Section_2_9.JPG', alt: 'Zavarivanje 9', categoryId: 'zavarivanje', category: 'Zavarivanje' },
-  // Section 3 - Lasersko rezanje (2 images)
-  { src: '/images/Steeltech_Section_3_1.JPG', alt: 'Lasersko rezanje 1', categoryId: 'lasersko-rezanje', category: 'Lasersko Rezanje' },
-  { src: '/images/Steeltech_Section_3_2.JPG', alt: 'Lasersko rezanje 2', categoryId: 'lasersko-rezanje', category: 'Lasersko Rezanje' },
-  // Section 4 - Antikorozivna zaštita (3 images)
-  { src: '/images/Steeltech_section_4.JPG', alt: 'Antikorozivna zaštita', categoryId: 'antikorozivna-zastita', category: 'Antikorozivna Zaštita' },
-  { src: '/images/Steeltech_section_4_1.JPG', alt: 'Antikorozivna zaštita 1', categoryId: 'antikorozivna-zastita', category: 'Antikorozivna Zaštita' },
-  { src: '/images/Steeltech_section_4_2.JPG', alt: 'Antikorozivna zaštita 2', categoryId: 'antikorozivna-zastita', category: 'Antikorozivna Zaštita' }
+  // Section 1 - Steel structures (24 images)
+  { src: '/images/Steeltech_Section_1_1.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_2.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_3.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_4.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_5.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_6.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_7.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_8.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_9.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_11.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_12.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_13.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_14.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_15.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_16.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_17.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_18.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_19.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_20.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_21.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_22.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_23.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_24.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  { src: '/images/Steeltech_Section_1_25.JPG', altKey: 'gallery.imageAlt.steelConstruction', categoryId: 'celicne-konstrukcije', categoryKey: 'gallery.categories.steelConstructions' },
+  // Section 2 - Welding (9 images)
+  { src: '/images/Steeltech_Section_2_1.JPG', altKey: 'gallery.imageAlt.welding', categoryId: 'zavarivanje', categoryKey: 'gallery.categories.welding' },
+  { src: '/images/Steeltech_Section_2_2.JPG', altKey: 'gallery.imageAlt.welding', categoryId: 'zavarivanje', categoryKey: 'gallery.categories.welding' },
+  { src: '/images/Steeltech_Section_2_3.JPG', altKey: 'gallery.imageAlt.welding', categoryId: 'zavarivanje', categoryKey: 'gallery.categories.welding' },
+  { src: '/images/Steeltech_Section_2_4.JPG', altKey: 'gallery.imageAlt.welding', categoryId: 'zavarivanje', categoryKey: 'gallery.categories.welding' },
+  { src: '/images/Steeltech_Section_2_5.JPG', altKey: 'gallery.imageAlt.welding', categoryId: 'zavarivanje', categoryKey: 'gallery.categories.welding' },
+  { src: '/images/Steeltech_Section_2_6.JPG', altKey: 'gallery.imageAlt.welding', categoryId: 'zavarivanje', categoryKey: 'gallery.categories.welding' },
+  { src: '/images/Steeltech_Section_2_7.JPG', altKey: 'gallery.imageAlt.welding', categoryId: 'zavarivanje', categoryKey: 'gallery.categories.welding' },
+  { src: '/images/Steeltech_Section_2_8.JPG', altKey: 'gallery.imageAlt.welding', categoryId: 'zavarivanje', categoryKey: 'gallery.categories.welding' },
+  { src: '/images/Steeltech_Section_2_9.JPG', altKey: 'gallery.imageAlt.welding', categoryId: 'zavarivanje', categoryKey: 'gallery.categories.welding' },
+  // Section 3 - Laser cutting (2 images)
+  { src: '/images/Steeltech_Section_3_1.JPG', altKey: 'gallery.imageAlt.laserCutting', categoryId: 'lasersko-rezanje', categoryKey: 'gallery.categories.laserCutting' },
+  { src: '/images/Steeltech_Section_3_2.JPG', altKey: 'gallery.imageAlt.laserCutting', categoryId: 'lasersko-rezanje', categoryKey: 'gallery.categories.laserCutting' },
+  // Section 4 - Anti-corrosion (3 images)
+  { src: '/images/Steeltech_section_4.JPG', altKey: 'gallery.imageAlt.antiCorrosion', categoryId: 'antikorozivna-zastita', categoryKey: 'gallery.categories.antiCorrosion' },
+  { src: '/images/Steeltech_section_4_1.JPG', altKey: 'gallery.imageAlt.antiCorrosion', categoryId: 'antikorozivna-zastita', categoryKey: 'gallery.categories.antiCorrosion' },
+  { src: '/images/Steeltech_section_4_2.JPG', altKey: 'gallery.imageAlt.antiCorrosion', categoryId: 'antikorozivna-zastita', categoryKey: 'gallery.categories.antiCorrosion' }
 ]
 
 const activeCategory = ref('sve')
 const lightboxOpen = ref(false)
 const currentImageIndex = ref(0)
 
-// Set category from URL query on mount
+// Get category from URL query - supports both 'kategorija' (HR) and 'category' (EN)
 onMounted(() => {
-  const queryCategory = route.query.kategorija as string
+  const queryCategory = (route.query.kategorija || route.query.category) as string
   if (queryCategory && categories.some(c => c.id === queryCategory)) {
     activeCategory.value = queryCategory
   }
 })
 
 // Watch for route changes
-watch(() => route.query.kategorija, (newCategory) => {
-  if (newCategory && categories.some(c => c.id === newCategory)) {
-    activeCategory.value = newCategory as string
+watch(() => [route.query.kategorija, route.query.category], ([hrCategory, enCategory]) => {
+  const queryCategory = (hrCategory || enCategory) as string
+  if (queryCategory && categories.some(c => c.id === queryCategory)) {
+    activeCategory.value = queryCategory
   }
 })
 
@@ -238,8 +241,10 @@ const filteredImages = computed(() => {
 
 function setActiveCategory(categoryId: string) {
   activeCategory.value = categoryId
+  // Use locale-appropriate query param
+  const queryParam = locale.value === 'en' ? 'category' : 'kategorija'
   router.replace({
-    query: categoryId === 'sve' ? {} : { kategorija: categoryId }
+    query: categoryId === 'sve' ? {} : { [queryParam]: categoryId }
   })
 }
 
@@ -271,18 +276,18 @@ onUnmounted(() => {
 })
 
 useHead({
-  title: 'Galerija - SteelTech | Projekti Čeličnih Konstrukcija',
+  title: t('seo.gallery.title'),
   meta: [
-    { name: 'description', content: 'SteelTech galerija projekata - pogledajte naše radove: čelične konstrukcije, zavarivanje, lasersko rezanje i antikorozivna zaštita.' },
-    { name: 'keywords', content: 'galerija, projekti, čelične konstrukcije, zavarivanje, lasersko rezanje, antikorozivna zaštita, portfolio' },
-    { property: 'og:title', content: 'Galerija - SteelTech' },
-    { property: 'og:description', content: 'Pogledajte naše projekte: čelične konstrukcije, zavarivanje, lasersko rezanje i antikorozivna zaštita.' },
-    { property: 'og:url', content: 'https://steeltech.ba/galerija' },
-    { name: 'twitter:title', content: 'Galerija - SteelTech' },
-    { name: 'twitter:description', content: 'Pogledajte naše projekte čeličnih konstrukcija i zavarivanja.' }
+    { name: 'description', content: t('seo.gallery.description') },
+    { name: 'keywords', content: t('seo.gallery.keywords') },
+    { property: 'og:title', content: t('seo.gallery.title') },
+    { property: 'og:description', content: t('seo.gallery.description') },
+    { property: 'og:url', content: `https://steeltech.ba${localePath('/galerija')}` },
+    { name: 'twitter:title', content: t('seo.gallery.title') },
+    { name: 'twitter:description', content: t('seo.gallery.description') }
   ],
   link: [
-    { rel: 'canonical', href: 'https://steeltech.ba/galerija' }
+    { rel: 'canonical', href: `https://steeltech.ba${localePath('/galerija')}` }
   ]
 })
 </script>

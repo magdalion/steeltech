@@ -8,10 +8,10 @@
       </div>
       <div class="container mx-auto px-4 relative z-10">
         <h1 class="font-title text-4xl md:text-5xl lg:text-6xl font-bold text-center uppercase tracking-wider mb-6">
-          <span class="text-brand-primary">Lokacija</span>
+          <span class="text-brand-primary">{{ $t('location.hero.title') }}</span>
         </h1>
         <p class="font-subtitle text-xl md:text-2xl text-center text-brand-light/80 max-w-2xl mx-auto">
-          Pronađite nas u Žepču
+          {{ $t('location.hero.subtitle') }}
         </p>
       </div>
     </section>
@@ -23,7 +23,7 @@
           <!-- Location Info -->
           <div>
             <h2 class="font-title text-2xl md:text-3xl uppercase tracking-wide mb-8">
-              Kako <span class="text-brand-primary">do nas</span>
+              {{ $t('location.howToFind.title1') }} <span class="text-brand-primary">{{ $t('location.howToFind.title2') }}</span>
             </h2>
 
             <!-- Address Card -->
@@ -36,11 +36,11 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-title text-lg uppercase tracking-wide mb-2 text-brand-light">Adresa</h3>
+                  <h3 class="font-title text-lg uppercase tracking-wide mb-2 text-brand-light">{{ $t('location.address.title') }}</h3>
                   <p class="text-brand-light/70 leading-relaxed">
-                    Brankovići bb<br />
-                    Žepče 72230<br />
-                    Bosna i Hercegovina
+                    {{ $t('location.address.street') }}<br />
+                    {{ $t('location.address.city') }}<br />
+                    {{ $t('location.address.country') }}
                   </p>
                 </div>
               </div>
@@ -48,25 +48,25 @@
 
             <!-- Directions -->
             <div class="bg-[#2d2d2d] border border-white/10 rounded-lg p-6">
-              <h3 class="font-title text-lg uppercase tracking-wide mb-4 text-brand-light">Upute za Dolazak</h3>
+              <h3 class="font-title text-lg uppercase tracking-wide mb-4 text-brand-light">{{ $t('location.directions.title') }}</h3>
               <ul class="space-y-3 text-brand-light/70">
                 <li class="flex items-start gap-3">
                   <svg class="w-5 h-5 text-brand-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
-                  <span>Nalazimo se u mjestu Brankovići, općina Žepče</span>
+                  <span>{{ $t('location.directions.point1') }}</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <svg class="w-5 h-5 text-brand-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
-                  <span>Lako dostupno sa glavne magistrale M17</span>
+                  <span>{{ $t('location.directions.point2') }}</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <svg class="w-5 h-5 text-brand-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
-                  <span>Mogućnost pristupa za teretna vozila</span>
+                  <span>{{ $t('location.directions.point3') }}</span>
                 </li>
               </ul>
             </div>
@@ -84,7 +84,7 @@
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                title="SteelTech lokacija na mapi"
+                :title="$t('location.mapTitle')"
               ></iframe>
             </div>
             <div class="mt-4">
@@ -97,7 +97,7 @@
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                 </svg>
-                Otvori u Google Maps
+                {{ $t('common.openInGoogleMaps') }}
               </a>
             </div>
           </div>
@@ -108,19 +108,22 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+const localePath = useLocalePath()
+
 useHead({
-  title: 'Lokacija - SteelTech | Žepče, Bosna i Hercegovina',
+  title: t('seo.location.title'),
   meta: [
-    { name: 'description', content: 'SteelTech lokacija - Brankovići bb, Žepče 72230, Bosna i Hercegovina. Pronađite nas na Google mapi i posjetite nas.' },
-    { name: 'keywords', content: 'lokacija, adresa, Žepče, Brankovići, Bosna i Hercegovina, mapa, kako doći' },
-    { property: 'og:title', content: 'Lokacija - SteelTech' },
-    { property: 'og:description', content: 'Brankovići bb, Žepče 72230, Bosna i Hercegovina. Pronađite nas na mapi.' },
-    { property: 'og:url', content: 'https://steeltech.ba/lokacija' },
-    { name: 'twitter:title', content: 'Lokacija - SteelTech' },
-    { name: 'twitter:description', content: 'Brankovići bb, Žepče 72230, Bosna i Hercegovina.' }
+    { name: 'description', content: t('seo.location.description') },
+    { name: 'keywords', content: t('seo.location.keywords') },
+    { property: 'og:title', content: t('seo.location.title') },
+    { property: 'og:description', content: t('seo.location.description') },
+    { property: 'og:url', content: `https://steeltech.ba${localePath('/lokacija')}` },
+    { name: 'twitter:title', content: t('seo.location.title') },
+    { name: 'twitter:description', content: t('seo.location.description') }
   ],
   link: [
-    { rel: 'canonical', href: 'https://steeltech.ba/lokacija' }
+    { rel: 'canonical', href: `https://steeltech.ba${localePath('/lokacija')}` }
   ]
 })
 </script>

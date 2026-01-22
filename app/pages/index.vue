@@ -13,31 +13,31 @@
       <div class="container mx-auto px-4 relative z-10 py-20">
         <div class="max-w-4xl">
           <span class="text-appear inline-block font-subtitle text-brand-primary text-2xl md:text-3xl mb-4 tracking-wide">
-            STEELTECH ŽEPČE
+            {{ $t('home.hero.subtitle') }}
           </span>
           <h1 class="text-appear text-appear-delay-1 font-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold uppercase tracking-wider mb-6 leading-tight">
-            Pouzdana<br />
-            <span class="text-brand-primary">Snaga Čelika</span>
+            {{ $t('home.hero.title1') }}<br />
+            <span class="text-brand-primary">{{ $t('home.hero.title2') }}</span>
           </h1>
           <p class="text-appear text-appear-delay-2 text-lg md:text-xl text-brand-light/70 mb-8 max-w-2xl leading-relaxed">
-            Specijalizirani za izradu čeličnih konstrukcija i vrhunske tehnologije zavarivanja. Rješenja koja zadovoljavaju najviše industrijske standarde.
+            {{ $t('home.hero.description') }}
           </p>
           <div class="text-appear text-appear-delay-3 flex flex-col sm:flex-row gap-4">
-            <NuxtLink
+            <NuxtLinkLocale
               to="/proizvodnja"
               class="inline-flex items-center justify-center px-8 py-4 bg-brand-primary text-white font-title uppercase tracking-wide text-sm rounded hover:bg-brand-secondary transition-colors duration-300"
             >
-              Naša Proizvodnja
+              {{ $t('home.hero.cta1') }}
               <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </NuxtLink>
-            <NuxtLink
+            </NuxtLinkLocale>
+            <NuxtLinkLocale
               to="/kontakt"
               class="inline-flex items-center justify-center px-8 py-4 bg-transparent border border-brand-light/30 text-brand-light font-title uppercase tracking-wide text-sm rounded hover:bg-white/5 hover:border-brand-light/50 transition-all duration-300"
             >
-              Kontaktirajte Nas
-            </NuxtLink>
+              {{ $t('home.hero.cta2') }}
+            </NuxtLinkLocale>
           </div>
         </div>
       </div>
@@ -60,19 +60,19 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div class="text-center">
             <div class="text-3xl md:text-4xl font-bold text-brand-primary mb-2">5</div>
-            <div class="text-brand-light/60 text-lg font-subtitle uppercase tracking-wide">Tehnologija Zavarivanja</div>
+            <div class="text-brand-light/60 text-lg font-subtitle uppercase tracking-wide">{{ $t('home.highlights.weldingTech') }}</div>
           </div>
           <div class="text-center">
             <div class="text-3xl md:text-4xl font-bold text-brand-primary mb-2">ISO</div>
-            <div class="text-brand-light/60 text-lg font-subtitle uppercase tracking-wide">Certificirani Standardi</div>
+            <div class="text-brand-light/60 text-lg font-subtitle uppercase tracking-wide">{{ $t('home.highlights.certifiedStandards') }}</div>
           </div>
           <div class="text-center">
             <div class="text-3xl md:text-4xl font-bold text-brand-primary mb-2">6kW</div>
-            <div class="text-brand-light/60 text-lg font-subtitle uppercase tracking-wide">Fiber Laser</div>
+            <div class="text-brand-light/60 text-lg font-subtitle uppercase tracking-wide">{{ $t('home.highlights.fiberLaser') }}</div>
           </div>
           <div class="text-center">
             <div class="text-3xl md:text-4xl font-bold text-brand-primary mb-2">100%</div>
-            <div class="text-brand-light/60 text-lg font-subtitle uppercase tracking-wide">Predanost Kvaliteti</div>
+            <div class="text-brand-light/60 text-lg font-subtitle uppercase tracking-wide">{{ $t('home.highlights.qualityCommitment') }}</div>
           </div>
         </div>
       </div>
@@ -83,25 +83,25 @@
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span class="inline-block font-subtitle text-brand-primary text-base uppercase tracking-wider mb-4">O Nama</span>
+            <span class="inline-block font-subtitle text-brand-primary text-base uppercase tracking-wider mb-4">{{ $t('home.about.sectionTitle') }}</span>
             <h2 class="font-title text-3xl md:text-4xl uppercase tracking-wide mb-6">
-              Mlada Porodična <span class="text-brand-primary">Firma</span>
+              {{ $t('home.about.title1') }} <span class="text-brand-primary">{{ $t('home.about.title2') }}</span>
             </h2>
             <p class="text-brand-light/70 leading-relaxed mb-6">
-              Steeltech Žepče spaja znanje, modernu tehnologiju i strast prema metalu. Kontinuirano ulažemo u savremenu opremu i stručan kadar, jer vjerujemo da kvalitet počinje od ljudi.
+              {{ $t('home.about.p1') }}
             </p>
             <p class="text-brand-light/70 leading-relaxed mb-8">
-              Naš rad je u potpunosti usklađen sa ISO standardima, što garantuje sigurnost, preciznost i dugotrajnost svakog projekta.
+              {{ $t('home.about.p2') }}
             </p>
-            <NuxtLink
+            <NuxtLinkLocale
               to="/o-nama"
               class="inline-flex items-center text-brand-primary font-title uppercase tracking-wide text-sm hover:underline"
             >
-              Saznaj Više
+              {{ $t('common.learnMore') }}
               <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </NuxtLink>
+            </NuxtLinkLocale>
           </div>
           <div class="grid grid-cols-2 gap-4">
             <div class="space-y-4">
@@ -141,12 +141,12 @@
     <section class="pt-8 pb-20 md:pt-12 md:pb-28">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-          <span class="inline-block font-subtitle text-brand-primary text-base uppercase tracking-wider mb-4">Naši Certifikati</span>
+          <span class="inline-block font-subtitle text-brand-primary text-base uppercase tracking-wider mb-4">{{ $t('home.certificates.sectionTitle') }}</span>
           <h2 class="font-title text-3xl md:text-4xl uppercase tracking-wide">
-            Potvrđena <span class="text-brand-primary">Kvaliteta</span>
+            {{ $t('home.certificates.title1') }} <span class="text-brand-primary">{{ $t('home.certificates.title2') }}</span>
           </h2>
           <p class="text-brand-light/60 mt-4 max-w-2xl mx-auto">
-            Naši certifikati garantuju usklađenost s najvišim europskim standardima za proizvodnju čeličnih konstrukcija i zavarivanje.
+            {{ $t('home.certificates.description') }}
           </p>
         </div>
 
@@ -162,7 +162,7 @@
               EN ISO 9001:2015
             </span>
             <h3 class="font-title text-lg uppercase tracking-wide text-brand-light mb-6">
-              Sistem Upravljanja Kvalitetom
+              {{ $t('home.certificates.iso9001') }}
             </h3>
             <a
               href="/certificates/steeltech-iso-9001.pdf"
@@ -171,7 +171,7 @@
               class="mt-auto inline-flex items-center justify-center gap-3 text-brand-primary hover:text-brand-light transition-colors duration-300 font-subtitle text-lg"
             >
               <svg class="w-7 h-7" viewBox="0 0 48 48" fill="currentColor"><path d="M20.071,30.645c0,0.878-0.259,1.556-0.776,2.033c-0.518,0.479-1.252,0.717-2.205,0.717h-0.596V36h-2.122v-7.853h2.718c0.992,0,1.737,0.217,2.234,0.649C19.822,29.23,20.071,29.847,20.071,30.645z M16.494,31.666h0.387c0.319,0,0.572-0.09,0.76-0.27c0.188-0.179,0.282-0.426,0.282-0.74c0-0.53-0.293-0.795-0.881-0.795h-0.548V31.666z"/><path d="M27.988,31.907c0,1.311-0.361,2.32-1.083,3.029C26.184,35.646,25.17,36,23.863,36h-2.541v-7.853h2.718c1.26,0,2.233,0.322,2.919,0.967C27.645,29.759,27.988,30.689,27.988,31.907z M25.786,31.982c0-0.72-0.142-1.253-0.427-1.601c-0.284-0.348-0.717-0.521-1.297-0.521h-0.618v4.398h0.473c0.645,0,1.117-0.188,1.418-0.562S25.786,32.752,25.786,31.982z"/><path d="M31.484,36h-2.089v-7.853h4.641v1.702h-2.551v1.499h2.353v1.702h-2.353V36z"/><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" points="29,2 29,14 41,14"/><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" points="41,23 41,14 29,2 7,2 7,23"/><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" points="7,41 7,46 41,46 41,41"/><rect x="2" y="23" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="44" height="18"/></svg>
-              Preuzmi PDF
+              {{ $t('common.downloadPdf') }}
             </a>
           </div>
 
@@ -186,7 +186,7 @@
               EN 1090 - FPC Sistema 2+
             </span>
             <h3 class="font-title text-lg uppercase tracking-wide text-brand-light mb-6">
-              Kontrola Proizvodnje Čeličnih Konstrukcija
+              {{ $t('home.certificates.en1090') }}
             </h3>
             <a
               href="/certificates/steeltech-en-1090-fpc.pdf"
@@ -195,7 +195,7 @@
               class="mt-auto inline-flex items-center justify-center gap-3 text-brand-primary hover:text-brand-light transition-colors duration-300 font-subtitle text-lg"
             >
               <svg class="w-7 h-7" viewBox="0 0 48 48" fill="currentColor"><path d="M20.071,30.645c0,0.878-0.259,1.556-0.776,2.033c-0.518,0.479-1.252,0.717-2.205,0.717h-0.596V36h-2.122v-7.853h2.718c0.992,0,1.737,0.217,2.234,0.649C19.822,29.23,20.071,29.847,20.071,30.645z M16.494,31.666h0.387c0.319,0,0.572-0.09,0.76-0.27c0.188-0.179,0.282-0.426,0.282-0.74c0-0.53-0.293-0.795-0.881-0.795h-0.548V31.666z"/><path d="M27.988,31.907c0,1.311-0.361,2.32-1.083,3.029C26.184,35.646,25.17,36,23.863,36h-2.541v-7.853h2.718c1.26,0,2.233,0.322,2.919,0.967C27.645,29.759,27.988,30.689,27.988,31.907z M25.786,31.982c0-0.72-0.142-1.253-0.427-1.601c-0.284-0.348-0.717-0.521-1.297-0.521h-0.618v4.398h0.473c0.645,0,1.117-0.188,1.418-0.562S25.786,32.752,25.786,31.982z"/><path d="M31.484,36h-2.089v-7.853h4.641v1.702h-2.551v1.499h2.353v1.702h-2.353V36z"/><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" points="29,2 29,14 41,14"/><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" points="41,23 41,14 29,2 7,2 7,23"/><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" points="7,41 7,46 41,46 41,41"/><rect x="2" y="23" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="44" height="18"/></svg>
-              Preuzmi PDF
+              {{ $t('common.downloadPdf') }}
             </a>
           </div>
 
@@ -210,7 +210,7 @@
               EN ISO 3834-2
             </span>
             <h3 class="font-title text-lg uppercase tracking-wide text-brand-light mb-6">
-              Zavarivanje Čeličnih Konstrukcija
+              {{ $t('home.certificates.en3834') }}
             </h3>
             <a
               href="/certificates/steeltech-en-3834-welding.pdf"
@@ -219,7 +219,7 @@
               class="mt-auto inline-flex items-center justify-center gap-3 text-brand-primary hover:text-brand-light transition-colors duration-300 font-subtitle text-lg"
             >
               <svg class="w-7 h-7" viewBox="0 0 48 48" fill="currentColor"><path d="M20.071,30.645c0,0.878-0.259,1.556-0.776,2.033c-0.518,0.479-1.252,0.717-2.205,0.717h-0.596V36h-2.122v-7.853h2.718c0.992,0,1.737,0.217,2.234,0.649C19.822,29.23,20.071,29.847,20.071,30.645z M16.494,31.666h0.387c0.319,0,0.572-0.09,0.76-0.27c0.188-0.179,0.282-0.426,0.282-0.74c0-0.53-0.293-0.795-0.881-0.795h-0.548V31.666z"/><path d="M27.988,31.907c0,1.311-0.361,2.32-1.083,3.029C26.184,35.646,25.17,36,23.863,36h-2.541v-7.853h2.718c1.26,0,2.233,0.322,2.919,0.967C27.645,29.759,27.988,30.689,27.988,31.907z M25.786,31.982c0-0.72-0.142-1.253-0.427-1.601c-0.284-0.348-0.717-0.521-1.297-0.521h-0.618v4.398h0.473c0.645,0,1.117-0.188,1.418-0.562S25.786,32.752,25.786,31.982z"/><path d="M31.484,36h-2.089v-7.853h4.641v1.702h-2.551v1.499h2.353v1.702h-2.353V36z"/><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" points="29,2 29,14 41,14"/><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" points="41,23 41,14 29,2 7,2 7,23"/><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" points="7,41 7,46 41,46 41,41"/><rect x="2" y="23" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="44" height="18"/></svg>
-              Preuzmi PDF
+              {{ $t('common.downloadPdf') }}
             </a>
           </div>
         </div>
@@ -230,9 +230,9 @@
     <section class="py-20 md:py-28 bg-[#1a1a1a]">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-          <span class="inline-block font-subtitle text-brand-primary text-base uppercase tracking-wider mb-4">Naše Usluge</span>
+          <span class="inline-block font-subtitle text-brand-primary text-base uppercase tracking-wider mb-4">{{ $t('home.services.sectionTitle') }}</span>
           <h2 class="font-title text-3xl md:text-4xl uppercase tracking-wide">
-            Što <span class="text-brand-primary">Radimo</span>
+            {{ $t('home.services.title1') }} <span class="text-brand-primary">{{ $t('home.services.title2') }}</span>
           </h2>
         </div>
 
@@ -242,7 +242,7 @@
             <div class="relative h-40 overflow-hidden">
               <NuxtImg
                 src="/images/Steeltech_Section_1_3.JPG"
-                alt="Čelične konstrukcije"
+                :alt="$t('home.services.steelConstructions.title')"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 loading="lazy"
               />
@@ -250,10 +250,10 @@
             </div>
             <div class="p-5">
               <h3 class="font-title text-lg uppercase tracking-wide mb-2 text-brand-light group-hover:text-brand-primary transition-colors">
-                Čelične Konstrukcije
+                {{ $t('home.services.steelConstructions.title') }}
               </h3>
               <p class="text-brand-light/60 text-sm line-clamp-2">
-                Čelične hale, skladišta, balkoni, ograde i stubišta.
+                {{ $t('home.services.steelConstructions.description') }}
               </p>
             </div>
           </div>
@@ -263,7 +263,7 @@
             <div class="relative h-40 overflow-hidden">
               <NuxtImg
                 src="/images/Steeltech_Section_2_1.JPG"
-                alt="Zavarivanje"
+                :alt="$t('home.services.welding.title')"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 loading="lazy"
               />
@@ -271,10 +271,10 @@
             </div>
             <div class="p-5">
               <h3 class="font-title text-lg uppercase tracking-wide mb-2 text-brand-light group-hover:text-brand-primary transition-colors">
-                Zavarivanje
+                {{ $t('home.services.welding.title') }}
               </h3>
               <p class="text-brand-light/60 text-sm line-clamp-2">
-                MIG, MAG, TIG, REL i lasersko zavarivanje.
+                {{ $t('home.services.welding.description') }}
               </p>
             </div>
           </div>
@@ -284,7 +284,7 @@
             <div class="relative h-40 overflow-hidden">
               <NuxtImg
                 src="/images/Steeltech_Section_3_1.JPG"
-                alt="Lasersko rezanje"
+                :alt="$t('home.services.laserCutting.title')"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 loading="lazy"
               />
@@ -292,10 +292,10 @@
             </div>
             <div class="p-5">
               <h3 class="font-title text-lg uppercase tracking-wide mb-2 text-brand-light group-hover:text-brand-primary transition-colors">
-                Lasersko Rezanje
+                {{ $t('home.services.laserCutting.title') }}
               </h3>
               <p class="text-brand-light/60 text-sm line-clamp-2">
-                6kW fiber laser, apkant preša, bušenje.
+                {{ $t('home.services.laserCutting.description') }}
               </p>
             </div>
           </div>
@@ -305,7 +305,7 @@
             <div class="relative h-40 overflow-hidden">
               <NuxtImg
                 src="/images/Steeltech_section_4_1.JPG"
-                alt="Antikorozivna zaštita"
+                :alt="$t('home.services.antiCorrosion.title')"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 loading="lazy"
               />
@@ -313,25 +313,25 @@
             </div>
             <div class="p-5">
               <h3 class="font-title text-lg uppercase tracking-wide mb-2 text-brand-light group-hover:text-brand-primary transition-colors">
-                Antikorozivna Zaštita
+                {{ $t('home.services.antiCorrosion.title') }}
               </h3>
               <p class="text-brand-light/60 text-sm line-clamp-2">
-                Vruće cinčanje, farbanje, plastifikacija.
+                {{ $t('home.services.antiCorrosion.description') }}
               </p>
             </div>
           </div>
         </div>
 
         <div class="text-center">
-          <NuxtLink
+          <NuxtLinkLocale
             to="/proizvodnja"
             class="inline-flex items-center justify-center px-8 py-4 bg-brand-primary text-white font-title uppercase tracking-wide text-sm rounded hover:bg-brand-secondary transition-colors duration-300"
           >
-            Pogledaj Sve Usluge
+            {{ $t('common.viewAllServices') }}
             <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </NuxtLink>
+          </NuxtLinkLocale>
         </div>
       </div>
     </section>
@@ -340,9 +340,9 @@
     <section class="py-20 md:py-28">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-          <span class="inline-block font-subtitle text-brand-primary text-base uppercase tracking-wider mb-4">Galerija</span>
+          <span class="inline-block font-subtitle text-brand-primary text-base uppercase tracking-wider mb-4">{{ $t('home.gallery.sectionTitle') }}</span>
           <h2 class="font-title text-3xl md:text-4xl uppercase tracking-wide">
-            Naši <span class="text-brand-primary">Projekti</span>
+            {{ $t('home.gallery.title1') }} <span class="text-brand-primary">{{ $t('home.gallery.title2') }}</span>
           </h2>
         </div>
 
@@ -352,7 +352,7 @@
             :key="index"
             class="group relative aspect-square overflow-hidden rounded-lg cursor-pointer"
           >
-            <NuxtLink :to="'/galerija'">
+            <NuxtLinkLocale :to="'/galerija'">
               <NuxtImg
                 :src="image.src"
                 :alt="image.alt"
@@ -369,20 +369,20 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
                 </svg>
               </div>
-            </NuxtLink>
+            </NuxtLinkLocale>
           </div>
         </div>
 
         <div class="text-center">
-          <NuxtLink
+          <NuxtLinkLocale
             to="/galerija"
             class="inline-flex items-center text-brand-primary font-title uppercase tracking-wide text-sm hover:underline"
           >
-            Pogledaj Cijelu Galeriju
+            {{ $t('common.viewFullGallery') }}
             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </NuxtLink>
+          </NuxtLinkLocale>
         </div>
       </div>
     </section>
@@ -394,18 +394,18 @@
       </div>
       <div class="container mx-auto px-4 relative z-10 text-center">
         <h2 class="font-title text-3xl md:text-4xl uppercase tracking-wide mb-4 text-white">
-          Imate Projekat?
+          {{ $t('home.cta.title') }}
         </h2>
         <p class="text-white/80 mb-8 max-w-xl mx-auto text-lg">
-          Kontaktirajte nas za besplatnu procjenu i ponudu. Naš tim je spreman pomoći vam u realizaciji vašeg projekta.
+          {{ $t('home.cta.description') }}
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <NuxtLink
+          <NuxtLinkLocale
             to="/kontakt"
             class="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-dark font-title uppercase tracking-wide text-sm rounded hover:bg-brand-light transition-colors duration-300"
           >
-            Pošalji Upit
-          </NuxtLink>
+            {{ $t('common.sendInquiry') }}
+          </NuxtLinkLocale>
           <a
             href="tel:+38764404198"
             class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-title uppercase tracking-wide text-sm rounded hover:bg-white/10 transition-colors duration-300"
@@ -422,34 +422,37 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+const localePath = useLocalePath()
+
 function scrollToHighlights() {
   document.getElementById('highlights')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
 const galleryPreview = [
-  { src: '/images/Steeltech_Section_1_3.JPG', alt: 'Čelična konstrukcija' },
-  { src: '/images/Steeltech_Section_1_12.JPG', alt: 'Čelična hala' },
-  { src: '/images/Steeltech_Section_2_1.JPG', alt: 'Zavarivanje' },
-  { src: '/images/Steeltech_Section_2_4.JPG', alt: 'Zavarivački rad' },
-  { src: '/images/Steeltech_Section_1_14.JPG', alt: 'Konstrukcija' },
-  { src: '/images/Steeltech_Section_3_1.JPG', alt: 'Lasersko rezanje' },
-  { src: '/images/Steeltech_Section_1_7.JPG', alt: 'Projekt' },
-  { src: '/images/Steeltech_section_4_1.JPG', alt: 'Antikorozivna zaštita' }
+  { src: '/images/Steeltech_Section_1_3.JPG', alt: 'Steel structure' },
+  { src: '/images/Steeltech_Section_1_12.JPG', alt: 'Steel hall' },
+  { src: '/images/Steeltech_Section_2_1.JPG', alt: 'Welding' },
+  { src: '/images/Steeltech_Section_2_4.JPG', alt: 'Welding work' },
+  { src: '/images/Steeltech_Section_1_14.JPG', alt: 'Construction' },
+  { src: '/images/Steeltech_Section_3_1.JPG', alt: 'Laser cutting' },
+  { src: '/images/Steeltech_Section_1_7.JPG', alt: 'Project' },
+  { src: '/images/Steeltech_section_4_1.JPG', alt: 'Anti-corrosion protection' }
 ]
 
 useHead({
-  title: 'SteelTech - Pouzdana Snaga Čelika | Čelične Konstrukcije Žepče',
+  title: t('seo.home.title'),
   meta: [
-    { name: 'description', content: 'SteelTech Žepče - specijalizirani za izradu čeličnih konstrukcija i vrhunske tehnologije zavarivanja. ISO certificirani standardi, moderna oprema, 6kW fiber laser.' },
-    { name: 'keywords', content: 'čelične konstrukcije, zavarivanje, lasersko rezanje, Žepče, BiH, ISO certifikat, MIG, MAG, TIG, antikorozivna zaštita' },
-    { property: 'og:title', content: 'SteelTech - Pouzdana Snaga Čelika' },
-    { property: 'og:description', content: 'Specijalizirani za izradu čeličnih konstrukcija i vrhunske tehnologije zavarivanja. ISO certificirani standardi.' },
-    { property: 'og:url', content: 'https://steeltech.ba/' },
-    { name: 'twitter:title', content: 'SteelTech - Pouzdana Snaga Čelika' },
-    { name: 'twitter:description', content: 'Specijalizirani za izradu čeličnih konstrukcija i vrhunske tehnologije zavarivanja.' }
+    { name: 'description', content: t('seo.home.description') },
+    { name: 'keywords', content: t('seo.home.keywords') },
+    { property: 'og:title', content: t('seo.home.title') },
+    { property: 'og:description', content: t('seo.home.description') },
+    { property: 'og:url', content: `https://steeltech.ba${localePath('/')}` },
+    { name: 'twitter:title', content: t('seo.home.title') },
+    { name: 'twitter:description', content: t('seo.home.description') }
   ],
   link: [
-    { rel: 'canonical', href: 'https://steeltech.ba/' }
+    { rel: 'canonical', href: `https://steeltech.ba${localePath('/')}` }
   ]
 })
 </script>

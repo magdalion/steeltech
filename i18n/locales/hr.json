@@ -1,0 +1,291 @@
+{
+  "nav": {
+    "home": "Naslovna",
+    "about": "O nama",
+    "production": "Proizvodnja",
+    "gallery": "Galerija",
+    "location": "Lokacija",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "description": "Pouzdana snaga čelika. Specijalizirani za izradu čeličnih konstrukcija i vrhunske tehnologije zavarivanja.",
+    "quickLinks": "Brze Poveznice",
+    "contactTitle": "Kontakt",
+    "address": "Brankovići bb, Žepče 72230",
+    "country": "Bosna i Hercegovina",
+    "followUs": "Zapratite nas!",
+    "onFacebook": "na Facebook-u",
+    "onInstagram": "na Instagram-u",
+    "copyright": "SteelTech. Sva prava zadržana."
+  },
+  "common": {
+    "learnMore": "Saznaj Više",
+    "viewGallery": "Pogledaj galeriju",
+    "contactUs": "Kontaktirajte Nas",
+    "sendInquiry": "Pošalji Upit",
+    "downloadPdf": "Preuzmi PDF",
+    "viewAllServices": "Pogledaj Sve Usluge",
+    "viewFullGallery": "Pogledaj Cijelu Galeriju",
+    "openInGoogleMaps": "Otvori u Google Maps"
+  },
+  "aria": {
+    "toggleMenu": "Otvori/zatvori izbornik",
+    "backToTop": "Na vrh stranice",
+    "closeLightbox": "Zatvori",
+    "previousImage": "Prethodna slika",
+    "nextImage": "Sljedeća slika"
+  },
+  "home": {
+    "hero": {
+      "subtitle": "STEELTECH ŽEPČE",
+      "title1": "Pouzdana",
+      "title2": "Snaga Čelika",
+      "description": "Specijalizirani za izradu čeličnih konstrukcija i vrhunske tehnologije zavarivanja. Rješenja koja zadovoljavaju najviše industrijske standarde.",
+      "cta1": "Naša Proizvodnja",
+      "cta2": "Kontaktirajte Nas"
+    },
+    "highlights": {
+      "weldingTech": "Tehnologija Zavarivanja",
+      "certifiedStandards": "Certificirani Standardi",
+      "fiberLaser": "Fiber Laser",
+      "qualityCommitment": "Predanost Kvaliteti"
+    },
+    "about": {
+      "sectionTitle": "O Nama",
+      "title1": "Mlada Porodična",
+      "title2": "Firma",
+      "p1": "Steeltech Žepče spaja znanje, modernu tehnologiju i strast prema metalu. Kontinuirano ulažemo u savremenu opremu i stručan kadar, jer vjerujemo da kvalitet počinje od ljudi.",
+      "p2": "Naš rad je u potpunosti usklađen sa ISO standardima, što garantuje sigurnost, preciznost i dugotrajnost svakog projekta."
+    },
+    "certificates": {
+      "sectionTitle": "Naši Certifikati",
+      "title1": "Potvrđena",
+      "title2": "Kvaliteta",
+      "description": "Naši certifikati garantuju usklađenost s najvišim europskim standardima za proizvodnju čeličnih konstrukcija i zavarivanje.",
+      "iso9001": "Sistem Upravljanja Kvalitetom",
+      "en1090": "Kontrola Proizvodnje Čeličnih Konstrukcija",
+      "en3834": "Zavarivanje Čeličnih Konstrukcija"
+    },
+    "services": {
+      "sectionTitle": "Naše Usluge",
+      "title1": "Što",
+      "title2": "Radimo",
+      "steelConstructions": {
+        "title": "Čelične Konstrukcije",
+        "description": "Čelične hale, skladišta, balkoni, ograde i stubišta."
+      },
+      "welding": {
+        "title": "Zavarivanje",
+        "description": "MIG, MAG, TIG, REL i lasersko zavarivanje."
+      },
+      "laserCutting": {
+        "title": "Lasersko Rezanje",
+        "description": "6kW fiber laser, apkant preša, bušenje."
+      },
+      "antiCorrosion": {
+        "title": "Antikorozivna Zaštita",
+        "description": "Vruće cinčanje, farbanje, plastifikacija."
+      }
+    },
+    "gallery": {
+      "sectionTitle": "Galerija",
+      "title1": "Naši",
+      "title2": "Projekti"
+    },
+    "cta": {
+      "title": "Imate Projekat?",
+      "description": "Kontaktirajte nas za besplatnu procjenu i ponudu. Naš tim je spreman pomoći vam u realizaciji vašeg projekta."
+    }
+  },
+  "about": {
+    "hero": {
+      "title1": "O",
+      "title2": "Nama",
+      "subtitle": "Pouzdana snaga čelika"
+    },
+    "intro": {
+      "p1": "{company} je mlada, porodična firma koja spaja znanje, modernu tehnologiju i strast prema metalu.",
+      "p2": "Specijalizirani smo za izradu čeličnih konstrukcija i vrhunske tehnologije zavarivanja, pružajući rješenja koja zadovoljavaju najviše industrijske standarde.",
+      "p3": "Kontinuirano ulažemo u savremenu opremu i stručan kadar, jer vjerujemo da kvalitet počinje od ljudi. Naš rad je u potpunosti usklađen sa ISO standardima, što garantuje sigurnost, preciznost i dugotrajnost svakog projekta.",
+      "p4": "Vođeni jasnom vizijom razvoja, Steeltech se stalno širi i unapređuje svoje kapacitete, s ciljem da postane pouzdan partner u oblasti čeličnih konstrukcija — danas, sutra i u budućnosti."
+    },
+    "values": {
+      "isoStandards": {
+        "title": "ISO Standardi",
+        "description": "Naš rad je u potpunosti usklađen sa ISO standardima, garantujući sigurnost i preciznost."
+      },
+      "modernEquipment": {
+        "title": "Moderna Oprema",
+        "description": "Kontinuirano ulažemo u savremenu opremu i najnovije tehnologije zavarivanja."
+      },
+      "familyCompany": {
+        "title": "Porodična Firma",
+        "description": "Mlada porodična firma koja spaja znanje, tehnologiju i strast prema metalu."
+      }
+    },
+    "references": {
+      "title": "Reference",
+      "description": "Znanje i kvalitet smo postigli i dokazali radeći poslove zavarivanja i montaže za vodeće kompanije:"
+    },
+    "cta": {
+      "title": "Spremni za Suradnju?",
+      "description": "Kontaktirajte nas za više informacija o našim uslugama i mogućnostima suradnje."
+    }
+  },
+  "production": {
+    "hero": {
+      "title": "Proizvodnja",
+      "subtitle": "Vrhunska kvaliteta u svakom projektu"
+    },
+    "services": {
+      "steelConstructions": {
+        "title": "Čelične Konstrukcije",
+        "description": "Specijalizirani smo za izradu čeličnih hala po sistemu ključ u ruke, međuetažnih skladišta, montažnih balkona i ograda, metalnih stubišta, specijalnih vozila za prijevoz tereta te ostale proizvode od metala po želji kupca."
+      },
+      "welding": {
+        "title": "Tehnologija Zavarivanja",
+        "description": "Tehnologije za koje posjedujemo opremu i znanje su MIG, MAG, TIG, REL i LASERSKO ZAVARIVANJE. Radimo na izradi opreme za trafostanice, radne mašine i industrijska postrojenja."
+      },
+      "laserCutting": {
+        "title": "Lasersko Rezanje",
+        "description": "Usluge laserskog rezanja i obrade metala bušenjem i savijanjem. Posjedujemo 6kW fiber laser, apkant prešu do 3m, i mogućnost bušenja do fi 100mm."
+      },
+      "antiCorrosion": {
+        "title": "Antikorozivna Zaštita",
+        "description": "U mogućnosti smo ponuditi preko naših partnera usluge vrućeg cinčanja, mokrog farbanja nitro i poliuretanskim bojama te elektrostatičke zaštite prahom (plastifikacija)."
+      },
+      "transport": {
+        "title": "Usluge Transporta",
+        "description": "Za sve naše proizvode osiguravamo transport na odredište te usluge dizalice. Kompletna logistička podrška za vaše projekte."
+      }
+    },
+    "cta": {
+      "title": "Trebate Ponudu?",
+      "description": "Kontaktirajte nas za besplatnu procjenu i ponudu za vaš projekt."
+    },
+    "equipment": {
+      "title1": "Naša",
+      "title2": "Oprema",
+      "fiberLaser": "Fiber Laser",
+      "pressBreak": "Apkant Preša",
+      "maxDrill": "Max. Provrt",
+      "weldingTech": "Tehnologija Zavarivanja"
+    }
+  },
+  "gallery": {
+    "hero": {
+      "title": "Galerija",
+      "subtitle": "Pogledajte naše projekte i radove"
+    },
+    "categories": {
+      "all": "Sve",
+      "steelConstructions": "Čelične Konstrukcije",
+      "welding": "Zavarivanje",
+      "laserCutting": "Lasersko Rezanje",
+      "antiCorrosion": "Antikorozivna Zaštita"
+    },
+    "noImages": "Nema slika u ovoj kategoriji.",
+    "imageAlt": {
+      "steelConstruction": "Čelična konstrukcija",
+      "welding": "Zavarivanje",
+      "laserCutting": "Lasersko rezanje",
+      "antiCorrosion": "Antikorozivna zaštita"
+    }
+  },
+  "location": {
+    "hero": {
+      "title": "Lokacija",
+      "subtitle": "Pronađite nas u Žepču"
+    },
+    "howToFind": {
+      "title1": "Kako",
+      "title2": "do nas"
+    },
+    "address": {
+      "title": "Adresa",
+      "street": "Brankovići bb",
+      "city": "Žepče 72230",
+      "country": "Bosna i Hercegovina"
+    },
+    "directions": {
+      "title": "Upute za Dolazak",
+      "point1": "Nalazimo se u mjestu Brankovići, općina Žepče",
+      "point2": "Lako dostupno sa glavne magistrale M17",
+      "point3": "Mogućnost pristupa za teretna vozila"
+    },
+    "mapTitle": "SteelTech lokacija na mapi"
+  },
+  "contact": {
+    "hero": {
+      "title": "Kontakt",
+      "subtitle": "Pošaljite nam upit"
+    },
+    "form": {
+      "title1": "Pošaljite",
+      "title2": "Upit",
+      "name": "Ime i prezime",
+      "namePlaceholder": "Vaše ime i prezime",
+      "email": "Email adresa",
+      "emailPlaceholder": "vasa{'@'}email.com",
+      "phone": "Telefon",
+      "phonePlaceholder": "+387 6X XXX XXX",
+      "subject": "Predmet",
+      "subjectPlaceholder": "Odaberite predmet",
+      "message": "Poruka",
+      "messagePlaceholder": "Opišite vaš upit ili projekt...",
+      "submit": "Pošalji Upit",
+      "submitting": "Slanje...",
+      "required": "*",
+      "success": "Hvala vam na upitu! Odgovorit ćemo vam u najkraćem mogućem roku.",
+      "subjects": {
+        "steelConstructions": "Čelične konstrukcije",
+        "welding": "Tehnologija zavarivanja",
+        "laserCutting": "Lasersko rezanje",
+        "antiCorrosion": "Antikorozivna zaštita",
+        "transport": "Usluge transporta",
+        "other": "Ostalo"
+      }
+    },
+    "info": {
+      "title1": "Kontakt",
+      "title2": "Informacije",
+      "address": "Adresa",
+      "emailTitle": "Email",
+      "phoneTitle": "Telefon",
+      "viewMap": "Pogledaj Mapu",
+      "findOnMap": "Pronađi nas na karti"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "SteelTech - Pouzdana Snaga Čelika | Čelične Konstrukcije Žepče",
+      "description": "SteelTech Žepče - specijalizirani za izradu čeličnih konstrukcija i vrhunske tehnologije zavarivanja. ISO certificirani standardi, moderna oprema, 6kW fiber laser.",
+      "keywords": "čelične konstrukcije, zavarivanje, lasersko rezanje, Žepče, BiH, ISO certifikat, MIG, MAG, TIG, antikorozivna zaštita"
+    },
+    "about": {
+      "title": "O Nama - SteelTech | Porodična Firma za Čelične Konstrukcije",
+      "description": "Steeltech Žepče - mlada, porodična firma specijalizirana za izradu čeličnih konstrukcija i vrhunske tehnologije zavarivanja. ISO certificirani, moderno opremljeni.",
+      "keywords": "o nama, SteelTech, Žepče, porodična firma, čelične konstrukcije, ISO certifikat, kvaliteta"
+    },
+    "production": {
+      "title": "Proizvodnja - SteelTech | Čelične Konstrukcije, Zavarivanje, Lasersko Rezanje",
+      "description": "SteelTech proizvodnja - čelične konstrukcije, MIG/MAG/TIG/REL zavarivanje, 6kW fiber lasersko rezanje, antikorozivna zaštita i usluge transporta.",
+      "keywords": "proizvodnja, čelične konstrukcije, zavarivanje, MIG, MAG, TIG, REL, lasersko rezanje, fiber laser, antikorozivna zaštita, cinčanje"
+    },
+    "gallery": {
+      "title": "Galerija - SteelTech | Projekti Čeličnih Konstrukcija",
+      "description": "SteelTech galerija projekata - pogledajte naše radove: čelične konstrukcije, zavarivanje, lasersko rezanje i antikorozivna zaštita.",
+      "keywords": "galerija, projekti, čelične konstrukcije, zavarivanje, lasersko rezanje, antikorozivna zaštita, portfolio"
+    },
+    "location": {
+      "title": "Lokacija - SteelTech | Žepče, Bosna i Hercegovina",
+      "description": "SteelTech lokacija - Brankovići bb, Žepče 72230, Bosna i Hercegovina. Pronađite nas na Google mapi i posjetite nas.",
+      "keywords": "lokacija, adresa, Žepče, Brankovići, Bosna i Hercegovina, mapa, kako doći"
+    },
+    "contact": {
+      "title": "Kontakt - SteelTech | Pošaljite Upit",
+      "description": "Kontaktirajte SteelTech za besplatnu ponudu. Email: dominik.jukic{'@'}steeltech.ba, telefon: +387 64 404 1908, adresa: Brankovići bb, Žepče 72230.",
+      "keywords": "kontakt, email, telefon, upit, ponuda, SteelTech, Žepče"
+    }
+  }
+}

@@ -8,10 +8,10 @@
       </div>
       <div class="container mx-auto px-4 relative z-10">
         <h1 class="font-title text-4xl md:text-5xl lg:text-6xl font-bold text-center uppercase tracking-wider mb-6">
-          <span class="text-brand-primary">Proizvodnja</span>
+          <span class="text-brand-primary">{{ $t('production.hero.title') }}</span>
         </h1>
         <p class="font-subtitle text-xl md:text-2xl text-center text-brand-light/80 max-w-2xl mx-auto">
-          Vrhunska kvaliteta u svakom projektu
+          {{ $t('production.hero.subtitle') }}
         </p>
       </div>
     </section>
@@ -20,12 +20,12 @@
     <section class="py-16 md:py-24">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Service Card 1: Čelične konstrukcije -->
+          <!-- Service Card 1: Steel Structures -->
           <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300">
             <div class="relative h-56 overflow-hidden">
               <NuxtImg
                 src="/images/Steeltech_Section_1_3.JPG"
-                alt="Čelične konstrukcije"
+                :alt="$t('production.services.steelConstructions.title')"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 loading="lazy"
               />
@@ -33,29 +33,29 @@
             </div>
             <div class="p-6">
               <h3 class="font-title text-xl uppercase tracking-wide mb-3 text-brand-light group-hover:text-brand-primary transition-colors">
-                Čelične Konstrukcije
+                {{ $t('production.services.steelConstructions.title') }}
               </h3>
               <p class="text-brand-light/60 text-sm leading-relaxed mb-4">
-                Specijalizirani smo za izradu čeličnih hala po sistemu ključ u ruke, međuetažnih skladišta, montažnih balkona i ograda, metalnih stubišta, specijalnih vozila za prijevoz tereta te ostale proizvode od metala po želji kupca.
+                {{ $t('production.services.steelConstructions.description') }}
               </p>
-              <NuxtLink
+              <NuxtLinkLocale
                 to="/galerija?kategorija=celicne-konstrukcije"
                 class="inline-flex items-center text-brand-primary text-sm font-medium hover:underline"
               >
-                Pogledaj galeriju
+                {{ $t('common.viewGallery') }}
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
-              </NuxtLink>
+              </NuxtLinkLocale>
             </div>
           </div>
 
-          <!-- Service Card 2: Tehnologija zavarivanja -->
+          <!-- Service Card 2: Welding Technology -->
           <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300">
             <div class="relative h-56 overflow-hidden">
               <NuxtImg
                 src="/images/Steeltech_Section_2_1.JPG"
-                alt="Tehnologija zavarivanja"
+                :alt="$t('production.services.welding.title')"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 loading="lazy"
               />
@@ -63,29 +63,29 @@
             </div>
             <div class="p-6">
               <h3 class="font-title text-xl uppercase tracking-wide mb-3 text-brand-light group-hover:text-brand-primary transition-colors">
-                Tehnologija Zavarivanja
+                {{ $t('production.services.welding.title') }}
               </h3>
               <p class="text-brand-light/60 text-sm leading-relaxed mb-4">
-                Tehnologije za koje posjedujemo opremu i znanje su MIG, MAG, TIG, REL i LASERSKO ZAVARIVANJE. Radimo na izradi opreme za trafostanice, radne mašine i industrijska postrojenja.
+                {{ $t('production.services.welding.description') }}
               </p>
-              <NuxtLink
+              <NuxtLinkLocale
                 to="/galerija?kategorija=zavarivanje"
                 class="inline-flex items-center text-brand-primary text-sm font-medium hover:underline"
               >
-                Pogledaj galeriju
+                {{ $t('common.viewGallery') }}
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
-              </NuxtLink>
+              </NuxtLinkLocale>
             </div>
           </div>
 
-          <!-- Service Card 3: Lasersko rezanje -->
+          <!-- Service Card 3: Laser Cutting -->
           <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300">
             <div class="relative h-56 overflow-hidden">
               <NuxtImg
                 src="/images/Steeltech_Section_3_1.JPG"
-                alt="Lasersko rezanje"
+                :alt="$t('production.services.laserCutting.title')"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 loading="lazy"
               />
@@ -93,29 +93,29 @@
             </div>
             <div class="p-6">
               <h3 class="font-title text-xl uppercase tracking-wide mb-3 text-brand-light group-hover:text-brand-primary transition-colors">
-                Lasersko Rezanje
+                {{ $t('production.services.laserCutting.title') }}
               </h3>
               <p class="text-brand-light/60 text-sm leading-relaxed mb-4">
-                Usluge laserskog rezanja i obrade metala bušenjem i savijanjem. Posjedujemo 6kW fiber laser, apkant prešu do 3m, i mogućnost bušenja do fi 100mm.
+                {{ $t('production.services.laserCutting.description') }}
               </p>
-              <NuxtLink
+              <NuxtLinkLocale
                 to="/galerija?kategorija=lasersko-rezanje"
                 class="inline-flex items-center text-brand-primary text-sm font-medium hover:underline"
               >
-                Pogledaj galeriju
+                {{ $t('common.viewGallery') }}
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
-              </NuxtLink>
+              </NuxtLinkLocale>
             </div>
           </div>
 
-          <!-- Service Card 4: Antikorozivna zaštita -->
+          <!-- Service Card 4: Anti-Corrosion -->
           <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300">
             <div class="relative h-56 overflow-hidden">
               <NuxtImg
                 src="/images/Steeltech_section_4_1.JPG"
-                alt="Antikorozivna zaštita"
+                :alt="$t('production.services.antiCorrosion.title')"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 loading="lazy"
               />
@@ -123,24 +123,24 @@
             </div>
             <div class="p-6">
               <h3 class="font-title text-xl uppercase tracking-wide mb-3 text-brand-light group-hover:text-brand-primary transition-colors">
-                Antikorozivna Zaštita
+                {{ $t('production.services.antiCorrosion.title') }}
               </h3>
               <p class="text-brand-light/60 text-sm leading-relaxed mb-4">
-                U mogućnosti smo ponuditi preko naših partnera usluge vrućeg cinčanja, mokrog farbanja nitro i poliuretanskim bojama te elektrostatičke zaštite prahom (plastifikacija).
+                {{ $t('production.services.antiCorrosion.description') }}
               </p>
-              <NuxtLink
+              <NuxtLinkLocale
                 to="/galerija?kategorija=antikorozivna-zastita"
                 class="inline-flex items-center text-brand-primary text-sm font-medium hover:underline"
               >
-                Pogledaj galeriju
+                {{ $t('common.viewGallery') }}
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
-              </NuxtLink>
+              </NuxtLinkLocale>
             </div>
           </div>
 
-          <!-- Service Card 5: Usluge transporta -->
+          <!-- Service Card 5: Transport -->
           <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300">
             <div class="relative h-56 overflow-hidden bg-brand-dark flex items-center justify-center">
               <svg class="w-24 h-24 text-brand-primary/30 group-hover:text-brand-primary/50 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -151,37 +151,37 @@
             </div>
             <div class="p-6">
               <h3 class="font-title text-xl uppercase tracking-wide mb-3 text-brand-light group-hover:text-brand-primary transition-colors">
-                Usluge Transporta
+                {{ $t('production.services.transport.title') }}
               </h3>
               <p class="text-brand-light/60 text-sm leading-relaxed mb-4">
-                Za sve naše proizvode osiguravamo transport na odredište te usluge dizalice. Kompletna logistička podrška za vaše projekte.
+                {{ $t('production.services.transport.description') }}
               </p>
-              <NuxtLink
+              <NuxtLinkLocale
                 to="/kontakt"
                 class="inline-flex items-center text-brand-primary text-sm font-medium hover:underline"
               >
-                Kontaktirajte nas
+                {{ $t('common.contactUs') }}
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
-              </NuxtLink>
+              </NuxtLinkLocale>
             </div>
           </div>
 
           <!-- CTA Card -->
           <div class="bg-gradient-to-br from-brand-secondary to-brand-primary rounded-lg p-6 flex flex-col justify-center">
             <h3 class="font-title text-xl uppercase tracking-wide mb-3 text-white">
-              Trebate Ponudu?
+              {{ $t('production.cta.title') }}
             </h3>
             <p class="text-white/80 text-sm leading-relaxed mb-4">
-              Kontaktirajte nas za besplatnu procjenu i ponudu za vaš projekt.
+              {{ $t('production.cta.description') }}
             </p>
-            <NuxtLink
+            <NuxtLinkLocale
               to="/kontakt"
               class="inline-flex items-center justify-center px-6 py-3 bg-white text-brand-dark font-title uppercase tracking-wide text-sm rounded hover:bg-brand-light transition-colors duration-300"
             >
-              Pošalji Upit
-            </NuxtLink>
+              {{ $t('common.sendInquiry') }}
+            </NuxtLinkLocale>
           </div>
         </div>
       </div>
@@ -191,24 +191,24 @@
     <section class="py-16 bg-[#1a1a1a]">
       <div class="container mx-auto px-4">
         <h2 class="font-title text-2xl md:text-3xl uppercase tracking-wide mb-12 text-center">
-          Naša <span class="text-brand-primary">Oprema</span>
+          {{ $t('production.equipment.title1') }} <span class="text-brand-primary">{{ $t('production.equipment.title2') }}</span>
         </h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           <div class="text-center">
             <div class="text-3xl md:text-4xl font-bold text-brand-primary mb-2">6kW</div>
-            <div class="text-brand-light/60 text-sm">Fiber Laser</div>
+            <div class="text-brand-light/60 text-sm">{{ $t('production.equipment.fiberLaser') }}</div>
           </div>
           <div class="text-center">
             <div class="text-3xl md:text-4xl font-bold text-brand-primary mb-2">3m</div>
-            <div class="text-brand-light/60 text-sm">Apkant Preša</div>
+            <div class="text-brand-light/60 text-sm">{{ $t('production.equipment.pressBreak') }}</div>
           </div>
           <div class="text-center">
             <div class="text-3xl md:text-4xl font-bold text-brand-primary mb-2">100mm</div>
-            <div class="text-brand-light/60 text-sm">Max. Provrt</div>
+            <div class="text-brand-light/60 text-sm">{{ $t('production.equipment.maxDrill') }}</div>
           </div>
           <div class="text-center">
             <div class="text-3xl md:text-4xl font-bold text-brand-primary mb-2">5</div>
-            <div class="text-brand-light/60 text-sm">Tehnologija Zavarivanja</div>
+            <div class="text-brand-light/60 text-sm">{{ $t('production.equipment.weldingTech') }}</div>
           </div>
         </div>
       </div>
@@ -217,19 +217,22 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+const localePath = useLocalePath()
+
 useHead({
-  title: 'Proizvodnja - SteelTech | Čelične Konstrukcije, Zavarivanje, Lasersko Rezanje',
+  title: t('seo.production.title'),
   meta: [
-    { name: 'description', content: 'SteelTech proizvodnja - čelične konstrukcije, MIG/MAG/TIG/REL zavarivanje, 6kW fiber lasersko rezanje, antikorozivna zaštita i usluge transporta.' },
-    { name: 'keywords', content: 'proizvodnja, čelične konstrukcije, zavarivanje, MIG, MAG, TIG, REL, lasersko rezanje, fiber laser, antikorozivna zaštita, cinčanje' },
-    { property: 'og:title', content: 'Proizvodnja - SteelTech' },
-    { property: 'og:description', content: 'Čelične konstrukcije, tehnologija zavarivanja, lasersko rezanje, antikorozivna zaštita i usluge transporta.' },
-    { property: 'og:url', content: 'https://steeltech.ba/proizvodnja' },
-    { name: 'twitter:title', content: 'Proizvodnja - SteelTech' },
-    { name: 'twitter:description', content: 'Čelične konstrukcije, zavarivanje, lasersko rezanje, antikorozivna zaštita.' }
+    { name: 'description', content: t('seo.production.description') },
+    { name: 'keywords', content: t('seo.production.keywords') },
+    { property: 'og:title', content: t('seo.production.title') },
+    { property: 'og:description', content: t('seo.production.description') },
+    { property: 'og:url', content: `https://steeltech.ba${localePath('/proizvodnja')}` },
+    { name: 'twitter:title', content: t('seo.production.title') },
+    { name: 'twitter:description', content: t('seo.production.description') }
   ],
   link: [
-    { rel: 'canonical', href: 'https://steeltech.ba/proizvodnja' }
+    { rel: 'canonical', href: `https://steeltech.ba${localePath('/proizvodnja')}` }
   ]
 })
 </script>

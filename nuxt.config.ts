@@ -2,16 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@nuxtjs/sitemap', '@nuxt/image'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@nuxtjs/sitemap', '@nuxt/image', '@nuxtjs/i18n'],
   css: ['~/assets/css/main.css'],
   site: {
     url: 'https://steeltech.ba'
   },
   app: {
     head: {
-      htmlAttrs: {
-        lang: 'hr'
-      },
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -20,7 +17,6 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#0087C2' },
         // Default OG tags
         { property: 'og:site_name', content: 'SteelTech' },
-        { property: 'og:locale', content: 'hr_HR' },
         { property: 'og:type', content: 'website' },
         { property: 'og:image', content: 'https://steeltech.ba/images/og-image.jpg' },
         { property: 'og:image:width', content: '1200' },
@@ -31,13 +27,52 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'canonical', href: 'https://steeltech.ba' },
         { rel: 'preload', as: 'style', href: '/css/nuxt-google-fonts.css' },
         { rel: 'stylesheet', href: '/css/nuxt-google-fonts.css' },
         { rel: 'preload', as: 'font', type: 'font/woff2', href: '/fonts/Audiowide-normal-400-latin.woff2', crossorigin: 'anonymous' },
         { rel: 'preload', as: 'font', type: 'font/woff2', href: '/fonts/Rajdhani-normal-400-latin.woff2', crossorigin: 'anonymous' }
       ]
     }
+  },
+  i18n: {
+    locales: [
+      {
+        code: 'hr',
+        iso: 'hr-HR',
+        name: 'Hrvatski',
+        file: 'hr.json'
+      },
+      {
+        code: 'en',
+        iso: 'en-US',
+        name: 'English',
+        file: 'en.json'
+      }
+    ],
+    defaultLocale: 'hr',
+    strategy: 'prefix_except_default',
+    lazy: true,
+    langDir: 'locales',
+    baseUrl: 'https://steeltech.ba',
+    customRoutes: 'config',
+    pages: {
+      'o-nama': {
+        en: '/about'
+      },
+      'proizvodnja': {
+        en: '/production'
+      },
+      'galerija': {
+        en: '/gallery'
+      },
+      'lokacija': {
+        en: '/location'
+      },
+      'kontakt': {
+        en: '/contact'
+      }
+    },
+    detectBrowserLanguage: false
   },
   sitemap: {
     xslColumns: [

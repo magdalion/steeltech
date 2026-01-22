@@ -8,10 +8,10 @@
       </div>
       <div class="container mx-auto px-4 relative z-10">
         <h1 class="font-title text-4xl md:text-5xl lg:text-6xl font-bold text-center uppercase tracking-wider mb-6">
-          <span class="text-brand-primary">Kontakt</span>
+          <span class="text-brand-primary">{{ $t('contact.hero.title') }}</span>
         </h1>
         <p class="font-subtitle text-xl md:text-2xl text-center text-brand-light/80 max-w-2xl mx-auto">
-          Pošaljite nam upit
+          {{ $t('contact.hero.subtitle') }}
         </p>
       </div>
     </section>
@@ -23,14 +23,14 @@
           <!-- Contact Form -->
           <div>
             <h2 class="font-title text-2xl uppercase tracking-wide mb-6">
-              Pošaljite <span class="text-brand-primary">Upit</span>
+              {{ $t('contact.form.title1') }} <span class="text-brand-primary">{{ $t('contact.form.title2') }}</span>
             </h2>
 
             <form @submit.prevent="handleSubmit" class="space-y-6">
               <!-- Name -->
               <div>
                 <label for="name" class="block text-brand-light/80 text-sm mb-2">
-                  Ime i prezime <span class="text-brand-primary">*</span>
+                  {{ $t('contact.form.name') }} <span class="text-brand-primary">{{ $t('contact.form.required') }}</span>
                 </label>
                 <input
                   id="name"
@@ -38,14 +38,14 @@
                   type="text"
                   required
                   class="w-full px-4 py-3 bg-[#2d2d2d] border border-white/10 rounded-lg text-brand-light placeholder-brand-light/40 focus:outline-none focus:border-brand-primary transition-colors"
-                  placeholder="Vaše ime i prezime"
+                  :placeholder="$t('contact.form.namePlaceholder')"
                 />
               </div>
 
               <!-- Email -->
               <div>
                 <label for="email" class="block text-brand-light/80 text-sm mb-2">
-                  Email adresa <span class="text-brand-primary">*</span>
+                  {{ $t('contact.form.email') }} <span class="text-brand-primary">{{ $t('contact.form.required') }}</span>
                 </label>
                 <input
                   id="email"
@@ -53,48 +53,48 @@
                   type="email"
                   required
                   class="w-full px-4 py-3 bg-[#2d2d2d] border border-white/10 rounded-lg text-brand-light placeholder-brand-light/40 focus:outline-none focus:border-brand-primary transition-colors"
-                  placeholder="vasa@email.com"
+                  :placeholder="$t('contact.form.emailPlaceholder')"
                 />
               </div>
 
               <!-- Phone -->
               <div>
                 <label for="phone" class="block text-brand-light/80 text-sm mb-2">
-                  Telefon
+                  {{ $t('contact.form.phone') }}
                 </label>
                 <input
                   id="phone"
                   v-model="form.phone"
                   type="tel"
                   class="w-full px-4 py-3 bg-[#2d2d2d] border border-white/10 rounded-lg text-brand-light placeholder-brand-light/40 focus:outline-none focus:border-brand-primary transition-colors"
-                  placeholder="+387 6X XXX XXX"
+                  :placeholder="$t('contact.form.phonePlaceholder')"
                 />
               </div>
 
               <!-- Subject -->
               <div>
                 <label for="subject" class="block text-brand-light/80 text-sm mb-2">
-                  Predmet
+                  {{ $t('contact.form.subject') }}
                 </label>
                 <select
                   id="subject"
                   v-model="form.subject"
                   class="w-full px-4 py-3 bg-[#2d2d2d] border border-white/10 rounded-lg text-brand-light focus:outline-none focus:border-brand-primary transition-colors"
                 >
-                  <option value="">Odaberite predmet</option>
-                  <option value="celicne-konstrukcije">Čelične konstrukcije</option>
-                  <option value="zavarivanje">Tehnologija zavarivanja</option>
-                  <option value="lasersko-rezanje">Lasersko rezanje</option>
-                  <option value="antikorozivna-zastita">Antikorozivna zaštita</option>
-                  <option value="transport">Usluge transporta</option>
-                  <option value="ostalo">Ostalo</option>
+                  <option value="">{{ $t('contact.form.subjectPlaceholder') }}</option>
+                  <option value="celicne-konstrukcije">{{ $t('contact.form.subjects.steelConstructions') }}</option>
+                  <option value="zavarivanje">{{ $t('contact.form.subjects.welding') }}</option>
+                  <option value="lasersko-rezanje">{{ $t('contact.form.subjects.laserCutting') }}</option>
+                  <option value="antikorozivna-zastita">{{ $t('contact.form.subjects.antiCorrosion') }}</option>
+                  <option value="transport">{{ $t('contact.form.subjects.transport') }}</option>
+                  <option value="ostalo">{{ $t('contact.form.subjects.other') }}</option>
                 </select>
               </div>
 
               <!-- Message -->
               <div>
                 <label for="message" class="block text-brand-light/80 text-sm mb-2">
-                  Poruka <span class="text-brand-primary">*</span>
+                  {{ $t('contact.form.message') }} <span class="text-brand-primary">{{ $t('contact.form.required') }}</span>
                 </label>
                 <textarea
                   id="message"
@@ -102,7 +102,7 @@
                   required
                   rows="5"
                   class="w-full px-4 py-3 bg-[#2d2d2d] border border-white/10 rounded-lg text-brand-light placeholder-brand-light/40 focus:outline-none focus:border-brand-primary transition-colors resize-none"
-                  placeholder="Opišite vaš upit ili projekt..."
+                  :placeholder="$t('contact.form.messagePlaceholder')"
                 ></textarea>
               </div>
 
@@ -121,7 +121,7 @@
                   <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                   <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
-                {{ isSubmitting ? 'Slanje...' : 'Pošalji Upit' }}
+                {{ isSubmitting ? $t('contact.form.submitting') : $t('contact.form.submit') }}
               </button>
 
               <!-- Success Message -->
@@ -135,7 +135,7 @@
               >
                 <div v-if="submitSuccess" class="p-4 bg-green-500/10 border border-green-500/30 rounded-lg">
                   <p class="text-green-400 text-sm">
-                    Hvala vam na upitu! Odgovorit ćemo vam u najkraćem mogućem roku.
+                    {{ $t('contact.form.success') }}
                   </p>
                 </div>
               </Transition>
@@ -145,7 +145,7 @@
           <!-- Contact Info -->
           <div>
             <h2 class="font-title text-2xl uppercase tracking-wide mb-6">
-              Kontakt <span class="text-brand-primary">Informacije</span>
+              {{ $t('contact.info.title1') }} <span class="text-brand-primary">{{ $t('contact.info.title2') }}</span>
             </h2>
 
             <div class="space-y-6">
@@ -159,11 +159,11 @@
                     </svg>
                   </div>
                   <div>
-                    <h3 class="font-title text-lg uppercase tracking-wide mb-2 text-brand-light">Adresa</h3>
+                    <h3 class="font-title text-lg uppercase tracking-wide mb-2 text-brand-light">{{ $t('contact.info.address') }}</h3>
                     <p class="text-brand-light/70 leading-relaxed">
-                      Brankovići bb<br />
-                      Žepče 72230<br />
-                      Bosna i Hercegovina
+                      {{ $t('location.address.street') }}<br />
+                      {{ $t('location.address.city') }}<br />
+                      {{ $t('location.address.country') }}
                     </p>
                   </div>
                 </div>
@@ -178,7 +178,7 @@
                     </svg>
                   </div>
                   <div>
-                    <h3 class="font-title text-lg uppercase tracking-wide mb-2 text-brand-light">Email</h3>
+                    <h3 class="font-title text-lg uppercase tracking-wide mb-2 text-brand-light">{{ $t('contact.info.emailTitle') }}</h3>
                     <a
                       href="mailto:dominik.jukic@steeltech.ba"
                       class="text-brand-light/70 hover:text-brand-primary transition-colors"
@@ -198,7 +198,7 @@
                     </svg>
                   </div>
                   <div>
-                    <h3 class="font-title text-lg uppercase tracking-wide mb-2 text-brand-light">Telefon</h3>
+                    <h3 class="font-title text-lg uppercase tracking-wide mb-2 text-brand-light">{{ $t('contact.info.phoneTitle') }}</h3>
                     <a
                       href="tel:+38764404198"
                       class="text-brand-light/70 hover:text-brand-primary transition-colors"
@@ -210,7 +210,7 @@
               </div>
 
               <!-- Map Link -->
-              <NuxtLink
+              <NuxtLinkLocale
                 to="/lokacija"
                 class="block bg-[#2d2d2d] border border-white/10 rounded-lg p-6 hover:border-brand-primary/50 transition-colors group"
               >
@@ -223,16 +223,16 @@
                     </div>
                     <div>
                       <h3 class="font-title text-lg uppercase tracking-wide text-brand-light group-hover:text-brand-primary transition-colors">
-                        Pogledaj Mapu
+                        {{ $t('contact.info.viewMap') }}
                       </h3>
-                      <p class="text-brand-light/60 text-sm">Pronađi nas na karti</p>
+                      <p class="text-brand-light/60 text-sm">{{ $t('contact.info.findOnMap') }}</p>
                     </div>
                   </div>
                   <svg class="w-5 h-5 text-brand-light/40 group-hover:text-brand-primary group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
-              </NuxtLink>
+              </NuxtLinkLocale>
             </div>
           </div>
         </div>
@@ -242,6 +242,9 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+const localePath = useLocalePath()
+
 interface ContactForm {
   name: string
   email: string
@@ -289,18 +292,18 @@ async function handleSubmit() {
 }
 
 useHead({
-  title: 'Kontakt - SteelTech | Pošaljite Upit',
+  title: t('seo.contact.title'),
   meta: [
-    { name: 'description', content: 'Kontaktirajte SteelTech za besplatnu ponudu. Email: dominik.jukic@steeltech.ba, telefon: +387 64 404 1908, adresa: Brankovići bb, Žepče 72230.' },
-    { name: 'keywords', content: 'kontakt, email, telefon, upit, ponuda, SteelTech, Žepče' },
-    { property: 'og:title', content: 'Kontakt - SteelTech' },
-    { property: 'og:description', content: 'Kontaktirajte nas za besplatnu ponudu. Email: dominik.jukic@steeltech.ba, telefon: +387 64 404 1908.' },
-    { property: 'og:url', content: 'https://steeltech.ba/kontakt' },
-    { name: 'twitter:title', content: 'Kontakt - SteelTech' },
-    { name: 'twitter:description', content: 'Kontaktirajte SteelTech za besplatnu ponudu.' }
+    { name: 'description', content: t('seo.contact.description') },
+    { name: 'keywords', content: t('seo.contact.keywords') },
+    { property: 'og:title', content: t('seo.contact.title') },
+    { property: 'og:description', content: t('seo.contact.description') },
+    { property: 'og:url', content: `https://steeltech.ba${localePath('/kontakt')}` },
+    { name: 'twitter:title', content: t('seo.contact.title') },
+    { name: 'twitter:description', content: t('seo.contact.description') }
   ],
   link: [
-    { rel: 'canonical', href: 'https://steeltech.ba/kontakt' }
+    { rel: 'canonical', href: `https://steeltech.ba${localePath('/kontakt')}` }
   ]
 })
 </script>

@@ -1,0 +1,291 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "production": "Production",
+    "gallery": "Gallery",
+    "location": "Location",
+    "contact": "Contact"
+  },
+  "footer": {
+    "description": "Reliable strength of steel. Specialized in manufacturing steel structures and premium welding technologies.",
+    "quickLinks": "Quick Links",
+    "contactTitle": "Contact",
+    "address": "Brankovici bb, Zepce 72230",
+    "country": "Bosnia and Herzegovina",
+    "followUs": "Follow Us!",
+    "onFacebook": "on Facebook",
+    "onInstagram": "on Instagram",
+    "copyright": "SteelTech. All rights reserved."
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "viewGallery": "View gallery",
+    "contactUs": "Contact Us",
+    "sendInquiry": "Send Inquiry",
+    "downloadPdf": "Download PDF",
+    "viewAllServices": "View All Services",
+    "viewFullGallery": "View Full Gallery",
+    "openInGoogleMaps": "Open in Google Maps"
+  },
+  "aria": {
+    "toggleMenu": "Toggle menu",
+    "backToTop": "Back to top",
+    "closeLightbox": "Close",
+    "previousImage": "Previous image",
+    "nextImage": "Next image"
+  },
+  "home": {
+    "hero": {
+      "subtitle": "STEELTECH ZEPCE",
+      "title1": "Reliable",
+      "title2": "Strength of Steel",
+      "description": "Specialized in manufacturing steel structures and premium welding technologies. Solutions that meet the highest industrial standards.",
+      "cta1": "Our Production",
+      "cta2": "Contact Us"
+    },
+    "highlights": {
+      "weldingTech": "Welding Technologies",
+      "certifiedStandards": "Certified Standards",
+      "fiberLaser": "Fiber Laser",
+      "qualityCommitment": "Quality Commitment"
+    },
+    "about": {
+      "sectionTitle": "About Us",
+      "title1": "Young Family",
+      "title2": "Business",
+      "p1": "Steeltech Zepce combines knowledge, modern technology and passion for metal. We continuously invest in modern equipment and skilled staff, because we believe quality starts with people.",
+      "p2": "Our work is fully compliant with ISO standards, guaranteeing safety, precision and durability of every project."
+    },
+    "certificates": {
+      "sectionTitle": "Our Certificates",
+      "title1": "Proven",
+      "title2": "Quality",
+      "description": "Our certificates guarantee compliance with the highest European standards for steel structure production and welding.",
+      "iso9001": "Quality Management System",
+      "en1090": "Steel Structure Production Control",
+      "en3834": "Steel Structure Welding"
+    },
+    "services": {
+      "sectionTitle": "Our Services",
+      "title1": "What",
+      "title2": "We Do",
+      "steelConstructions": {
+        "title": "Steel Structures",
+        "description": "Steel halls, warehouses, balconies, fences and staircases."
+      },
+      "welding": {
+        "title": "Welding",
+        "description": "MIG, MAG, TIG, SMAW and laser welding."
+      },
+      "laserCutting": {
+        "title": "Laser Cutting",
+        "description": "6kW fiber laser, press brake, drilling."
+      },
+      "antiCorrosion": {
+        "title": "Anti-Corrosion Protection",
+        "description": "Hot-dip galvanizing, painting, powder coating."
+      }
+    },
+    "gallery": {
+      "sectionTitle": "Gallery",
+      "title1": "Our",
+      "title2": "Projects"
+    },
+    "cta": {
+      "title": "Have a Project?",
+      "description": "Contact us for a free assessment and quote. Our team is ready to help you realize your project."
+    }
+  },
+  "about": {
+    "hero": {
+      "title1": "About",
+      "title2": "Us",
+      "subtitle": "Reliable strength of steel"
+    },
+    "intro": {
+      "p1": "{company} is a young, family business that combines knowledge, modern technology and passion for metal.",
+      "p2": "We specialize in manufacturing steel structures and premium welding technologies, providing solutions that meet the highest industrial standards.",
+      "p3": "We continuously invest in modern equipment and skilled staff, because we believe quality starts with people. Our work is fully compliant with ISO standards, guaranteeing safety, precision and durability of every project.",
+      "p4": "Guided by a clear vision of development, Steeltech is constantly expanding and improving its capabilities, with the goal of becoming a reliable partner in steel structures - today, tomorrow and in the future."
+    },
+    "values": {
+      "isoStandards": {
+        "title": "ISO Standards",
+        "description": "Our work is fully compliant with ISO standards, guaranteeing safety and precision."
+      },
+      "modernEquipment": {
+        "title": "Modern Equipment",
+        "description": "We continuously invest in modern equipment and the latest welding technologies."
+      },
+      "familyCompany": {
+        "title": "Family Business",
+        "description": "A young family business that combines knowledge, technology and passion for metal."
+      }
+    },
+    "references": {
+      "title": "References",
+      "description": "We have achieved and proven our knowledge and quality by performing welding and assembly work for leading companies:"
+    },
+    "cta": {
+      "title": "Ready to Collaborate?",
+      "description": "Contact us for more information about our services and collaboration opportunities."
+    }
+  },
+  "production": {
+    "hero": {
+      "title": "Production",
+      "subtitle": "Premium quality in every project"
+    },
+    "services": {
+      "steelConstructions": {
+        "title": "Steel Structures",
+        "description": "We specialize in manufacturing turnkey steel halls, mezzanine warehouses, prefabricated balconies and fences, metal staircases, special cargo vehicles and other metal products according to customer requirements."
+      },
+      "welding": {
+        "title": "Welding Technology",
+        "description": "Technologies for which we have equipment and expertise are MIG, MAG, TIG, SMAW and LASER WELDING. We work on manufacturing equipment for substations, work machines and industrial plants."
+      },
+      "laserCutting": {
+        "title": "Laser Cutting",
+        "description": "Laser cutting and metal processing services including drilling and bending. We have a 6kW fiber laser, press brake up to 3m, and drilling capability up to 100mm diameter."
+      },
+      "antiCorrosion": {
+        "title": "Anti-Corrosion Protection",
+        "description": "Through our partners, we can offer hot-dip galvanizing, wet painting with nitro and polyurethane paints, and electrostatic powder coating services."
+      },
+      "transport": {
+        "title": "Transport Services",
+        "description": "For all our products, we provide transportation to destination and crane services. Complete logistical support for your projects."
+      }
+    },
+    "cta": {
+      "title": "Need a Quote?",
+      "description": "Contact us for a free assessment and quote for your project."
+    },
+    "equipment": {
+      "title1": "Our",
+      "title2": "Equipment",
+      "fiberLaser": "Fiber Laser",
+      "pressBreak": "Press Brake",
+      "maxDrill": "Max. Drill",
+      "weldingTech": "Welding Technologies"
+    }
+  },
+  "gallery": {
+    "hero": {
+      "title": "Gallery",
+      "subtitle": "View our projects and work"
+    },
+    "categories": {
+      "all": "All",
+      "steelConstructions": "Steel Structures",
+      "welding": "Welding",
+      "laserCutting": "Laser Cutting",
+      "antiCorrosion": "Anti-Corrosion"
+    },
+    "noImages": "No images in this category.",
+    "imageAlt": {
+      "steelConstruction": "Steel structure",
+      "welding": "Welding",
+      "laserCutting": "Laser cutting",
+      "antiCorrosion": "Anti-corrosion protection"
+    }
+  },
+  "location": {
+    "hero": {
+      "title": "Location",
+      "subtitle": "Find us in Zepce"
+    },
+    "howToFind": {
+      "title1": "How to",
+      "title2": "find us"
+    },
+    "address": {
+      "title": "Address",
+      "street": "Brankovici bb",
+      "city": "Zepce 72230",
+      "country": "Bosnia and Herzegovina"
+    },
+    "directions": {
+      "title": "Directions",
+      "point1": "We are located in Brankovici, municipality of Zepce",
+      "point2": "Easily accessible from the main M17 highway",
+      "point3": "Accessible for heavy vehicles"
+    },
+    "mapTitle": "SteelTech location on map"
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact",
+      "subtitle": "Send us an inquiry"
+    },
+    "form": {
+      "title1": "Send",
+      "title2": "Inquiry",
+      "name": "Full name",
+      "namePlaceholder": "Your full name",
+      "email": "Email address",
+      "emailPlaceholder": "your{'@'}email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+387 6X XXX XXX",
+      "subject": "Subject",
+      "subjectPlaceholder": "Select subject",
+      "message": "Message",
+      "messagePlaceholder": "Describe your inquiry or project...",
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "required": "*",
+      "success": "Thank you for your inquiry! We will respond as soon as possible.",
+      "subjects": {
+        "steelConstructions": "Steel structures",
+        "welding": "Welding technology",
+        "laserCutting": "Laser cutting",
+        "antiCorrosion": "Anti-corrosion protection",
+        "transport": "Transport services",
+        "other": "Other"
+      }
+    },
+    "info": {
+      "title1": "Contact",
+      "title2": "Information",
+      "address": "Address",
+      "emailTitle": "Email",
+      "phoneTitle": "Phone",
+      "viewMap": "View Map",
+      "findOnMap": "Find us on the map"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "SteelTech - Reliable Strength of Steel | Steel Structures Zepce",
+      "description": "SteelTech Zepce - specialized in manufacturing steel structures and premium welding technologies. ISO certified standards, modern equipment, 6kW fiber laser.",
+      "keywords": "steel structures, welding, laser cutting, Zepce, Bosnia, ISO certificate, MIG, MAG, TIG, anti-corrosion protection"
+    },
+    "about": {
+      "title": "About Us - SteelTech | Family Business for Steel Structures",
+      "description": "Steeltech Zepce - a young, family business specialized in manufacturing steel structures and premium welding technologies. ISO certified, modernly equipped.",
+      "keywords": "about us, SteelTech, Zepce, family business, steel structures, ISO certificate, quality"
+    },
+    "production": {
+      "title": "Production - SteelTech | Steel Structures, Welding, Laser Cutting",
+      "description": "SteelTech production - steel structures, MIG/MAG/TIG/SMAW welding, 6kW fiber laser cutting, anti-corrosion protection and transport services.",
+      "keywords": "production, steel structures, welding, MIG, MAG, TIG, SMAW, laser cutting, fiber laser, anti-corrosion protection, galvanizing"
+    },
+    "gallery": {
+      "title": "Gallery - SteelTech | Steel Structure Projects",
+      "description": "SteelTech project gallery - view our work: steel structures, welding, laser cutting and anti-corrosion protection.",
+      "keywords": "gallery, projects, steel structures, welding, laser cutting, anti-corrosion protection, portfolio"
+    },
+    "location": {
+      "title": "Location - SteelTech | Zepce, Bosnia and Herzegovina",
+      "description": "SteelTech location - Brankovici bb, Zepce 72230, Bosnia and Herzegovina. Find us on Google Maps and visit us.",
+      "keywords": "location, address, Zepce, Brankovici, Bosnia and Herzegovina, map, directions"
+    },
+    "contact": {
+      "title": "Contact - SteelTech | Send Inquiry",
+      "description": "Contact SteelTech for a free quote. Email: dominik.jukic{'@'}steeltech.ba, phone: +387 64 404 1908, address: Brankovici bb, Zepce 72230.",
+      "keywords": "contact, email, phone, inquiry, quote, SteelTech, Zepce"
+    }
+  }
+}
