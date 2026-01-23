@@ -26,7 +26,7 @@
               {{ $t('contact.form.title1') }} <span class="text-brand-primary">{{ $t('contact.form.title2') }}</span>
             </h2>
 
-            <form @submit.prevent="handleSubmit" class="space-y-6">
+            <form @submit.prevent="handleSubmit" class="space-y-6" novalidate>
               <!-- Honeypot field - hidden from users, bots will fill it -->
               <div class="hidden" aria-hidden="true">
                 <label for="website">Website</label>
@@ -49,7 +49,6 @@
                   id="name"
                   v-model="form.name"
                   type="text"
-                  required
                   class="w-full px-4 py-3 bg-[#2d2d2d] border border-white/10 rounded-lg text-brand-light placeholder-brand-light/40 focus:outline-none focus:border-brand-primary transition-colors"
                   :placeholder="$t('contact.form.namePlaceholder')"
                 />
@@ -63,8 +62,7 @@
                 <input
                   id="email"
                   v-model="form.email"
-                  type="email"
-                  required
+                  type="text"
                   class="w-full px-4 py-3 bg-[#2d2d2d] border border-white/10 rounded-lg text-brand-light placeholder-brand-light/40 focus:outline-none focus:border-brand-primary transition-colors"
                   :placeholder="$t('contact.form.emailPlaceholder')"
                 />
@@ -112,7 +110,6 @@
                 <textarea
                   id="message"
                   v-model="form.message"
-                  required
                   rows="5"
                   class="w-full px-4 py-3 bg-[#2d2d2d] border border-white/10 rounded-lg text-brand-light placeholder-brand-light/40 focus:outline-none focus:border-brand-primary transition-colors resize-none"
                   :placeholder="$t('contact.form.messagePlaceholder')"
@@ -334,13 +331,23 @@ const submitError = ref('')
 const csrfToken = ref('')
 const honeypot = ref('')
 const consentTouched = ref(false)
+const isResettingForm = ref(false)
 
-// Track when user unchecks consent after checking it
+// Track consent changes (but not during form reset)
+// flush: 'sync' ensures the watcher runs immediately so isResettingForm check works
 watch(() => form.consent, (newVal, oldVal) => {
+  if (isResettingForm.value) return
+
+  // Show warning when user unchecks after checking
   if (oldVal === true && newVal === false) {
     consentTouched.value = true
   }
-})
+
+  // Clear error message when user checks consent (fixes the issue they were warned about)
+  if (newVal === true) {
+    submitError.value = ''
+  }
+}, { flush: 'sync' })
 
 // Fetch CSRF token on mount
 onMounted(async () => {
@@ -371,7 +378,7 @@ async function handleSubmit() {
     return
   }
 
-  if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+  if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email)) {
     submitError.value = t('contact.form.errors.emailRequired')
     isSubmitting.value = false
     return
@@ -412,7 +419,8 @@ async function handleSubmit() {
     const data = await response.json()
 
     if (data.success) {
-      // Reset form and show success
+      // Reset form and show success (skip consent watcher during reset)
+      isResettingForm.value = true
       form.name = ''
       form.email = ''
       form.phone = ''
@@ -420,10 +428,8 @@ async function handleSubmit() {
       form.message = ''
       form.consent = false
       consentTouched.value = false
+      isResettingForm.value = false
       submitSuccess.value = true
-
-      // Refresh CSRF token for potential next submission
-      await fetchCsrfToken()
 
       // Hide success message after 5 seconds
       setTimeout(() => {
@@ -435,16 +441,14 @@ async function handleSubmit() {
         case 'rate_limited':
           submitError.value = t('contact.form.errors.tooManyRequests')
           break
-        case 'invalid_csrf':
-          // Refresh token and ask user to try again
-          await fetchCsrfToken()
-          submitError.value = t('contact.form.errors.generic')
-          break
         case 'name_invalid':
           submitError.value = t('contact.form.errors.nameRequired')
           break
         case 'email_invalid':
           submitError.value = t('contact.form.errors.emailRequired')
+          break
+        case 'phone_invalid':
+          submitError.value = t('contact.form.errors.phoneInvalid')
           break
         case 'message_invalid':
           submitError.value = t('contact.form.errors.messageRequired')
@@ -453,9 +457,14 @@ async function handleSubmit() {
           submitError.value = t('contact.form.errors.generic')
       }
     }
+
+    // Always refresh CSRF token after any server request (token is consumed on use)
+    await fetchCsrfToken()
   } catch (error) {
     console.error('Form submission error:', error)
     submitError.value = t('contact.form.errors.networkError')
+    // Refresh token in case request reached server before failing
+    await fetchCsrfToken()
   } finally {
     isSubmitting.value = false
   }

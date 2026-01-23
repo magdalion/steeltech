@@ -31,6 +31,9 @@ class InputValidator
             $this->errors['email'] = 'Email is required';
         } elseif (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
             $this->errors['email'] = 'Invalid email format';
+        } elseif (!preg_match('/\.[a-zA-Z]{2,}$/', $data['email'])) {
+            // TLD must be at least 2 characters
+            $this->errors['email'] = 'Invalid email format';
         } elseif (strlen($data['email']) > 254) {
             $this->errors['email'] = 'Email must be 254 characters or less';
         }

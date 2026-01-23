@@ -4,7 +4,7 @@ User-Agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://steeltech.ba/sitemap.xml
+Sitemap: https://steeltech.ba/sitemap_index.xml
 
 # Block internal paths
 Disallow: /_nuxt/

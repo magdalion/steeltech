@@ -265,6 +265,7 @@
       "errors": {
         "nameRequired": "Please enter your full name.",
         "emailRequired": "Please enter a valid email address.",
+        "phoneInvalid": "Phone number must contain between 6 and 20 digits.",
         "messageRequired": "Message must contain at least 10 characters.",
         "consentRequired": "Please accept the terms of personal data processing.",
         "networkError": "A communication error occurred. Please try again.",

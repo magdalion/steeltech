@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy": "nuxt generate && scp -r .output/public/* webpage:/home/steeltech/public_html/ && ssh webpage 'sudo chown -R steeltech:steeltech /home/steeltech/public_html/'"
+    "deploy": "nuxt generate && scp -r .output/public/* webpage:/home/steeltech/public_html/ && ssh webpage 'sudo chown -R steeltech:steeltech /home/steeltech/public_html/ && sudo find /home/steeltech/public_html -type d -exec chmod 755 {} \\; && sudo find /home/steeltech/public_html -type f -exec chmod 644 {} \\;'"
   },
   "dependencies": {
     "@nuxt/image": "^2.0.0",

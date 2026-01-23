@@ -85,6 +85,7 @@ export default defineNuxtConfig({
     detectBrowserLanguage: false
   },
   sitemap: {
+    // autoI18n: true (default) - generates per-locale sitemaps with proper hreflang
     xslColumns: [
       { label: 'URL', width: '65%' },
       { label: 'Priority', select: 'sitemap:priority', width: '12.5%' },

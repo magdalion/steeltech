@@ -122,6 +122,17 @@ try {
     // Consume the CSRF token (one-time use)
     $csrfManager->consume($csrfToken);
 
+    // Validate raw phone input before sanitization (if provided)
+    // This catches text input that would be stripped to empty by sanitization
+    $rawPhone = trim($input['phone'] ?? '');
+    if (!empty($rawPhone)) {
+        // Phone should contain mostly digits (allow +, spaces, dashes, parentheses)
+        $digitsOnly = preg_replace('/[^\d]/', '', $rawPhone);
+        if (strlen($digitsOnly) < 6 || strlen($digitsOnly) > 20) {
+            sendResponse(false, 'phone_invalid', 400);
+        }
+    }
+
     // Sanitize input
     $data = $validator->sanitizeFormData($input);
 

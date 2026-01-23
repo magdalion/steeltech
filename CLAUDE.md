@@ -27,7 +27,14 @@ npm run deploy    # Generate and deploy to server via SSH
 npm run deploy
 ```
 
-This runs `nuxt generate` and uploads to `webpage:/home/steeltech/public_html/` via SCP.
+This script:
+1. Runs `nuxt generate` to build static site
+2. Uploads files to `webpage:/home/steeltech/public_html/` via SCP
+3. Sets ownership to `steeltech:steeltech`
+4. Sets directory permissions to `755` (rwxr-xr-x)
+5. Sets file permissions to `644` (rw-r--r--)
+
+The chmod steps are critical - without them Apache cannot read files and returns 403 Forbidden.
 
 **SSH alias:** `webpage` (configured in `~/.ssh/config`)
 
@@ -87,7 +94,7 @@ public/
 |--------|---------|
 | `@nuxtjs/tailwindcss` | CSS framework |
 | `@nuxtjs/google-fonts` | Audiowide & Rajdhani fonts (self-hosted, preloaded) |
-| `@nuxtjs/sitemap` | Auto-generates sitemap.xml |
+| `@nuxtjs/sitemap` | Auto-generates sitemap_index.xml with per-locale sitemaps |
 | `@nuxt/image` | Image optimization (NuxtImg component) |
 | `@nuxtjs/i18n` | Internationalization (Croatian/English) |
 
@@ -218,17 +225,20 @@ Located in `public/.htaccess`:
 - Block sensitive files (.env, config files)
 
 ### Sitemap
-Auto-generated at `https://steeltech.ba/sitemap.xml`
-- Includes all pages with images
-- XSL stylesheet for human-readable view
+Auto-generated per-locale sitemaps with i18n integration:
+- `https://steeltech.ba/sitemap_index.xml` - Main index (submit this to Google Search Console)
+- `https://steeltech.ba/__sitemap__/hr-HR.xml` - Croatian URLs with hreflang
+- `https://steeltech.ba/__sitemap__/en-US.xml` - English URLs with hreflang
+- XSL stylesheet for human-readable view in browser
 
 ### Robots.txt
 ```
 User-Agent: *
 Allow: /
-Sitemap: https://steeltech.ba/sitemap.xml
+Sitemap: https://steeltech.ba/sitemap_index.xml
 Disallow: /_nuxt/
 Disallow: /_ipx/
+Disallow: /__sitemap__/
 ```
 
 ### Back to Top Button

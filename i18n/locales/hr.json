@@ -265,6 +265,7 @@
       "errors": {
         "nameRequired": "Molimo unesite vaše ime i prezime.",
         "emailRequired": "Molimo unesite ispravnu email adresu.",
+        "phoneInvalid": "Telefonski broj mora sadržavati između 6 i 20 znamenki.",
         "messageRequired": "Poruka mora sadržavati najmanje 10 znakova.",
         "consentRequired": "Molimo prihvatite uvjete obrade osobnih podataka.",
         "networkError": "Došlo je do greške u komunikaciji. Molimo pokušajte ponovno.",
