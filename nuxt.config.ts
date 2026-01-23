@@ -70,6 +70,12 @@ export default defineNuxtConfig({
       },
       'kontakt': {
         en: '/contact'
+      },
+      'politika-privatnosti': {
+        en: '/privacy-policy'
+      },
+      'politika-kolacica': {
+        en: '/cookies-policy'
       }
     },
     detectBrowserLanguage: false

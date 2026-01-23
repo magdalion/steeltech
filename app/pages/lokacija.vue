@@ -76,7 +76,9 @@
           <!-- Map -->
           <div>
             <div class="bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden h-[400px] lg:h-[500px]">
+              <!-- Map iframe - only shown when third-party cookies are accepted -->
               <iframe
+                v-if="canShowMap"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2861.0!2d18.0394!3d44.4267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475f3a8b8c8c8c8b%3A0x8c8c8c8c8c8c8c8c!2sBrankovi%C4%87i%2C%20%C5%BDep%C4%8De%2072230%2C%20Bosnia%20and%20Herzegovina!5e0!3m2!1sen!2s!4v1234567890"
                 width="100%"
                 height="100%"
@@ -86,6 +88,32 @@
                 referrerpolicy="no-referrer-when-downgrade"
                 :title="$t('location.mapTitle')"
               ></iframe>
+              <!-- Cookie consent placeholder - shown when third-party cookies are not accepted -->
+              <div
+                v-else
+                class="h-full flex flex-col items-center justify-center p-8 text-center"
+              >
+                <div class="w-16 h-16 mb-4 text-brand-primary">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                  </svg>
+                </div>
+                <h3 class="font-title text-lg uppercase tracking-wide mb-2 text-brand-light">
+                  {{ $t('location.cookieRequired.title') }}
+                </h3>
+                <p class="text-brand-light/60 text-sm mb-6 max-w-sm">
+                  {{ $t('location.cookieRequired.description') }}
+                </p>
+                <button
+                  @click="acceptThirdPartyCookies"
+                  class="inline-flex items-center gap-2 px-6 py-3 bg-brand-primary text-white font-title uppercase tracking-wide text-sm rounded hover:bg-brand-secondary transition-colors duration-300"
+                >
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {{ $t('location.cookieRequired.button') }}
+                </button>
+              </div>
             </div>
             <div class="mt-4">
               <a
@@ -110,6 +138,20 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const localePath = useLocalePath()
+const { preferences, saveCustomPreferences, hasConsented } = useCookieConsent()
+
+// Check if we can show the map (third-party cookies accepted)
+const canShowMap = computed(() => {
+  return preferences.value.thirdParty
+})
+
+// Accept third-party cookies when user clicks the button
+const acceptThirdPartyCookies = () => {
+  saveCustomPreferences({
+    functional: preferences.value.functional,
+    thirdParty: true
+  })
+}
 
 useHead({
   title: t('seo.location.title'),

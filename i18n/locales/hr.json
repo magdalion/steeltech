@@ -16,7 +16,11 @@
     "followUs": "Zapratite nas!",
     "onFacebook": "na Facebook-u",
     "onInstagram": "na Instagram-u",
-    "copyright": "SteelTech. Sva prava zadržana."
+    "copyright": "SteelTech. Sva prava zadržana.",
+    "developedBy": "Razvio Webpage.ba",
+    "legal": "Pravne Informacije",
+    "privacyPolicy": "Politika Privatnosti",
+    "cookiesPolicy": "Politika Kolačića"
   },
   "common": {
     "learnMore": "Saznaj Više",
@@ -213,7 +217,12 @@
       "point2": "Lako dostupno sa glavne magistrale M17",
       "point3": "Mogućnost pristupa za teretna vozila"
     },
-    "mapTitle": "SteelTech lokacija na mapi"
+    "mapTitle": "SteelTech lokacija na mapi",
+    "cookieRequired": {
+      "title": "Kolačići Potrebni",
+      "description": "Za prikaz Google Maps mape potrebno je prihvatiti kolačiće trećih strana.",
+      "button": "Prihvati Kolačiće"
+    }
   },
   "contact": {
     "hero": {
@@ -294,6 +303,212 @@
       "title": "Kontakt - SteelTech | Pošaljite Upit",
       "description": "Kontaktirajte SteelTech za besplatnu ponudu. Email: dominik.jukic{'@'}steeltech.ba, telefon: +387 64 404 1908, adresa: Brankovići bb, Žepče 72230.",
       "keywords": "kontakt, email, telefon, upit, ponuda, SteelTech, Žepče"
+    },
+    "privacy": {
+      "title": "Politika Privatnosti - SteelTech | Zaštita Podataka",
+      "description": "Politika privatnosti SteelTech - saznajte kako prikupljamo, koristimo i štitimo vaše osobne podatke u skladu s GDPR regulativom.",
+      "keywords": "politika privatnosti, zaštita podataka, GDPR, osobni podaci, SteelTech"
+    },
+    "cookies": {
+      "title": "Politika Kolačića - SteelTech | Korištenje Kolačića",
+      "description": "Politika kolačića SteelTech - informacije o kolačićima koje koristimo na našoj web stranici i kako njima upravljati.",
+      "keywords": "politika kolačića, kolačići, cookies, privatnost, SteelTech"
+    }
+  },
+  "cookieConsent": {
+    "title": "Koristimo Kolačiće",
+    "description": "Ova web stranica koristi kolačiće kako bi vam omogućila najbolje korisničko iskustvo. Neki kolačići su neophodni za rad stranice, dok drugi poboljšavaju vaše iskustvo.",
+    "learnMore": "Saznajte više",
+    "acceptAll": "Prihvati Sve",
+    "rejectNonEssential": "Samo Neophodni",
+    "customize": "Prilagodi",
+    "customizeTitle": "Postavke Kolačića",
+    "savePreferences": "Spremi Postavke",
+    "alwaysOn": "Uvijek uključeno",
+    "categories": {
+      "necessary": {
+        "title": "Neophodni Kolačići",
+        "description": "Ovi kolačići su neophodni za rad web stranice i ne mogu se isključiti. Koriste se za osnovne funkcije poput sigurnosti i pristupačnosti."
+      },
+      "functional": {
+        "title": "Funkcionalni Kolačići",
+        "description": "Ovi kolačići omogućuju poboljšane funkcionalnosti poput pamćenja vašeg odabira jezika."
+      },
+      "thirdParty": {
+        "title": "Kolačići Trećih Strana",
+        "description": "Ovi kolačići postavljaju treće strane poput Google Maps za prikaz interaktivne mape naše lokacije."
+      }
+    }
+  },
+  "privacy": {
+    "hero": {
+      "title": "Politika Privatnosti",
+      "subtitle": "Vaša privatnost nam je važna"
+    },
+    "lastUpdated": "Zadnje ažuriranje",
+    "updateDate": "23. siječnja 2026.",
+    "sections": {
+      "intro": {
+        "title": "Uvod",
+        "content": "Metalna proizvodnja Steeltech Žepče (u daljnjem tekstu: \"mi\", \"nas\" ili \"naš\") posvećena je zaštiti vaše privatnosti. Ova Politika privatnosti objašnjava kako prikupljamo, koristimo, pohranjujemo i štitimo vaše osobne podatke kada koristite našu web stranicu steeltech.ba."
+      },
+      "definitions": {
+        "title": "Definicije Pojmova",
+        "items": {
+          "dataSubject": {
+            "term": "Ispitanik",
+            "definition": "Fizička osoba čiji se osobni podaci obrađuju."
+          },
+          "personalData": {
+            "term": "Osobni podaci",
+            "definition": "Sve informacije koje se odnose na identificiranu ili identificiranu fizičku osobu."
+          },
+          "processing": {
+            "term": "Obrada",
+            "definition": "Svaka radnja ili skup radnji koje se provode na osobnim podacima."
+          },
+          "controller": {
+            "term": "Voditelj obrade",
+            "definition": "Fizička ili pravna osoba koja određuje svrhe i sredstva obrade osobnih podataka."
+          }
+        }
+      },
+      "controller": {
+        "title": "Podaci o Voditelju Obrade",
+        "company": "Metalna proizvodnja Steeltech Žepče",
+        "address": "Brankovići bb",
+        "city": "Žepče 72230, Bosna i Hercegovina",
+        "emailLabel": "Email",
+        "website": "Web stranica"
+      },
+      "dataTypes": {
+        "title": "Vrste Podataka koje Prikupljamo",
+        "intro": "Možemo prikupljati sljedeće vrste osobnih podataka:",
+        "items": {
+          "name": "Ime i prezime",
+          "email": "Email adresa",
+          "phone": "Broj telefona (opcionalno)",
+          "message": "Sadržaj poruke iz kontakt forme",
+          "ip": "IP adresa (u tehničke svrhe)",
+          "browser": "Podaci o pregledniku i uređaju"
+        }
+      },
+      "purpose": {
+        "title": "Svrha Obrade Podataka",
+        "intro": "Vaše osobne podatke koristimo u sljedeće svrhe:",
+        "items": {
+          "respond": "Odgovaranje na vaše upite poslane putem kontakt forme",
+          "improve": "Poboljšanje funkcioniranja naše web stranice",
+          "legal": "Ispunjavanje zakonskih obveza"
+        }
+      },
+      "retention": {
+        "title": "Čuvanje Podataka",
+        "content": "Vaše osobne podatke čuvamo samo onoliko dugo koliko je potrebno za ispunjenje svrha za koje su prikupljeni. Podaci iz kontakt forme čuvaju se dok se vaš upit ne obradi i razriješi, nakon čega se sigurno brišu. Tehnički podaci poput IP adresa čuvaju se privremeno u svrhe sigurnosti."
+      },
+      "rights": {
+        "title": "Vaša Prava",
+        "intro": "U skladu s važećim zakonima o zaštiti podataka, imate sljedeća prava:",
+        "items": {
+          "access": "Pravo pristupa - možete zatražiti kopiju svojih osobnih podataka",
+          "rectification": "Pravo ispravka - možete zatražiti ispravak netočnih podataka",
+          "erasure": "Pravo brisanja - možete zatražiti brisanje svojih podataka",
+          "restriction": "Pravo ograničenja obrade",
+          "portability": "Pravo prenosivosti podataka",
+          "objection": "Pravo prigovora na obradu"
+        },
+        "contact": "Za ostvarivanje bilo kojeg od ovih prava, molimo vas da nas kontaktirate putem dolje navedenih kontakt podataka."
+      },
+      "security": {
+        "title": "Sigurnost Podataka",
+        "content": "Provodimo odgovarajuće tehničke i organizacijske mjere za zaštitu vaših osobnih podataka od neovlaštenog pristupa, izmjene, otkrivanja ili uništenja. To uključuje korištenje HTTPS enkripcije, CSRF zaštitu za kontakt formu i redovito ažuriranje sigurnosnih mjera."
+      },
+      "cookies": {
+        "title": "Kolačići",
+        "content": "Naša web stranica koristi kolačiće za poboljšanje vašeg korisničkog iskustva. Za detaljne informacije o kolačićima koje koristimo i kako njima upravljati, molimo pogledajte našu ",
+        "linkText": "Politiku Kolačića"
+      },
+      "thirdParty": {
+        "title": "Veze na Druge Stranice",
+        "content": "Naša web stranica može sadržavati veze na druge stranice. Nismo odgovorni za prakse privatnosti ili sadržaj tih vanjskih stranica. Preporučujemo da pregledate politike privatnosti svake stranice koju posjetite."
+      },
+      "changes": {
+        "title": "Izmjene Politike",
+        "content": "Zadržavamo pravo izmjene ove Politike privatnosti u bilo kojem trenutku. Sve izmjene bit će objavljene na ovoj stranici s ažuriranim datumom. Preporučujemo da povremeno pregledate ovu stranicu kako biste bili informirani o eventualnim promjenama."
+      },
+      "contact": {
+        "title": "Kontakt",
+        "content": "Ako imate pitanja o ovoj Politici privatnosti ili želite ostvariti svoja prava, molimo kontaktirajte nas na: "
+      }
+    }
+  },
+  "cookies": {
+    "hero": {
+      "title": "Politika Kolačića",
+      "subtitle": "Informacije o korištenju kolačića"
+    },
+    "lastUpdated": "Zadnje ažuriranje",
+    "updateDate": "23. siječnja 2026.",
+    "table": {
+      "name": "Naziv",
+      "purpose": "Svrha",
+      "duration": "Trajanje",
+      "provider": "Pružatelj",
+      "moreInfo": "Više Informacija"
+    },
+    "days": "dana",
+    "year": "godina",
+    "session": "Sesija",
+    "sections": {
+      "what": {
+        "title": "Što su Kolačići",
+        "content": "Kolačići su male tekstualne datoteke koje se pohranjuju na vašem uređaju (računalo, tablet ili mobitel) kada posjetite web stranicu. Koriste se za pamćenje vaših postavki, poboljšanje korisničkog iskustva i analizu korištenja stranice."
+      },
+      "types": {
+        "title": "Vrste Kolačića koje Koristimo",
+        "intro": "Na našoj web stranici koristimo sljedeće vrste kolačića:",
+        "necessary": {
+          "title": "Neophodni Kolačići",
+          "description": "Ovi kolačići su neophodni za rad web stranice. Bez njih određene funkcionalnosti ne bi radile ispravno.",
+          "items": {
+            "consent": "Pohranjuje vaše postavke kolačića",
+            "csrf": "Zaštita od CSRF napada na kontakt formi"
+          }
+        },
+        "functional": {
+          "title": "Funkcionalni Kolačići",
+          "description": "Ovi kolačići omogućuju dodatne funkcionalnosti poput pamćenja vaših preferencija.",
+          "items": {
+            "language": "Pamti vaš odabir jezika (hrvatski/engleski)"
+          }
+        },
+        "thirdParty": {
+          "title": "Kolačići Trećih Strana",
+          "description": "Ovi kolačići postavljaju treće strane čije usluge koristimo na našoj stranici.",
+          "items": {
+            "maps": "Prikaz interaktivne mape naše lokacije"
+          },
+          "googlePolicy": "Google Politika Privatnosti"
+        }
+      },
+      "manage": {
+        "title": "Upravljanje Kolačićima",
+        "content": "Možete upravljati svojim postavkama kolačića u bilo kojem trenutku klikom na gumb ispod.",
+        "button": "Postavke Kolačića",
+        "browserNote": "Također možete upravljati kolačićima putem postavki vašeg preglednika. Imajte na umu da blokiranje određenih kolačića može utjecati na funkcionalnost web stranice."
+      },
+      "googleMaps": {
+        "title": "Google Maps",
+        "content": "Na stranici \"Lokacija\" koristimo Google Maps za prikaz naše lokacije. Google Maps može postavljati vlastite kolačiće za pravilno funkcioniranje karte. Ako ne prihvatite kolačiće trećih strana, karta se neće prikazati, ali ćete i dalje moći pristupiti našoj adresi i dobiti upute za dolazak."
+      },
+      "changes": {
+        "title": "Izmjene Politike",
+        "content": "Možemo povremeno ažurirati ovu Politiku kolačića. Sve promjene bit će objavljene na ovoj stranici s novim datumom ažuriranja."
+      },
+      "contact": {
+        "title": "Kontakt",
+        "content": "Ako imate pitanja o našoj politici kolačića, molimo kontaktirajte nas na: "
+      }
     }
   }
 }

@@ -16,7 +16,11 @@
     "followUs": "Follow Us!",
     "onFacebook": "on Facebook",
     "onInstagram": "on Instagram",
-    "copyright": "SteelTech. All rights reserved."
+    "copyright": "SteelTech. All rights reserved.",
+    "developedBy": "Developed by Webpage.ba",
+    "legal": "Legal Information",
+    "privacyPolicy": "Privacy Policy",
+    "cookiesPolicy": "Cookies Policy"
   },
   "common": {
     "learnMore": "Learn More",
@@ -213,7 +217,12 @@
       "point2": "Easily accessible from the main M17 highway",
       "point3": "Accessible for heavy vehicles"
     },
-    "mapTitle": "SteelTech location on map"
+    "mapTitle": "SteelTech location on map",
+    "cookieRequired": {
+      "title": "Cookies Required",
+      "description": "To display the Google Maps map, you need to accept third-party cookies.",
+      "button": "Accept Cookies"
+    }
   },
   "contact": {
     "hero": {
@@ -294,6 +303,212 @@
       "title": "Contact - SteelTech | Send Inquiry",
       "description": "Contact SteelTech for a free quote. Email: dominik.jukic{'@'}steeltech.ba, phone: +387 64 404 1908, address: Brankovici bb, Zepce 72230.",
       "keywords": "contact, email, phone, inquiry, quote, SteelTech, Zepce"
+    },
+    "privacy": {
+      "title": "Privacy Policy - SteelTech | Data Protection",
+      "description": "SteelTech Privacy Policy - learn how we collect, use and protect your personal data in accordance with GDPR regulations.",
+      "keywords": "privacy policy, data protection, GDPR, personal data, SteelTech"
+    },
+    "cookies": {
+      "title": "Cookies Policy - SteelTech | Cookie Usage",
+      "description": "SteelTech Cookies Policy - information about the cookies we use on our website and how to manage them.",
+      "keywords": "cookies policy, cookies, privacy, SteelTech"
+    }
+  },
+  "cookieConsent": {
+    "title": "We Use Cookies",
+    "description": "This website uses cookies to provide you with the best user experience. Some cookies are essential for the website to function, while others enhance your experience.",
+    "learnMore": "Learn more",
+    "acceptAll": "Accept All",
+    "rejectNonEssential": "Essential Only",
+    "customize": "Customize",
+    "customizeTitle": "Cookie Settings",
+    "savePreferences": "Save Preferences",
+    "alwaysOn": "Always on",
+    "categories": {
+      "necessary": {
+        "title": "Essential Cookies",
+        "description": "These cookies are essential for the website to function and cannot be disabled. They are used for basic features like security and accessibility."
+      },
+      "functional": {
+        "title": "Functional Cookies",
+        "description": "These cookies enable enhanced functionality such as remembering your language preference."
+      },
+      "thirdParty": {
+        "title": "Third-Party Cookies",
+        "description": "These cookies are set by third parties like Google Maps to display an interactive map of our location."
+      }
+    }
+  },
+  "privacy": {
+    "hero": {
+      "title": "Privacy Policy",
+      "subtitle": "Your privacy matters to us"
+    },
+    "lastUpdated": "Last updated",
+    "updateDate": "January 23, 2026",
+    "sections": {
+      "intro": {
+        "title": "Introduction",
+        "content": "Metalna proizvodnja Steeltech Zepce (hereinafter: \"we\", \"us\" or \"our\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store and protect your personal data when you use our website steeltech.ba."
+      },
+      "definitions": {
+        "title": "Definitions",
+        "items": {
+          "dataSubject": {
+            "term": "Data Subject",
+            "definition": "A natural person whose personal data is being processed."
+          },
+          "personalData": {
+            "term": "Personal Data",
+            "definition": "Any information relating to an identified or identifiable natural person."
+          },
+          "processing": {
+            "term": "Processing",
+            "definition": "Any operation or set of operations performed on personal data."
+          },
+          "controller": {
+            "term": "Controller",
+            "definition": "A natural or legal person who determines the purposes and means of processing personal data."
+          }
+        }
+      },
+      "controller": {
+        "title": "Data Controller Information",
+        "company": "Metalna proizvodnja Steeltech Zepce",
+        "address": "Brankovici bb",
+        "city": "Zepce 72230, Bosnia and Herzegovina",
+        "emailLabel": "Email",
+        "website": "Website"
+      },
+      "dataTypes": {
+        "title": "Types of Data We Collect",
+        "intro": "We may collect the following types of personal data:",
+        "items": {
+          "name": "Full name",
+          "email": "Email address",
+          "phone": "Phone number (optional)",
+          "message": "Message content from contact form",
+          "ip": "IP address (for technical purposes)",
+          "browser": "Browser and device information"
+        }
+      },
+      "purpose": {
+        "title": "Purpose of Data Processing",
+        "intro": "We use your personal data for the following purposes:",
+        "items": {
+          "respond": "Responding to your inquiries submitted through the contact form",
+          "improve": "Improving the functionality of our website",
+          "legal": "Fulfilling legal obligations"
+        }
+      },
+      "retention": {
+        "title": "Data Retention",
+        "content": "We retain your personal data only for as long as necessary to fulfill the purposes for which it was collected. Data from the contact form is kept until your inquiry is processed and resolved, after which it is securely deleted. Technical data such as IP addresses is kept temporarily for security purposes."
+      },
+      "rights": {
+        "title": "Your Rights",
+        "intro": "Under applicable data protection laws, you have the following rights:",
+        "items": {
+          "access": "Right of access - you may request a copy of your personal data",
+          "rectification": "Right to rectification - you may request correction of inaccurate data",
+          "erasure": "Right to erasure - you may request deletion of your data",
+          "restriction": "Right to restriction of processing",
+          "portability": "Right to data portability",
+          "objection": "Right to object to processing"
+        },
+        "contact": "To exercise any of these rights, please contact us using the contact details provided below."
+      },
+      "security": {
+        "title": "Data Security",
+        "content": "We implement appropriate technical and organizational measures to protect your personal data from unauthorized access, modification, disclosure or destruction. This includes the use of HTTPS encryption, CSRF protection for the contact form, and regular security updates."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "content": "Our website uses cookies to improve your user experience. For detailed information about the cookies we use and how to manage them, please see our ",
+        "linkText": "Cookies Policy"
+      },
+      "thirdParty": {
+        "title": "Links to Other Websites",
+        "content": "Our website may contain links to other websites. We are not responsible for the privacy practices or content of those external websites. We recommend that you review the privacy policies of each website you visit."
+      },
+      "changes": {
+        "title": "Policy Changes",
+        "content": "We reserve the right to modify this Privacy Policy at any time. Any changes will be posted on this page with an updated date. We recommend that you periodically review this page to stay informed of any changes."
+      },
+      "contact": {
+        "title": "Contact",
+        "content": "If you have any questions about this Privacy Policy or wish to exercise your rights, please contact us at: "
+      }
+    }
+  },
+  "cookies": {
+    "hero": {
+      "title": "Cookies Policy",
+      "subtitle": "Information about cookie usage"
+    },
+    "lastUpdated": "Last updated",
+    "updateDate": "January 23, 2026",
+    "table": {
+      "name": "Name",
+      "purpose": "Purpose",
+      "duration": "Duration",
+      "provider": "Provider",
+      "moreInfo": "More Info"
+    },
+    "days": "days",
+    "year": "year",
+    "session": "Session",
+    "sections": {
+      "what": {
+        "title": "What are Cookies",
+        "content": "Cookies are small text files that are stored on your device (computer, tablet or mobile) when you visit a website. They are used to remember your settings, improve user experience and analyze website usage."
+      },
+      "types": {
+        "title": "Types of Cookies We Use",
+        "intro": "We use the following types of cookies on our website:",
+        "necessary": {
+          "title": "Essential Cookies",
+          "description": "These cookies are essential for the website to function. Without them, certain features would not work properly.",
+          "items": {
+            "consent": "Stores your cookie preferences",
+            "csrf": "Protection against CSRF attacks on the contact form"
+          }
+        },
+        "functional": {
+          "title": "Functional Cookies",
+          "description": "These cookies enable additional functionality such as remembering your preferences.",
+          "items": {
+            "language": "Remembers your language choice (Croatian/English)"
+          }
+        },
+        "thirdParty": {
+          "title": "Third-Party Cookies",
+          "description": "These cookies are set by third parties whose services we use on our website.",
+          "items": {
+            "maps": "Displays an interactive map of our location"
+          },
+          "googlePolicy": "Google Privacy Policy"
+        }
+      },
+      "manage": {
+        "title": "Managing Cookies",
+        "content": "You can manage your cookie preferences at any time by clicking the button below.",
+        "button": "Cookie Settings",
+        "browserNote": "You can also manage cookies through your browser settings. Please note that blocking certain cookies may affect website functionality."
+      },
+      "googleMaps": {
+        "title": "Google Maps",
+        "content": "On our \"Location\" page, we use Google Maps to display our location. Google Maps may set its own cookies for the map to function properly. If you do not accept third-party cookies, the map will not be displayed, but you will still be able to access our address and get directions."
+      },
+      "changes": {
+        "title": "Policy Changes",
+        "content": "We may update this Cookies Policy from time to time. Any changes will be posted on this page with a new update date."
+      },
+      "contact": {
+        "title": "Contact",
+        "content": "If you have any questions about our cookies policy, please contact us at: "
+      }
     }
   }
 }

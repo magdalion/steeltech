@@ -162,14 +162,43 @@
           </div>
         </div>
 
-        <!-- Copyright -->
-        <div class="border-t border-white/10 pt-8 text-center">
-          <p class="text-sm text-brand-light/40">
-            &copy; {{ new Date().getFullYear() }} {{ $t('footer.copyright') }}
-          </p>
+        <!-- Legal Links & Copyright -->
+        <div class="border-t border-white/10 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-sm text-brand-light/40">
+              &copy; {{ new Date().getFullYear() }} {{ $t('footer.copyright') }}
+              <span class="mx-2">|</span>
+              <a
+                href="https://webpage.ba"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-brand-primary transition-colors"
+              >
+                {{ $t('footer.developedBy') }}
+              </a>
+            </p>
+            <div class="flex items-center gap-4 text-sm">
+              <NuxtLinkLocale
+                to="/politika-privatnosti"
+                class="text-brand-light/40 hover:text-brand-primary transition-colors"
+              >
+                {{ $t('footer.privacyPolicy') }}
+              </NuxtLinkLocale>
+              <span class="text-brand-light/20">|</span>
+              <NuxtLinkLocale
+                to="/politika-kolacica"
+                class="text-brand-light/40 hover:text-brand-primary transition-colors"
+              >
+                {{ $t('footer.cookiesPolicy') }}
+              </NuxtLinkLocale>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
+
+    <!-- Cookie Consent Banner -->
+    <CookieConsent />
 
     <!-- Back to Top Button -->
     <Transition
