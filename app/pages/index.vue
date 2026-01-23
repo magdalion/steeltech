@@ -432,8 +432,8 @@ function scrollToHighlights() {
 const galleryPreview = [
   { src: '/images/Steeltech_Section_1_3.JPG', alt: 'Steel structure' },
   { src: '/images/Steeltech_Section_1_12.JPG', alt: 'Steel hall' },
-  { src: '/images/Steeltech_Section_2_1.JPG', alt: 'Welding' },
-  { src: '/images/Steeltech_Section_2_4.JPG', alt: 'Welding work' },
+  { src: '/images/Steeltech_Section_2_1.JPG', alt: 'Welding & Assembly' },
+  { src: '/images/Steeltech_Section_2_4.JPG', alt: 'Welding & Assembly work' },
   { src: '/images/Steeltech_Section_1_14.JPG', alt: 'Construction' },
   { src: '/images/Steeltech_Section_3_1.JPG', alt: 'Laser cutting' },
   { src: '/images/Steeltech_Section_1_7.JPG', alt: 'Project' },

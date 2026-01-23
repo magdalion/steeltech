@@ -162,7 +162,7 @@ class InputValidator
         $subjects = [
             'hr' => [
                 'celicne-konstrukcije' => 'Čelične konstrukcije',
-                'zavarivanje' => 'Tehnologija zavarivanja',
+                'zavarivanje' => 'Tehnologija zavarivanja i montaže',
                 'lasersko-rezanje' => 'Lasersko rezanje',
                 'antikorozivna-zastita' => 'Antikorozivna zaštita',
                 'transport' => 'Usluge transporta',
@@ -170,7 +170,7 @@ class InputValidator
             ],
             'en' => [
                 'celicne-konstrukcije' => 'Steel Structures',
-                'zavarivanje' => 'Welding Technology',
+                'zavarivanje' => 'Welding & Assembly Technology',
                 'lasersko-rezanje' => 'Laser Cutting',
                 'antikorozivna-zastita' => 'Anti-Corrosion Protection',
                 'transport' => 'Transport Services',

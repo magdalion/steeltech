@@ -49,7 +49,7 @@
       "cta2": "Kontaktirajte Nas"
     },
     "highlights": {
-      "weldingTech": "Tehnologija Zavarivanja",
+      "weldingTech": "Tehnologija Zavarivanja i Montaže",
       "certifiedStandards": "Certificirani Standardi",
       "fiberLaser": "Fiber Laser",
       "qualityCommitment": "Predanost Kvaliteti"
@@ -79,7 +79,7 @@
         "description": "Čelične hale, skladišta, balkoni, ograde i stubišta."
       },
       "welding": {
-        "title": "Zavarivanje",
+        "title": "Zavarivanje i montaža",
         "description": "MIG, MAG, TIG, REL i lasersko zavarivanje."
       },
       "laserCutting": {
@@ -147,7 +147,7 @@
         "description": "Specijalizirani smo za izradu čeličnih hala po sistemu ključ u ruke, međuetažnih skladišta, montažnih balkona i ograda, metalnih stubišta, specijalnih vozila za prijevoz tereta te ostale proizvode od metala po želji kupca."
       },
       "welding": {
-        "title": "Tehnologija Zavarivanja",
+        "title": "Tehnologija Zavarivanja i Montaže",
         "description": "Tehnologije za koje posjedujemo opremu i znanje su MIG, MAG, TIG, REL i LASERSKO ZAVARIVANJE. Radimo na izradi opreme za trafostanice, radne mašine i industrijska postrojenja."
       },
       "laserCutting": {
@@ -173,7 +173,7 @@
       "fiberLaser": "Fiber Laser",
       "pressBreak": "Apkant Preša",
       "maxDrill": "Max. Provrt",
-      "weldingTech": "Tehnologija Zavarivanja"
+      "weldingTech": "Tehnologija Zavarivanja i Montaže"
     }
   },
   "gallery": {
@@ -184,14 +184,14 @@
     "categories": {
       "all": "Sve",
       "steelConstructions": "Čelične Konstrukcije",
-      "welding": "Zavarivanje",
+      "welding": "Zavarivanje i montaža",
       "laserCutting": "Lasersko Rezanje",
       "antiCorrosion": "Antikorozivna Zaštita"
     },
     "noImages": "Nema slika u ovoj kategoriji.",
     "imageAlt": {
       "steelConstruction": "Čelična konstrukcija",
-      "welding": "Zavarivanje",
+      "welding": "Zavarivanje i montaža",
       "laserCutting": "Lasersko rezanje",
       "antiCorrosion": "Antikorozivna zaštita"
     }
@@ -248,7 +248,7 @@
       "success": "Hvala vam na upitu! Odgovorit ćemo vam u najkraćem mogućem roku.",
       "subjects": {
         "steelConstructions": "Čelične konstrukcije",
-        "welding": "Tehnologija zavarivanja",
+        "welding": "Tehnologija zavarivanja i montaže",
         "laserCutting": "Lasersko rezanje",
         "antiCorrosion": "Antikorozivna zaštita",
         "transport": "Usluge transporta",
@@ -277,7 +277,7 @@
     "home": {
       "title": "SteelTech - Pouzdana Snaga Čelika | Čelične Konstrukcije Žepče",
       "description": "SteelTech Žepče - specijalizirani za izradu čeličnih konstrukcija i vrhunske tehnologije zavarivanja. ISO certificirani standardi, moderna oprema, 6kW fiber laser.",
-      "keywords": "čelične konstrukcije, zavarivanje, lasersko rezanje, Žepče, BiH, ISO certifikat, MIG, MAG, TIG, antikorozivna zaštita"
+      "keywords": "čelične konstrukcije, zavarivanje, montaža, lasersko rezanje, Žepče, BiH, ISO certifikat, MIG, MAG, TIG, antikorozivna zaštita"
     },
     "about": {
       "title": "O Nama - SteelTech | Porodična Firma za Čelične Konstrukcije",
@@ -285,14 +285,14 @@
       "keywords": "o nama, SteelTech, Žepče, porodična firma, čelične konstrukcije, ISO certifikat, kvaliteta"
     },
     "production": {
-      "title": "Proizvodnja - SteelTech | Čelične Konstrukcije, Zavarivanje, Lasersko Rezanje",
-      "description": "SteelTech proizvodnja - čelične konstrukcije, MIG/MAG/TIG/REL zavarivanje, 6kW fiber lasersko rezanje, antikorozivna zaštita i usluge transporta.",
-      "keywords": "proizvodnja, čelične konstrukcije, zavarivanje, MIG, MAG, TIG, REL, lasersko rezanje, fiber laser, antikorozivna zaštita, cinčanje"
+      "title": "Proizvodnja - SteelTech | Čelične Konstrukcije, Zavarivanje, Montaža, Lasersko Rezanje",
+      "description": "SteelTech proizvodnja - čelične konstrukcije, MIG/MAG/TIG/REL zavarivanje i montaža, 6kW fiber lasersko rezanje, antikorozivna zaštita i usluge transporta.",
+      "keywords": "proizvodnja, čelične konstrukcije, zavarivanje, montaža, MIG, MAG, TIG, REL, lasersko rezanje, fiber laser, antikorozivna zaštita, cinčanje"
     },
     "gallery": {
       "title": "Galerija - SteelTech | Projekti Čeličnih Konstrukcija",
-      "description": "SteelTech galerija projekata - pogledajte naše radove: čelične konstrukcije, zavarivanje, lasersko rezanje i antikorozivna zaštita.",
-      "keywords": "galerija, projekti, čelične konstrukcije, zavarivanje, lasersko rezanje, antikorozivna zaštita, portfolio"
+      "description": "SteelTech galerija projekata - pogledajte naše radove: čelične konstrukcije, zavarivanje i montaža, lasersko rezanje i antikorozivna zaštita.",
+      "keywords": "galerija, projekti, čelične konstrukcije, zavarivanje, montaža, lasersko rezanje, antikorozivna zaštita, portfolio"
     },
     "location": {
       "title": "Lokacija - SteelTech | Žepče, Bosna i Hercegovina",

@@ -49,7 +49,7 @@
       "cta2": "Contact Us"
     },
     "highlights": {
-      "weldingTech": "Welding Technologies",
+      "weldingTech": "Welding & Assembly",
       "certifiedStandards": "Certified Standards",
       "fiberLaser": "Fiber Laser",
       "qualityCommitment": "Quality Commitment"
@@ -79,7 +79,7 @@
         "description": "Steel halls, warehouses, balconies, fences and staircases."
       },
       "welding": {
-        "title": "Welding",
+        "title": "Welding & Assembly",
         "description": "MIG, MAG, TIG, SMAW and laser welding."
       },
       "laserCutting": {
@@ -147,7 +147,7 @@
         "description": "We specialize in manufacturing turnkey steel halls, mezzanine warehouses, prefabricated balconies and fences, metal staircases, special cargo vehicles and other metal products according to customer requirements."
       },
       "welding": {
-        "title": "Welding Technology",
+        "title": "Welding & Assembly Technology",
         "description": "Technologies for which we have equipment and expertise are MIG, MAG, TIG, SMAW and LASER WELDING. We work on manufacturing equipment for substations, work machines and industrial plants."
       },
       "laserCutting": {
@@ -173,7 +173,7 @@
       "fiberLaser": "Fiber Laser",
       "pressBreak": "Press Brake",
       "maxDrill": "Max. Drill",
-      "weldingTech": "Welding Technologies"
+      "weldingTech": "Welding & Assembly"
     }
   },
   "gallery": {
@@ -184,14 +184,14 @@
     "categories": {
       "all": "All",
       "steelConstructions": "Steel Structures",
-      "welding": "Welding",
+      "welding": "Welding & Assembly",
       "laserCutting": "Laser Cutting",
       "antiCorrosion": "Anti-Corrosion"
     },
     "noImages": "No images in this category.",
     "imageAlt": {
       "steelConstruction": "Steel structure",
-      "welding": "Welding",
+      "welding": "Welding & Assembly",
       "laserCutting": "Laser cutting",
       "antiCorrosion": "Anti-corrosion protection"
     }
@@ -248,7 +248,7 @@
       "success": "Thank you for your inquiry! We will respond as soon as possible.",
       "subjects": {
         "steelConstructions": "Steel structures",
-        "welding": "Welding technology",
+        "welding": "Welding & Assembly technology",
         "laserCutting": "Laser cutting",
         "antiCorrosion": "Anti-corrosion protection",
         "transport": "Transport services",
@@ -277,7 +277,7 @@
     "home": {
       "title": "SteelTech - Reliable Strength of Steel | Steel Structures Zepce",
       "description": "SteelTech Zepce - specialized in manufacturing steel structures and premium welding technologies. ISO certified standards, modern equipment, 6kW fiber laser.",
-      "keywords": "steel structures, welding, laser cutting, Zepce, Bosnia, ISO certificate, MIG, MAG, TIG, anti-corrosion protection"
+      "keywords": "steel structures, welding, assembly, laser cutting, Zepce, Bosnia, ISO certificate, MIG, MAG, TIG, anti-corrosion protection"
     },
     "about": {
       "title": "About Us - SteelTech | Family Business for Steel Structures",
@@ -285,14 +285,14 @@
       "keywords": "about us, SteelTech, Zepce, family business, steel structures, ISO certificate, quality"
     },
     "production": {
-      "title": "Production - SteelTech | Steel Structures, Welding, Laser Cutting",
-      "description": "SteelTech production - steel structures, MIG/MAG/TIG/SMAW welding, 6kW fiber laser cutting, anti-corrosion protection and transport services.",
-      "keywords": "production, steel structures, welding, MIG, MAG, TIG, SMAW, laser cutting, fiber laser, anti-corrosion protection, galvanizing"
+      "title": "Production - SteelTech | Steel Structures, Welding, Assembly, Laser Cutting",
+      "description": "SteelTech production - steel structures, MIG/MAG/TIG/SMAW welding & assembly, 6kW fiber laser cutting, anti-corrosion protection and transport services.",
+      "keywords": "production, steel structures, welding, assembly, MIG, MAG, TIG, SMAW, laser cutting, fiber laser, anti-corrosion protection, galvanizing"
     },
     "gallery": {
       "title": "Gallery - SteelTech | Steel Structure Projects",
-      "description": "SteelTech project gallery - view our work: steel structures, welding, laser cutting and anti-corrosion protection.",
-      "keywords": "gallery, projects, steel structures, welding, laser cutting, anti-corrosion protection, portfolio"
+      "description": "SteelTech project gallery - view our work: steel structures, welding & assembly, laser cutting and anti-corrosion protection.",
+      "keywords": "gallery, projects, steel structures, welding, assembly, laser cutting, anti-corrosion protection, portfolio"
     },
     "location": {
       "title": "Location - SteelTech | Zepce, Bosnia and Herzegovina",
