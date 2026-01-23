@@ -119,6 +119,42 @@
                 ></textarea>
               </div>
 
+              <!-- Consent Checkbox -->
+              <div>
+                <div class="flex items-start gap-3">
+                  <input
+                    id="consent"
+                    v-model="form.consent"
+                    type="checkbox"
+                    class="mt-1 w-4 h-4 accent-brand-primary cursor-pointer"
+                  />
+                  <label for="consent" class="text-brand-light/80 text-sm leading-relaxed">
+                    {{ $t('contact.form.consent.label') }}
+                    <NuxtLinkLocale to="/politika-privatnosti" class="text-brand-primary hover:underline">
+                      {{ $t('contact.form.consent.privacyPolicy') }}
+                    </NuxtLinkLocale>
+                    {{ $t('contact.form.consent.and') }}
+                    <NuxtLinkLocale to="/politika-kolacica" class="text-brand-primary hover:underline">
+                      {{ $t('contact.form.consent.cookiesPolicy') }}
+                    </NuxtLinkLocale>.
+                    <span class="text-brand-primary">{{ $t('contact.form.consent.required') }}</span>
+                  </label>
+                </div>
+                <!-- Subtle warning when unchecked after interaction -->
+                <Transition
+                  enter-active-class="transition duration-200 ease-out"
+                  enter-from-class="opacity-0"
+                  enter-to-class="opacity-100"
+                  leave-active-class="transition duration-150 ease-in"
+                  leave-from-class="opacity-100"
+                  leave-to-class="opacity-0"
+                >
+                  <p v-if="!form.consent && consentTouched" class="mt-2 text-amber-400/80 text-xs">
+                    {{ $t('contact.form.consent.warning') }}
+                  </p>
+                </Transition>
+              </div>
+
               <!-- Submit Button -->
               <button
                 type="submit"
@@ -280,6 +316,7 @@ interface ContactForm {
   phone: string
   subject: string
   message: string
+  consent: boolean
 }
 
 const form = reactive<ContactForm>({
@@ -287,7 +324,8 @@ const form = reactive<ContactForm>({
   email: '',
   phone: '',
   subject: '',
-  message: ''
+  message: '',
+  consent: false
 })
 
 const isSubmitting = ref(false)
@@ -295,6 +333,14 @@ const submitSuccess = ref(false)
 const submitError = ref('')
 const csrfToken = ref('')
 const honeypot = ref('')
+const consentTouched = ref(false)
+
+// Track when user unchecks consent after checking it
+watch(() => form.consent, (newVal, oldVal) => {
+  if (oldVal === true && newVal === false) {
+    consentTouched.value = true
+  }
+})
 
 // Fetch CSRF token on mount
 onMounted(async () => {
@@ -337,6 +383,13 @@ async function handleSubmit() {
     return
   }
 
+  if (!form.consent) {
+    submitError.value = t('contact.form.errors.consentRequired')
+    consentTouched.value = true
+    isSubmitting.value = false
+    return
+  }
+
   try {
     const response = await fetch('/api/contact.php', {
       method: 'POST',
@@ -349,6 +402,7 @@ async function handleSubmit() {
         phone: form.phone,
         subject: form.subject,
         message: form.message,
+        consent: form.consent,
         lang: locale.value,
         csrf_token: csrfToken.value,
         website: honeypot.value // Honeypot field
@@ -364,6 +418,8 @@ async function handleSubmit() {
       form.phone = ''
       form.subject = ''
       form.message = ''
+      form.consent = false
+      consentTouched.value = false
       submitSuccess.value = true
 
       // Refresh CSRF token for potential next submission

@@ -17,7 +17,19 @@ npm run dev       # Development server
 npm run build     # Build for production
 npm run preview   # Preview production build
 npm run generate  # Generate static site (outputs to .output/public/)
+npm run deploy    # Generate and deploy to server via SSH
 ```
+
+## Deployment
+
+**One-command deployment:**
+```bash
+npm run deploy
+```
+
+This runs `nuxt generate` and uploads to `webpage:/home/steeltech/public_html/` via SCP.
+
+**SSH alias:** `webpage` (configured in `~/.ssh/config`)
 
 ## Architecture
 
@@ -44,11 +56,29 @@ public/
 ├── .htaccess               # Apache config (HTTPS, caching, security headers)
 ├── robots.txt              # Search engine directives
 ├── favicon.ico             # Site favicon (needs replacement with SteelTech logo)
-└── images/                 # Project images organized by section
-    ├── Steeltech_Section_1_*.JPG   # Čelične konstrukcije (17 images)
-    ├── Steeltech_Section_2_*.JPG   # Zavarivanje (9 images)
-    ├── Steeltech_Section_3_*.JPG   # Lasersko rezanje (2 images)
-    └── Steeltech_section_4*.JPG    # Antikorozivna zaštita (3 images)
+├── images/                 # Project images organized by section
+│   ├── Steeltech_Section_1_*.JPG   # Čelične konstrukcije (17 images)
+│   ├── Steeltech_Section_2_*.JPG   # Zavarivanje (9 images)
+│   ├── Steeltech_Section_3_*.JPG   # Lasersko rezanje (2 images)
+│   └── Steeltech_section_4*.JPG    # Antikorozivna zaštita (3 images)
+└── api/                    # PHP backend for contact form
+    ├── contact.php         # Main form handler (POST)
+    ├── csrf-token.php      # CSRF token generator (GET)
+    ├── cleanup.php         # Cron job for expired files
+    ├── config/
+    │   └── mail.config.php # SMTP credentials
+    ├── includes/
+    │   ├── RateLimiter.php     # 5 requests/hour per IP
+    │   ├── CsrfToken.php       # Token generation/validation
+    │   └── InputValidator.php  # Input sanitization
+    ├── templates/
+    │   ├── email-hr.html   # Croatian email template
+    │   └── email-en.html   # English email template
+    ├── storage/
+    │   ├── rate_limits/    # Rate limit tracking (auto-created)
+    │   └── csrf_tokens/    # CSRF token storage (auto-created)
+    └── vendor/
+        └── autoload.php    # PHPMailer autoloader
 ```
 
 ## Installed Modules
@@ -59,6 +89,7 @@ public/
 | `@nuxtjs/google-fonts` | Audiowide & Rajdhani fonts (self-hosted, preloaded) |
 | `@nuxtjs/sitemap` | Auto-generates sitemap.xml |
 | `@nuxt/image` | Image optimization (NuxtImg component) |
+| `@nuxtjs/i18n` | Internationalization (Croatian/English) |
 
 ## Design System
 
@@ -183,7 +214,7 @@ Located in `public/.htaccess`:
 - Security headers (X-Frame-Options, CSP, HSTS, etc.)
 - Gzip compression
 - Browser caching (1 year for static assets)
-- SPA routing fallback to index.html
+- SPA routing fallback to index.html (excludes /api/)
 - Block sensitive files (.env, config files)
 
 ### Sitemap
@@ -236,12 +267,6 @@ steeltech.ba/en/production → English pages
 | `/lokacija`        | `/en/location`    |
 | `/kontakt`         | `/en/contact`     |
 
-**Implementation Plan:**
-1. ~~Complete full Hrvatski version first~~ ✅
-2. Add @nuxtjs/i18n module
-3. Create English translations
-4. Add language switcher to navigation
-
 ## Gallery Features
 
 The gallery (`/galerija`) supports category filtering via URL query params:
@@ -262,52 +287,62 @@ All project images use `<NuxtImg>` component for:
 
 Logo SVGs remain as standard `<img>` (SVGs don't need optimization).
 
-## Deployment
+---
 
-1. Run `npm run generate`
-2. Upload **all** contents of `.output/public/` to hosting root, including:
-   - `/css/nuxt-google-fonts.css` - Required for fonts
-   - `/fonts/` directory - Self-hosted font files
-   - `.htaccess` - May be hidden, required for HTTPS/caching
-3. Verify fonts load correctly in browser DevTools → Network → Font
+## Contact Form (PHP API) ✅
+
+**Status:** Fully working (HR & EN)
+
+### Features
+- CSRF token protection (single-use, 1-hour expiry)
+- Rate limiting (5 requests/hour per IP)
+- Honeypot spam protection
+- **GDPR consent checkbox** (required before submission)
+- Consent confirmation recorded in email for audit trail
+- HTML email templates (Croatian & English)
+- PHPMailer for SMTP delivery
+
+### API Endpoints
+- `GET /api/csrf-token.php` - Get CSRF token
+- `POST /api/contact.php` - Submit form
+
+### SMTP Configuration
+Located in `public/api/config/mail.config.php`:
+```php
+define('SMTP_HOST', 'server1.webpage.ba');  // Must match SSL cert CN
+define('SMTP_PORT', 587);
+define('SMTP_SECURE', 'tls');
+define('SMTP_USERNAME', 'dominik.jukic@steeltech.ba');
+```
+
+**Important:** Do NOT use `localhost` as SMTP_HOST - the SSL certificate requires the actual hostname.
+
+### API .htaccess Note
+**Do NOT use `SetHandler application/x-httpd-php`** in `api/.htaccess` - cPanel PHP-FPM handles PHP automatically. Using SetHandler causes 404 errors on PHP-FPM setups.
+
+### Cron Job (Optional)
+Clean up expired tokens/rate limits daily. Add in cPanel → Cron Jobs:
+```
+0 3 * * * /usr/bin/php /home/steeltech/public_html/api/cleanup.php
+```
 
 ---
 
 ## TODO - Remaining Tasks
 
-### 1. Favicon
-- Create favicon files from SteelTech logo
-- Required files:
-  - `favicon.ico` (16x16, 32x32)
-  - `apple-touch-icon.png` (180x180)
-  - `favicon-32x32.png`
-  - `favicon-16x16.png`
-- Use https://realfavicongenerator.net or https://favicon.io
+### ~~1. Website Logo Replacement~~ ✅
+- ~~Replace current logo with new SteelTech logo~~
+- Done: Logo with gear icon, STEELTECH text, and METALNA PROIZVODNJA tagline
 
-### 2. English Version
-- Install `@nuxtjs/i18n` module
-- Create English page translations in `/en/` routes
-- Add language switcher to navigation
-- Update sitemap for multilingual support
+### ~~2. Favicon~~ ✅
+- ~~Create favicon files from SteelTech logo~~
+- Done: Full favicon set generated via RealFaviconGenerator
+- Files: `favicon.ico`, `favicon.svg`, `favicon-96x96.png`, `apple-touch-icon.png`, `site.webmanifest`, PWA icons
 
-### 3. Contact Form (PHP Mailer)
-- Create PHP backend for contact form submission
-- Server setup for email sending
-- Connect form in `kontakt.vue` to PHP endpoint
-- Add form validation and success/error handling
+### ~~3. OG Image for Social Sharing~~ ✅
+- ~~Create `public/images/og-image.jpg` (1200x630px)~~
+- Done: OG image with logo on gray background (#231F20)
 
-### 4. Certification Images
-- Q-CERT SAFE FPC EN 3834 & EN 1090 (Certificate No. 050625-16)
-- Q-CERT SAFE FPC (Certificate No. 050625-16)
-- Q-CERT SAFE CERTIFIED MS - ISO 9001 (Certificate No. 050625-14)
-- CE marking logo
-- Contact Q-CERT for official logo files
-- Add to appropriate page (o-nama.vue or footer)
-
-### 5. OG Image for Social Sharing
-- Create `public/images/og-image.jpg` (1200x630px)
-- Should include SteelTech logo and tagline
-- Used when sharing links on Facebook, LinkedIn, Twitter
-
-### 6. Instagram URL
+### 4. Instagram URL
 - Add real Instagram URL to footer (currently placeholder #)
+- File: `app/layouts/default.vue:157`

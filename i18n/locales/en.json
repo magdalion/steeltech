@@ -254,10 +254,19 @@
         "transport": "Transport services",
         "other": "Other"
       },
+      "consent": {
+        "label": "By submitting this form, I confirm that I have read and accept the processing of my personal data in accordance with the",
+        "privacyPolicy": "Privacy Policy",
+        "and": "and",
+        "cookiesPolicy": "Cookies Policy",
+        "required": "*",
+        "warning": "Consent for data processing is required to send an inquiry."
+      },
       "errors": {
         "nameRequired": "Please enter your full name.",
         "emailRequired": "Please enter a valid email address.",
         "messageRequired": "Message must contain at least 10 characters.",
+        "consentRequired": "Please accept the terms of personal data processing.",
         "networkError": "A communication error occurred. Please try again.",
         "generic": "An error occurred. Please try again.",
         "tooManyRequests": "Too many requests. Please wait before sending again."

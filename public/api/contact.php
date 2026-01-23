@@ -146,8 +146,14 @@ try {
     $subjectLabel = $validator->getSubjectLabel($data['subject'], $data['lang']);
     $phoneDisplay = $data['phone'] ?: ($data['lang'] === 'hr' ? 'Nije navedeno' : 'Not provided');
 
+    // Consent confirmation text
+    $consentGiven = !empty($input['consent']);
+    $consentText = $data['lang'] === 'hr'
+        ? ($consentGiven ? '✓ Korisnik je prihvatio uvjete obrade osobnih podataka.' : '✗ Suglasnost nije dana.')
+        : ($consentGiven ? '✓ User has accepted the terms of personal data processing.' : '✗ Consent was not given.');
+
     $emailBody = str_replace(
-        ['{{NAME}}', '{{EMAIL}}', '{{PHONE}}', '{{SUBJECT}}', '{{MESSAGE}}', '{{DATE}}', '{{IP}}'],
+        ['{{NAME}}', '{{EMAIL}}', '{{PHONE}}', '{{SUBJECT}}', '{{MESSAGE}}', '{{DATE}}', '{{IP}}', '{{CONSENT}}'],
         [
             $data['name'],
             $data['email'],
@@ -155,7 +161,8 @@ try {
             $subjectLabel,
             nl2br($data['message']),
             date('d.m.Y H:i:s'),
-            $clientIP
+            $clientIP,
+            $consentText
         ],
         $emailTemplate
     );
@@ -196,8 +203,8 @@ try {
 
     // Plain text alternative
     $plainText = $data['lang'] === 'hr'
-        ? "Ime: {$data['name']}\nEmail: {$data['email']}\nTelefon: {$phoneDisplay}\nPredmet: {$subjectLabel}\n\nPoruka:\n{$data['message']}"
-        : "Name: {$data['name']}\nEmail: {$data['email']}\nPhone: {$phoneDisplay}\nSubject: {$subjectLabel}\n\nMessage:\n{$data['message']}";
+        ? "Ime: {$data['name']}\nEmail: {$data['email']}\nTelefon: {$phoneDisplay}\nPredmet: {$subjectLabel}\n\nPoruka:\n{$data['message']}\n\n---\n{$consentText}"
+        : "Name: {$data['name']}\nEmail: {$data['email']}\nPhone: {$phoneDisplay}\nSubject: {$subjectLabel}\n\nMessage:\n{$data['message']}\n\n---\n{$consentText}";
     $mail->AltBody = $plainText;
 
     $mail->send();

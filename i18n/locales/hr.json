@@ -254,10 +254,19 @@
         "transport": "Usluge transporta",
         "other": "Ostalo"
       },
+      "consent": {
+        "label": "Slanjem ovog obrasca potvrđujem da sam pročitao/la i prihvaćam obradu mojih osobnih podataka u skladu s",
+        "privacyPolicy": "Politikom Privatnosti",
+        "and": "i",
+        "cookiesPolicy": "Politikom Kolačića",
+        "required": "*",
+        "warning": "Za slanje upita potrebna je suglasnost za obradu podataka."
+      },
       "errors": {
         "nameRequired": "Molimo unesite vaše ime i prezime.",
         "emailRequired": "Molimo unesite ispravnu email adresu.",
         "messageRequired": "Poruka mora sadržavati najmanje 10 znakova.",
+        "consentRequired": "Molimo prihvatite uvjete obrade osobnih podataka.",
         "networkError": "Došlo je do greške u komunikaciji. Molimo pokušajte ponovno.",
         "generic": "Došlo je do greške. Molimo pokušajte ponovno.",
         "tooManyRequests": "Previše zahtjeva. Molimo pričekajte prije ponovnog slanja."
