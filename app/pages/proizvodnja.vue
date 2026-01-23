@@ -21,7 +21,7 @@
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Service Card 1: Steel Structures -->
-          <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300">
+          <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300 flex flex-col">
             <div class="relative h-56 overflow-hidden">
               <NuxtImg
                 src="/images/Steeltech_Section_1_3.JPG"
@@ -31,7 +31,7 @@
               />
               <div class="absolute inset-0 bg-gradient-to-t from-[#2d2d2d] to-transparent"></div>
             </div>
-            <div class="p-6">
+            <div class="p-6 flex flex-col flex-grow">
               <h3 class="font-title text-xl uppercase tracking-wide mb-3 text-brand-light group-hover:text-brand-primary transition-colors">
                 {{ $t('production.services.steelConstructions.title') }}
               </h3>
@@ -40,7 +40,7 @@
               </p>
               <NuxtLinkLocale
                 to="/galerija?kategorija=celicne-konstrukcije"
-                class="inline-flex items-center text-brand-primary text-sm font-medium hover:underline"
+                class="inline-flex items-center text-brand-primary text-sm font-medium hover:underline mt-auto"
               >
                 {{ $t('common.viewGallery') }}
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,7 +51,7 @@
           </div>
 
           <!-- Service Card 2: Welding Technology -->
-          <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300">
+          <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300 flex flex-col">
             <div class="relative h-56 overflow-hidden">
               <NuxtImg
                 src="/images/Steeltech_Section_2_1.JPG"
@@ -61,7 +61,7 @@
               />
               <div class="absolute inset-0 bg-gradient-to-t from-[#2d2d2d] to-transparent"></div>
             </div>
-            <div class="p-6">
+            <div class="p-6 flex flex-col flex-grow">
               <h3 class="font-title text-xl uppercase tracking-wide mb-3 text-brand-light group-hover:text-brand-primary transition-colors">
                 {{ $t('production.services.welding.title') }}
               </h3>
@@ -70,7 +70,7 @@
               </p>
               <NuxtLinkLocale
                 to="/galerija?kategorija=zavarivanje"
-                class="inline-flex items-center text-brand-primary text-sm font-medium hover:underline"
+                class="inline-flex items-center text-brand-primary text-sm font-medium hover:underline mt-auto"
               >
                 {{ $t('common.viewGallery') }}
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,7 +81,7 @@
           </div>
 
           <!-- Service Card 3: Laser Cutting -->
-          <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300">
+          <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300 flex flex-col">
             <div class="relative h-56 overflow-hidden">
               <NuxtImg
                 src="/images/Steeltech_Section_3_1.JPG"
@@ -91,7 +91,7 @@
               />
               <div class="absolute inset-0 bg-gradient-to-t from-[#2d2d2d] to-transparent"></div>
             </div>
-            <div class="p-6">
+            <div class="p-6 flex flex-col flex-grow">
               <h3 class="font-title text-xl uppercase tracking-wide mb-3 text-brand-light group-hover:text-brand-primary transition-colors">
                 {{ $t('production.services.laserCutting.title') }}
               </h3>
@@ -100,7 +100,7 @@
               </p>
               <NuxtLinkLocale
                 to="/galerija?kategorija=lasersko-rezanje"
-                class="inline-flex items-center text-brand-primary text-sm font-medium hover:underline"
+                class="inline-flex items-center text-brand-primary text-sm font-medium hover:underline mt-auto"
               >
                 {{ $t('common.viewGallery') }}
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -111,7 +111,7 @@
           </div>
 
           <!-- Service Card 4: Anti-Corrosion -->
-          <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300">
+          <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300 flex flex-col">
             <div class="relative h-56 overflow-hidden">
               <NuxtImg
                 src="/images/Steeltech_section_4_1.JPG"
@@ -121,7 +121,7 @@
               />
               <div class="absolute inset-0 bg-gradient-to-t from-[#2d2d2d] to-transparent"></div>
             </div>
-            <div class="p-6">
+            <div class="p-6 flex flex-col flex-grow">
               <h3 class="font-title text-xl uppercase tracking-wide mb-3 text-brand-light group-hover:text-brand-primary transition-colors">
                 {{ $t('production.services.antiCorrosion.title') }}
               </h3>
@@ -130,7 +130,7 @@
               </p>
               <NuxtLinkLocale
                 to="/galerija?kategorija=antikorozivna-zastita"
-                class="inline-flex items-center text-brand-primary text-sm font-medium hover:underline"
+                class="inline-flex items-center text-brand-primary text-sm font-medium hover:underline mt-auto"
               >
                 {{ $t('common.viewGallery') }}
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -141,7 +141,7 @@
           </div>
 
           <!-- Service Card 5: Transport -->
-          <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300">
+          <div class="group bg-[#2d2d2d] border border-white/10 rounded-lg overflow-hidden hover:border-brand-primary/50 transition-all duration-300 flex flex-col">
             <div class="relative h-56 overflow-hidden bg-brand-dark flex items-center justify-center">
               <svg class="w-24 h-24 text-brand-primary/30 group-hover:text-brand-primary/50 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -149,7 +149,7 @@
               </svg>
               <div class="absolute inset-0 bg-gradient-to-t from-[#2d2d2d] to-transparent"></div>
             </div>
-            <div class="p-6">
+            <div class="p-6 flex flex-col flex-grow">
               <h3 class="font-title text-xl uppercase tracking-wide mb-3 text-brand-light group-hover:text-brand-primary transition-colors">
                 {{ $t('production.services.transport.title') }}
               </h3>
@@ -158,7 +158,7 @@
               </p>
               <NuxtLinkLocale
                 to="/kontakt"
-                class="inline-flex items-center text-brand-primary text-sm font-medium hover:underline"
+                class="inline-flex items-center text-brand-primary text-sm font-medium hover:underline mt-auto"
               >
                 {{ $t('common.contactUs') }}
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
